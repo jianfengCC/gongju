@@ -1,0 +1,2 @@
+
+#define SPECIAL_EVENT_SIGNAL_NUM                    0

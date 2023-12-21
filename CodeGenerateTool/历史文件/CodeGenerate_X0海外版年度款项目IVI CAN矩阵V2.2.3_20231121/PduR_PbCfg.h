@@ -1,0 +1,493 @@
+/**
+ * Copyright (c) 2012-2018
+ * All Rights Reserved by APPSYS and its affiliates.
+ * You may not use, copy, distribute, modify, transmit in any form this file
+ * except in compliance with APPSYS in writing by applicable law.
+ */
+/**
+ * @file    Com_PbCfg.c
+ * @brief   brief function description.
+ * @details detailed function description.
+ * @version 1.0
+ * @author  wenzc
+ * @date    2019-05-21
+ *
+ * Edit History
+ * ----------------------------------------------------------------------------
+ * DATE                     NAME               DESCRIPTION
+ * 2019-05-21               appsys             Create it.
+ */
+
+#ifndef PDUR_PBCFG_H
+#define PDUR_PBCFG_H
+#include "PduR.h"
+#include "PduR_Types.h"
+extern const PduR_PBConfigType PduR_Config;
+
+// Symbolic names for PduR Src Pdus
+#define PduRConf_Pdu_Tester01 0u
+#define PduRConf_Pdu_Ecu01 1u
+#define PduRConf_Pdu_DiagPhysicalRx 2u
+#define PduRConf_Pdu_DiagPhysicalTx 3u
+#define PduRConf_Pdu_DiagFunctionalRx 4u
+#define PduRConf_Pdu_DiagUUDT 5u
+#define PduRConf_Pdu_SwcMem_Tx_Com 6u
+#define PduRConf_Pdu_SwcMem_Rx_CanIf 7u
+
+//  PduR Polite Defines.
+
+
+#define PDUR_PDU_ID_Diag_FuncReq_INFO_CANIF   1
+#define PDUR_REVERSE_PDU_ID_Diag_FuncReq_INFO_COM   1
+
+#define PDUR_PDU_ID_Diag_PhyReq_IVI_INFO_CANIF   0
+#define PDUR_REVERSE_PDU_ID_Diag_PhyReq_IVI_INFO_COM   0
+
+#define PDUR_PDU_ID_TBOX_chargeSet_INFO_CANIF   2
+#define PDUR_REVERSE_PDU_ID_TBOX_chargeSet_INFO_COM   2
+
+#define PDUR_PDU_ID_BMS_metric_INFO_CANIF   3
+#define PDUR_REVERSE_PDU_ID_BMS_metric_INFO_COM   3
+
+#define PDUR_PDU_ID_BMS_tboxRequest_INFO_CANIF   4
+#define PDUR_REVERSE_PDU_ID_BMS_tboxRequest_INFO_COM   4
+
+#define PDUR_PDU_ID_VCU_range_INFO_CANIF   5
+#define PDUR_REVERSE_PDU_ID_VCU_range_INFO_COM   5
+
+#define PDUR_PDU_ID_VCU_range1_INFO_CANIF   6
+#define PDUR_REVERSE_PDU_ID_VCU_range1_INFO_COM   6
+
+#define PDUR_PDU_ID_VCU_state_INFO_CANIF   7
+#define PDUR_REVERSE_PDU_ID_VCU_state_INFO_COM   7
+
+#define PDUR_PDU_ID_OBC_state_INFO_CANIF   8
+#define PDUR_REVERSE_PDU_ID_OBC_state_INFO_COM   8
+
+#define PDUR_PDU_ID_OBC_state1_INFO_CANIF   9
+#define PDUR_REVERSE_PDU_ID_OBC_state1_INFO_COM   9
+
+#define PDUR_PDU_ID_DCDC_state_INFO_CANIF   10
+#define PDUR_REVERSE_PDU_ID_DCDC_state_INFO_COM   10
+
+#define PDUR_PDU_ID_GSM_state_INFO_CANIF   11
+#define PDUR_REVERSE_PDU_ID_GSM_state_INFO_COM   11
+
+#define PDUR_PDU_ID_GTW_mcur0_mcuf0_info_INFO_CANIF   12
+#define PDUR_REVERSE_PDU_ID_GTW_mcur0_mcuf0_info_INFO_COM   12
+
+#define PDUR_PDU_ID_BMS_temperature_INFO_CANIF   13
+#define PDUR_REVERSE_PDU_ID_BMS_temperature_INFO_COM   13
+
+#define PDUR_PDU_ID_VCU_Info_INFO_CANIF   14
+#define PDUR_REVERSE_PDU_ID_VCU_Info_INFO_COM   14
+
+#define PDUR_PDU_ID_VCU_pwr_INFO_CANIF   15
+#define PDUR_REVERSE_PDU_ID_VCU_pwr_INFO_COM   15
+
+#define PDUR_PDU_ID_VCU_RevV2V_INFO_CANIF   16
+#define PDUR_REVERSE_PDU_ID_VCU_RevV2V_INFO_COM   16
+
+#define PDUR_PDU_ID_BMS_ASSt_INFO_CANIF   17
+#define PDUR_REVERSE_PDU_ID_BMS_ASSt_INFO_COM   17
+
+#define PDUR_PDU_ID_VCU_stateCha1_INFO_CANIF   18
+#define PDUR_REVERSE_PDU_ID_VCU_stateCha1_INFO_COM   18
+
+#define PDUR_PDU_ID_EPS_state_INFO_CANIF   19
+#define PDUR_REVERSE_PDU_ID_EPS_state_INFO_COM   19
+
+#define PDUR_PDU_ID_EPS_sas_INFO_CANIF   20
+#define PDUR_REVERSE_PDU_ID_EPS_sas_INFO_COM   20
+
+#define PDUR_PDU_ID_ESC_wheelSpd_Front_INFO_CANIF   21
+#define PDUR_REVERSE_PDU_ID_ESC_wheelSpd_Front_INFO_COM   21
+
+#define PDUR_PDU_ID_ESC_wheelSpd_Rear_INFO_CANIF   22
+#define PDUR_REVERSE_PDU_ID_ESC_wheelSpd_Rear_INFO_COM   22
+
+#define PDUR_PDU_ID_ESC_state1_INFO_CANIF   23
+#define PDUR_REVERSE_PDU_ID_ESC_state1_INFO_COM   23
+
+#define PDUR_PDU_ID_ESC_state2_INFO_CANIF   24
+#define PDUR_REVERSE_PDU_ID_ESC_state2_INFO_COM   24
+
+#define PDUR_PDU_ID_ESC_yawState_INFO_CANIF   25
+#define PDUR_REVERSE_PDU_ID_ESC_yawState_INFO_COM   25
+
+#define PDUR_PDU_ID_GW_ESC_yawState_INFO_CANIF   26
+#define PDUR_REVERSE_PDU_ID_GW_ESC_yawState_INFO_COM   26
+
+#define PDUR_PDU_ID_ESC_wssFront_INFO_CANIF   27
+#define PDUR_REVERSE_PDU_ID_ESC_wssFront_INFO_COM   27
+
+#define PDUR_PDU_ID_ESC_wssRear_INFO_CANIF   28
+#define PDUR_REVERSE_PDU_ID_ESC_wssRear_INFO_COM   28
+
+#define PDUR_PDU_ID_ESC_epb_INFO_CANIF   29
+#define PDUR_REVERSE_PDU_ID_ESC_epb_INFO_COM   29
+
+#define PDUR_PDU_ID_MRR_acc_INFO_CANIF   30
+#define PDUR_REVERSE_PDU_ID_MRR_acc_INFO_COM   30
+
+#define PDUR_PDU_ID_MRR_pss_INFO_CANIF   31
+#define PDUR_REVERSE_PDU_ID_MRR_pss_INFO_COM   31
+
+#define PDUR_PDU_ID_MRR_hmi1_INFO_CANIF   32
+#define PDUR_REVERSE_PDU_ID_MRR_hmi1_INFO_COM   32
+
+#define PDUR_PDU_ID_MRR_hmi2_INFO_CANIF   33
+#define PDUR_REVERSE_PDU_ID_MRR_hmi2_INFO_COM   33
+
+#define PDUR_PDU_ID_MRR_hmi3_34E_INFO_CANIF   34
+#define PDUR_REVERSE_PDU_ID_MRR_hmi3_34E_INFO_COM   34
+
+#define PDUR_PDU_ID_MRR_hmi4_34F_INFO_CANIF   35
+#define PDUR_REVERSE_PDU_ID_MRR_hmi4_34F_INFO_COM   35
+
+#define PDUR_PDU_ID_MRR_hmi5_355_INFO_CANIF   36
+#define PDUR_REVERSE_PDU_ID_MRR_hmi5_355_INFO_COM   36
+
+#define PDUR_PDU_ID_MRR_hmi6_356_INFO_CANIF   37
+#define PDUR_REVERSE_PDU_ID_MRR_hmi6_356_INFO_COM   37
+
+#define PDUR_PDU_ID_MPC_state_INFO_CANIF   38
+#define PDUR_REVERSE_PDU_ID_MPC_state_INFO_COM   38
+
+#define PDUR_PDU_ID_MPC_hmi_INFO_CANIF   39
+#define PDUR_REVERSE_PDU_ID_MPC_hmi_INFO_COM   39
+
+#define PDUR_PDU_ID_MPC_RoadState_359_INFO_CANIF   40
+#define PDUR_REVERSE_PDU_ID_MPC_RoadState_359_INFO_COM   40
+
+#define PDUR_PDU_ID_MPC_hmi_35D_INFO_CANIF   41
+#define PDUR_REVERSE_PDU_ID_MPC_hmi_35D_INFO_COM   41
+
+#define PDUR_PDU_ID_SRR_R_state_22B_INFO_CANIF   42
+#define PDUR_REVERSE_PDU_ID_SRR_R_state_22B_INFO_COM   42
+
+#define PDUR_PDU_ID_ABM_state_INFO_CANIF   43
+#define PDUR_REVERSE_PDU_ID_ABM_state_INFO_COM   43
+
+#define PDUR_PDU_ID_APA_35B_INFO_CANIF   44
+#define PDUR_REVERSE_PDU_ID_APA_35B_INFO_COM   44
+
+#define PDUR_PDU_ID_VCU_state2_INFO_CANIF   45
+#define PDUR_REVERSE_PDU_ID_VCU_state2_INFO_COM   45
+
+#define PDUR_PDU_ID_BLE_FB_INFO_CANIF   46
+#define PDUR_REVERSE_PDU_ID_BLE_FB_INFO_COM   46
+
+#define PDUR_PDU_ID_BLE_User_ID_INFO_CANIF   47
+#define PDUR_REVERSE_PDU_ID_BLE_User_ID_INFO_COM   47
+
+#define PDUR_PDU_ID_TBOX_Factory_360_INFO_CANIF   48
+#define PDUR_REVERSE_PDU_ID_TBOX_Factory_360_INFO_COM   48
+
+#define PDUR_PDU_ID_AC_ctrlFeedback_INFO_CANIF   49
+#define PDUR_REVERSE_PDU_ID_AC_ctrlFeedback_INFO_COM   49
+
+#define PDUR_PDU_ID_AC_state2_INFO_CANIF   50
+#define PDUR_REVERSE_PDU_ID_AC_state2_INFO_COM   50
+
+#define PDUR_PDU_ID_BCM_state_INFO_CANIF   51
+#define PDUR_REVERSE_PDU_ID_BCM_state_INFO_COM   51
+
+#define PDUR_PDU_ID_BCM_state2_INFO_CANIF   52
+#define PDUR_REVERSE_PDU_ID_BCM_state2_INFO_COM   52
+
+#define PDUR_PDU_ID_BCM_state3_INFO_CANIF   53
+#define PDUR_REVERSE_PDU_ID_BCM_state3_INFO_COM   53
+
+#define PDUR_PDU_ID_BCM_state4_INFO_CANIF   54
+#define PDUR_REVERSE_PDU_ID_BCM_state4_INFO_COM   54
+
+#define PDUR_PDU_ID_BCM_tpms_INFO_CANIF   55
+#define PDUR_REVERSE_PDU_ID_BCM_tpms_INFO_COM   55
+
+#define PDUR_PDU_ID_BCM_tpms1_INFO_CANIF   56
+#define PDUR_REVERSE_PDU_ID_BCM_tpms1_INFO_COM   56
+
+#define PDUR_PDU_ID_BCM_peps_INFO_CANIF   57
+#define PDUR_REVERSE_PDU_ID_BCM_peps_INFO_COM   57
+
+#define PDUR_PDU_ID_BCM_rsm_INFO_CANIF   58
+#define PDUR_REVERSE_PDU_ID_BCM_rsm_INFO_COM   58
+
+#define PDUR_PDU_ID_BCM_RemotFB_INFO_CANIF   59
+#define PDUR_REVERSE_PDU_ID_BCM_RemotFB_INFO_COM   59
+
+#define PDUR_PDU_ID_LCU_32A_INFO_CANIF   60
+#define PDUR_REVERSE_PDU_ID_LCU_32A_INFO_COM   60
+
+#define PDUR_PDU_ID_PLG_state_INFO_CANIF   61
+#define PDUR_REVERSE_PDU_ID_PLG_state_INFO_COM   61
+
+#define PDUR_PDU_ID_GW_Handle_state_INFO_CANIF   62
+#define PDUR_REVERSE_PDU_ID_GW_Handle_state_INFO_COM   62
+
+#define PDUR_PDU_ID_DSM_state_INFO_CANIF   63
+#define PDUR_REVERSE_PDU_ID_DSM_state_INFO_COM   63
+
+#define PDUR_PDU_ID_PSM_memory_INFO_CANIF   64
+#define PDUR_REVERSE_PDU_ID_PSM_memory_INFO_COM   64
+
+#define PDUR_PDU_ID_DSM_memory_INFO_CANIF   65
+#define PDUR_REVERSE_PDU_ID_DSM_memory_INFO_COM   65
+
+#define PDUR_PDU_ID_PSM_state_INFO_CANIF   66
+#define PDUR_REVERSE_PDU_ID_PSM_state_INFO_COM   66
+
+#define PDUR_PDU_ID_LRSM_state_INFO_CANIF   67
+#define PDUR_REVERSE_PDU_ID_LRSM_state_INFO_COM   67
+
+#define PDUR_PDU_ID_TBOX_infoCtrl_INFO_CANIF   68
+#define PDUR_REVERSE_PDU_ID_TBOX_infoCtrl_INFO_COM   68
+
+#define PDUR_PDU_ID_GW_vent1Sts_INFO_CANIF   69
+#define PDUR_REVERSE_PDU_ID_GW_vent1Sts_INFO_COM   69
+
+#define PDUR_PDU_ID_GW_vent2Sts_INFO_CANIF   70
+#define PDUR_REVERSE_PDU_ID_GW_vent2Sts_INFO_COM   70
+
+#define PDUR_PDU_ID_GW_vent3Sts_INFO_CANIF   71
+#define PDUR_REVERSE_PDU_ID_GW_vent3Sts_INFO_COM   71
+
+#define PDUR_PDU_ID_GW_vent4Sts_INFO_CANIF   72
+#define PDUR_REVERSE_PDU_ID_GW_vent4Sts_INFO_COM   72
+
+#define PDUR_PDU_ID_GW_vent5Sts_INFO_CANIF   73
+#define PDUR_REVERSE_PDU_ID_GW_vent5Sts_INFO_COM   73
+
+#define PDUR_PDU_ID_GW_vent6Sts_INFO_CANIF   74
+#define PDUR_REVERSE_PDU_ID_GW_vent6Sts_INFO_COM   74
+
+#define PDUR_PDU_ID_GW_vent7Sts_INFO_CANIF   75
+#define PDUR_REVERSE_PDU_ID_GW_vent7Sts_INFO_COM   75
+
+#define PDUR_PDU_ID_GW_vent8Sts_INFO_CANIF   76
+#define PDUR_REVERSE_PDU_ID_GW_vent8Sts_INFO_COM   76
+
+#define PDUR_PDU_ID_GW_BMS_meas_INFO_CANIF   77
+#define PDUR_REVERSE_PDU_ID_GW_BMS_meas_INFO_COM   77
+
+#define PDUR_PDU_ID_BMS_state_INFO_CANIF   78
+#define PDUR_REVERSE_PDU_ID_BMS_state_INFO_COM   78
+
+#define PDUR_PDU_ID_GTW_mcur0_info_INFO_CANIF   79
+#define PDUR_REVERSE_PDU_ID_GTW_mcur0_info_INFO_COM   79
+
+#define PDUR_PDU_ID_GTW_mcuf0_info_INFO_CANIF   80
+#define PDUR_REVERSE_PDU_ID_GTW_mcuf0_info_INFO_COM   80
+
+#define PDUR_PDU_ID_GTW_ecu_gcu_vcu_info_INFO_CANIF   81
+#define PDUR_REVERSE_PDU_ID_GTW_ecu_gcu_vcu_info_INFO_COM   81
+
+#define PDUR_PDU_ID_GTW_esc_eps_iB_info_INFO_CANIF   82
+#define PDUR_REVERSE_PDU_ID_GTW_esc_eps_iB_info_INFO_COM   82
+
+#define PDUR_PDU_ID_GW_EPS_state_INFO_CANIF   83
+#define PDUR_REVERSE_PDU_ID_GW_EPS_state_INFO_COM   83
+
+#define PDUR_PDU_ID_VCU_stateCha2_INFO_CANIF   84
+#define PDUR_REVERSE_PDU_ID_VCU_stateCha2_INFO_COM   84
+
+#define PDUR_PDU_ID_AC_temp_pressure_INFO_CANIF   85
+#define PDUR_REVERSE_PDU_ID_AC_temp_pressure_INFO_COM   85
+
+#define PDUR_PDU_ID_WCM_state_INFO_CANIF   86
+#define PDUR_REVERSE_PDU_ID_WCM_state_INFO_COM   86
+
+#define PDUR_PDU_ID_AVM_state_484_INFO_CANIF   87
+#define PDUR_REVERSE_PDU_ID_AVM_state_484_INFO_COM   87
+
+#define PDUR_PDU_ID_HUD_state_INFO_CANIF   88
+#define PDUR_REVERSE_PDU_ID_HUD_state_INFO_COM   88
+
+#define PDUR_PDU_ID_MFW_Ctrl_INFO_CANIF   89
+#define PDUR_REVERSE_PDU_ID_MFW_Ctrl_INFO_COM   89
+
+#define PDUR_PDU_ID_MFW_KeySt_INFO_CANIF   90
+#define PDUR_REVERSE_PDU_ID_MFW_KeySt_INFO_COM   90
+
+#define PDUR_PDU_ID_IVI_timeAndGPS_INFO_CANIF   91
+#define PDUR_REVERSE_PDU_ID_IVI_timeAndGPS_INFO_COM   91
+
+#define PDUR_PDU_ID_GTW_BMS_Rev_INFO_CANIF   92
+#define PDUR_REVERSE_PDU_ID_GTW_BMS_Rev_INFO_COM   92
+
+#define PDUR_PDU_ID_SWHC_400_INFO_CANIF   93
+#define PDUR_REVERSE_PDU_ID_SWHC_400_INFO_COM   93
+
+
+
+#define PDUR_PDU_ID_Diag_Resp_IVI_INFO_CANIF   94
+#define PDUR_REVERSE_PDU_ID_Diag_Resp_IVI_INFO_COM   94
+
+#define PDUR_PDU_ID_IC_info_INFO_CANIF   95
+#define PDUR_REVERSE_PDU_ID_IC_info_INFO_COM   95
+
+#define PDUR_PDU_ID_IVI_SLA_408_INFO_CANIF   96
+#define PDUR_REVERSE_PDU_ID_IVI_SLA_408_INFO_COM   96
+
+#define PDUR_PDU_ID_IVI_User_ID_INFO_CANIF   97
+#define PDUR_REVERSE_PDU_ID_IVI_User_ID_INFO_COM   97
+
+#define PDUR_PDU_ID_IVI_096_INFO_CANIF   98
+#define PDUR_REVERSE_PDU_ID_IVI_096_INFO_COM   98
+
+#define PDUR_PDU_ID_IVI_control_INFO_CANIF   99
+#define PDUR_REVERSE_PDU_ID_IVI_control_INFO_COM   99
+
+#define PDUR_PDU_ID_IVI_comfortSet_INFO_CANIF   100
+#define PDUR_REVERSE_PDU_ID_IVI_comfortSet_INFO_COM   100
+
+#define PDUR_PDU_ID_IVI_pwrSet_INFO_CANIF   101
+#define PDUR_REVERSE_PDU_ID_IVI_pwrSet_INFO_COM   101
+
+#define PDUR_PDU_ID_IVI_chassisSet1_INFO_CANIF   102
+#define PDUR_REVERSE_PDU_ID_IVI_chassisSet1_INFO_COM   102
+
+#define PDUR_PDU_ID_IVI_chassisSet_065_INFO_CANIF   103
+#define PDUR_REVERSE_PDU_ID_IVI_chassisSet_065_INFO_COM   103
+
+#define PDUR_PDU_ID_IVI_dvrSet_INFO_CANIF   104
+#define PDUR_REVERSE_PDU_ID_IVI_dvrSet_INFO_COM   104
+
+#define PDUR_PDU_ID_IVI_dsmmSet_INFO_CANIF   105
+#define PDUR_REVERSE_PDU_ID_IVI_dsmmSet_INFO_COM   105
+
+#define PDUR_PDU_ID_IVI_dsmmSet2_INFO_CANIF   106
+#define PDUR_REVERSE_PDU_ID_IVI_dsmmSet2_INFO_COM   106
+
+#define PDUR_PDU_ID_IVI_infoSet_INFO_CANIF   107
+#define PDUR_REVERSE_PDU_ID_IVI_infoSet_INFO_COM   107
+
+#define PDUR_PDU_ID_VSP_state_INFO_CANIF   108
+#define PDUR_REVERSE_PDU_ID_VSP_state_INFO_COM   108
+
+#define PDUR_PDU_ID_IVI_infoSet2_INFO_CANIF   109
+#define PDUR_REVERSE_PDU_ID_IVI_infoSet2_INFO_COM   109
+
+#define PDUR_PDU_ID_IVI_AVMSet_3D2_INFO_CANIF   110
+#define PDUR_REVERSE_PDU_ID_IVI_AVMSet_3D2_INFO_COM   110
+
+#define PDUR_PDU_ID_IVI_scuSet_INFO_CANIF   111
+#define PDUR_REVERSE_PDU_ID_IVI_scuSet_INFO_COM   111
+
+#define PDUR_PDU_ID_IVI_vent1Ctrl_INFO_CANIF   112
+#define PDUR_REVERSE_PDU_ID_IVI_vent1Ctrl_INFO_COM   112
+
+#define PDUR_PDU_ID_IVI_vent2Ctrl_INFO_CANIF   113
+#define PDUR_REVERSE_PDU_ID_IVI_vent2Ctrl_INFO_COM   113
+
+#define PDUR_PDU_ID_IVI_vent3Ctrl_INFO_CANIF   114
+#define PDUR_REVERSE_PDU_ID_IVI_vent3Ctrl_INFO_COM   114
+
+#define PDUR_PDU_ID_IVI_vent4Ctrl_INFO_CANIF   115
+#define PDUR_REVERSE_PDU_ID_IVI_vent4Ctrl_INFO_COM   115
+
+#define PDUR_PDU_ID_IVI_vent5Ctrl_INFO_CANIF   116
+#define PDUR_REVERSE_PDU_ID_IVI_vent5Ctrl_INFO_COM   116
+
+#define PDUR_PDU_ID_IVI_vent6Ctrl_INFO_CANIF   117
+#define PDUR_REVERSE_PDU_ID_IVI_vent6Ctrl_INFO_COM   117
+
+#define PDUR_PDU_ID_IVI_vent7Ctrl_INFO_CANIF   118
+#define PDUR_REVERSE_PDU_ID_IVI_vent7Ctrl_INFO_COM   118
+
+#define PDUR_PDU_ID_IVI_vent8Ctrl_INFO_CANIF   119
+#define PDUR_REVERSE_PDU_ID_IVI_vent8Ctrl_INFO_COM   119
+
+#define PDUR_PDU_ID_IVI_NaviChrgSt_33D_INFO_CANIF   120
+#define PDUR_REVERSE_PDU_ID_IVI_NaviChrgSt_33D_INFO_COM   120
+
+#define PDUR_PDU_ID_IVI_NaviChrgSt_33E_INFO_CANIF   121
+#define PDUR_REVERSE_PDU_ID_IVI_NaviChrgSt_33E_INFO_COM   121
+
+#define PDUR_PDU_ID_IC_engineOFF_INFO_CANIF   122
+#define PDUR_REVERSE_PDU_ID_IC_engineOFF_INFO_COM   122
+
+#define PDUR_PDU_ID_IC_faultSum_INFO_CANIF   123
+#define PDUR_REVERSE_PDU_ID_IC_faultSum_INFO_COM   123
+
+#define PDUR_PDU_ID_IC_infoSet_INFO_CANIF   124
+#define PDUR_REVERSE_PDU_ID_IC_infoSet_INFO_COM   124
+
+#define PDUR_PDU_ID_IC_3F8_INFO_CANIF   125
+#define PDUR_REVERSE_PDU_ID_IC_3F8_INFO_COM   125
+
+#define PDUR_PDU_ID_IC_state3_INFO_CANIF   126
+#define PDUR_REVERSE_PDU_ID_IC_state3_INFO_COM   126
+
+#define PDUR_PDU_ID_IC_Warning_INFO_CANIF   127
+#define PDUR_REVERSE_PDU_ID_IC_Warning_INFO_COM   127
+
+#define PDUR_PDU_ID_IC_Warningfb_INFO_CANIF   128
+#define PDUR_REVERSE_PDU_ID_IC_Warningfb_INFO_COM   128
+
+#define PDUR_PDU_ID_IC_state_INFO_CANIF   129
+#define PDUR_REVERSE_PDU_ID_IC_state_INFO_COM   129
+
+#define PDUR_PDU_ID_IC_info2_INFO_CANIF   130
+#define PDUR_REVERSE_PDU_ID_IC_info2_INFO_COM   130
+
+#define PDUR_PDU_ID_IC_state1_INFO_CANIF   131
+#define PDUR_REVERSE_PDU_ID_IC_state1_INFO_COM   131
+
+#define PDUR_PDU_ID_IC_EnergyConsumption_INFO_CANIF   132
+#define PDUR_REVERSE_PDU_ID_IC_EnergyConsumption_INFO_COM   132
+
+#define PDUR_PDU_ID_IC_state2_INFO_CANIF   133
+#define PDUR_REVERSE_PDU_ID_IC_state2_INFO_COM   133
+
+#define PDUR_PDU_ID_IC_state4_INFO_CANIF   134
+#define PDUR_REVERSE_PDU_ID_IC_state4_INFO_COM   134
+
+#define PDUR_PDU_ID_IC_state5_INFO_CANIF   135
+#define PDUR_REVERSE_PDU_ID_IC_state5_INFO_COM   135
+
+#define PDUR_PDU_ID_IVI_StatusAndNotify_INFO_CANIF   136
+#define PDUR_REVERSE_PDU_ID_IVI_StatusAndNotify_INFO_COM   136
+
+#define PDUR_PDU_ID_IVI_hmi_INFO_CANIF   137
+#define PDUR_REVERSE_PDU_ID_IVI_hmi_INFO_COM   137
+
+#define PDUR_PDU_ID_IVI_State_5F0_INFO_CANIF   138
+#define PDUR_REVERSE_PDU_ID_IVI_State_5F0_INFO_COM   138
+
+#define PDUR_PDU_ID_IC_RequestAndStatus_INFO_CANIF   139
+#define PDUR_REVERSE_PDU_ID_IC_RequestAndStatus_INFO_COM   139
+
+#define PDUR_PDU_ID_IVI_set_INFO_CANIF   140
+#define PDUR_REVERSE_PDU_ID_IVI_set_INFO_COM   140
+
+#define PDUR_PDU_ID_IVI_navi_INFO_CANIF   141
+#define PDUR_REVERSE_PDU_ID_IVI_navi_INFO_COM   141
+
+#define PDUR_PDU_ID_IVI_NaviDirection_LaneX_INFO_CANIF   142
+#define PDUR_REVERSE_PDU_ID_IVI_NaviDirection_LaneX_INFO_COM   142
+
+#define PDUR_PDU_ID_IVI_media_INFO_CANIF   143
+#define PDUR_REVERSE_PDU_ID_IVI_media_INFO_COM   143
+
+#define PDUR_PDU_ID_IVI_naviText_INFO_CANIF   144
+#define PDUR_REVERSE_PDU_ID_IVI_naviText_INFO_COM   144
+
+#define PDUR_PDU_ID_IVI_TelSongText_INFO_CANIF   145
+#define PDUR_REVERSE_PDU_ID_IVI_TelSongText_INFO_COM   145
+
+#define PDUR_PDU_ID_IVI_ADAS_3E1_INFO_CANIF   146
+#define PDUR_REVERSE_PDU_ID_IVI_ADAS_3E1_INFO_COM   146
+
+#define PDUR_PDU_ID_Wacc_500_INFO_CANIF   147
+#define PDUR_REVERSE_PDU_ID_Wacc_500_INFO_COM   147
+
+
+
+#define PDUR_PDU_ID_DIAGPHYSICALRX    PDUR_PDU_ID_Diag_PhyReq_IVI1_INFO_CANIF
+#define PDUR_PDU_ID_DIAGFUNCTIONALRX    PDUR_PDU_ID_Diag_FuncReq_INFO_CANIF
+#define PDUR_PDU_ID_DIAGPHYSICALTX    PDUR_PDU_ID_Diag_Resp_IVI1_INFO_CANIF
+#endif
+
+

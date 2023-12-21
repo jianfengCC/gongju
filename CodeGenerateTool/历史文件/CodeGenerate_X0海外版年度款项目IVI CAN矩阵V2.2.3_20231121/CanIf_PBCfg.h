@@ -1,0 +1,184 @@
+/**
+ * Copyright (c) 2012-2018
+ * All Rights Reserved by APPSYS and its affiliates.
+ * You may not use, copy, distribute, modify, transmit in any form this file
+ * except in compliance with APPSYS in writing by applicable law.
+ */
+/**
+ * @file    CanIf_PBCfg.c
+ * @brief   brief function description.
+ * @details detailed function description.
+ * @version 1.0
+ * @author  appsys
+ * @date    2019-05-21
+ *
+ * Edit History
+ * ----------------------------------------------------------------------------
+ * DATE                     NAME               DESCRIPTION
+ * 2019-05-21               appsys             Create it.
+ */
+
+#ifndef CANIF_PBCFG_H_
+#define CANIF_PBCFG_H_
+
+
+#define CANIF_NUM_TX_LPDU  55
+
+#define CANIF_NUM_RX_LPDU  95
+
+#define CANIF_PDU_ID_DIAGPHYSICALTX 0
+#define CANIF_PDU_ID_0x4F3_INFO   1
+#define CANIF_PDU_ID_0x408_INFO   2
+#define CANIF_PDU_ID_0x376_INFO   3
+#define CANIF_PDU_ID_0x096_INFO   4
+#define CANIF_PDU_ID_0x075_INFO   5
+#define CANIF_PDU_ID_0x095_INFO   6
+#define CANIF_PDU_ID_0x0A5_INFO   7
+#define CANIF_PDU_ID_0x1D5_INFO   8
+#define CANIF_PDU_ID_0x065_INFO   9
+#define CANIF_PDU_ID_0x105_INFO   10
+#define CANIF_PDU_ID_0x098_INFO   11
+#define CANIF_PDU_ID_0x093_INFO   12
+#define CANIF_PDU_ID_0x0C5_INFO   13
+#define CANIF_PDU_ID_0x3A0_INFO   14
+#define CANIF_PDU_ID_0x0C6_INFO   15
+#define CANIF_PDU_ID_0x3D2_INFO   16
+#define CANIF_PDU_ID_0x0F5_INFO   17
+#define CANIF_PDU_ID_0x31C_INFO   18
+#define CANIF_PDU_ID_0x31D_INFO   19
+#define CANIF_PDU_ID_0x325_INFO   20
+#define CANIF_PDU_ID_0x328_INFO   21
+#define CANIF_PDU_ID_0x33A_INFO   22
+#define CANIF_PDU_ID_0x33B_INFO   23
+#define CANIF_PDU_ID_0x34A_INFO   24
+#define CANIF_PDU_ID_0x34B_INFO   25
+#define CANIF_PDU_ID_0x33D_INFO   26
+#define CANIF_PDU_ID_0x33E_INFO   27
+#define CANIF_PDU_ID_0x052_INFO   28
+#define CANIF_PDU_ID_0x5FD_INFO   29
+#define CANIF_PDU_ID_0x3F2_INFO   30
+#define CANIF_PDU_ID_0x3F8_INFO   31
+#define CANIF_PDU_ID_0x4F4_INFO   32
+#define CANIF_PDU_ID_0x571_INFO   33
+#define CANIF_PDU_ID_0x570_INFO   34
+#define CANIF_PDU_ID_0x2F2_INFO   35
+#define CANIF_PDU_ID_0x3F7_INFO   36
+#define CANIF_PDU_ID_0x482_INFO   37
+#define CANIF_PDU_ID_0x491_INFO   38
+#define CANIF_PDU_ID_0x492_INFO   39
+#define CANIF_PDU_ID_0x493_INFO   40
+#define CANIF_PDU_ID_0x494_INFO   41
+#define CANIF_PDU_ID_0x495_INFO   42
+#define CANIF_PDU_ID_0x496_INFO   43
+#define CANIF_PDU_ID_0x5F0_INFO   44
+#define CANIF_PDU_ID_0x4A2_INFO   45
+#define CANIF_PDU_ID_0x3B5_INFO   46
+#define CANIF_PDU_ID_0x485_INFO   47
+#define CANIF_PDU_ID_0x486_INFO   48
+#define CANIF_PDU_ID_0x395_INFO   49
+#define CANIF_PDU_ID_0x3C5_INFO   50
+#define CANIF_PDU_ID_0x3A5_INFO   51
+#define CANIF_PDU_ID_0x3E1_INFO   52
+#define CANIF_PDU_ID_0x500_INFO   53
+
+
+#define CANIF_PDU_ID_DIAGFUNCTIONALRX       1
+#define CANIF_PDU_ID_DIAGPHYSICALRX         0
+#define CANIF_PDU_ID_0x35F_INFO   2
+#define CANIF_PDU_ID_0x514_INFO   3
+#define CANIF_PDU_ID_0x574_INFO   4
+#define CANIF_PDU_ID_0x561_INFO   5
+#define CANIF_PDU_ID_0x351_INFO   6
+#define CANIF_PDU_ID_0x111_INFO   7
+#define CANIF_PDU_ID_0x387_INFO   8
+#define CANIF_PDU_ID_0x407_INFO   9
+#define CANIF_PDU_ID_0x38D_INFO   10
+#define CANIF_PDU_ID_0x309_INFO   11
+#define CANIF_PDU_ID_0x38A_INFO   12
+#define CANIF_PDU_ID_0x304_INFO   13
+#define CANIF_PDU_ID_0x331_INFO   14
+#define CANIF_PDU_ID_0x301_INFO   15
+#define CANIF_PDU_ID_0x330_INFO   16
+#define CANIF_PDU_ID_0x3A4_INFO   17
+#define CANIF_PDU_ID_0x3A1_INFO   18
+#define CANIF_PDU_ID_0x124_INFO   19
+#define CANIF_PDU_ID_0x144_INFO   20
+#define CANIF_PDU_ID_0x142_INFO   21
+#define CANIF_PDU_ID_0x122_INFO   22
+#define CANIF_PDU_ID_0x212_INFO   23
+#define CANIF_PDU_ID_0x2A2_INFO   24
+#define CANIF_PDU_ID_0x252_INFO   25
+#define CANIF_PDU_ID_0x3FB_INFO   26
+#define CANIF_PDU_ID_0x272_INFO   27
+#define CANIF_PDU_ID_0x282_INFO   28
+#define CANIF_PDU_ID_0x2C2_INFO   29
+#define CANIF_PDU_ID_0x219_INFO   30
+#define CANIF_PDU_ID_0x239_INFO   31
+#define CANIF_PDU_ID_0x349_INFO   32
+#define CANIF_PDU_ID_0x369_INFO   33
+#define CANIF_PDU_ID_0x34E_INFO   34
+#define CANIF_PDU_ID_0x34F_INFO   35
+#define CANIF_PDU_ID_0x355_INFO   36
+#define CANIF_PDU_ID_0x356_INFO   37
+#define CANIF_PDU_ID_0x21A_INFO   38
+#define CANIF_PDU_ID_0x35A_INFO   39
+#define CANIF_PDU_ID_0x359_INFO   40
+#define CANIF_PDU_ID_0x35D_INFO   41
+#define CANIF_PDU_ID_0x22B_INFO   42
+#define CANIF_PDU_ID_0x380_INFO   43
+#define CANIF_PDU_ID_0x35B_INFO   44
+#define CANIF_PDU_ID_0x3B1_INFO   45
+#define CANIF_PDU_ID_0x347_INFO   46
+#define CANIF_PDU_ID_0x375_INFO   47
+#define CANIF_PDU_ID_0x360_INFO   48
+#define CANIF_PDU_ID_0x3B6_INFO   49
+#define CANIF_PDU_ID_0x386_INFO   50
+#define CANIF_PDU_ID_0x2A1_INFO   51
+#define CANIF_PDU_ID_0x3C1_INFO   52
+#define CANIF_PDU_ID_0x3C2_INFO   53
+#define CANIF_PDU_ID_0x305_INFO   54
+#define CANIF_PDU_ID_0x411_INFO   55
+#define CANIF_PDU_ID_0x421_INFO   56
+#define CANIF_PDU_ID_0x2C1_INFO   57
+#define CANIF_PDU_ID_0x3D1_INFO   58
+#define CANIF_PDU_ID_0x5C3_INFO   59
+#define CANIF_PDU_ID_0x32A_INFO   60
+#define CANIF_PDU_ID_0x394_INFO   61
+#define CANIF_PDU_ID_0x335_INFO   62
+#define CANIF_PDU_ID_0x3D5_INFO   63
+#define CANIF_PDU_ID_0x3D6_INFO   64
+#define CANIF_PDU_ID_0x3D4_INFO   65
+#define CANIF_PDU_ID_0x318_INFO   66
+#define CANIF_PDU_ID_0x31A_INFO   67
+#define CANIF_PDU_ID_0x0A8_INFO   68
+#define CANIF_PDU_ID_0x3C6_INFO   69
+#define CANIF_PDU_ID_0x3C7_INFO   70
+#define CANIF_PDU_ID_0x3C8_INFO   71
+#define CANIF_PDU_ID_0x3C9_INFO   72
+#define CANIF_PDU_ID_0x3CA_INFO   73
+#define CANIF_PDU_ID_0x3CB_INFO   74
+#define CANIF_PDU_ID_0x3CC_INFO   75
+#define CANIF_PDU_ID_0x3CD_INFO   76
+#define CANIF_PDU_ID_0x3DE_INFO   77
+#define CANIF_PDU_ID_0x31E_INFO   78
+#define CANIF_PDU_ID_0x3AE_INFO   79
+#define CANIF_PDU_ID_0x3BE_INFO   80
+#define CANIF_PDU_ID_0x37E_INFO   81
+#define CANIF_PDU_ID_0x223_INFO   82
+#define CANIF_PDU_ID_0x353_INFO   83
+#define CANIF_PDU_ID_0x24E_INFO   84
+#define CANIF_PDU_ID_0x3CE_INFO   85
+#define CANIF_PDU_ID_0x3AD_INFO   86
+#define CANIF_PDU_ID_0x484_INFO   87
+#define CANIF_PDU_ID_0x3FA_INFO   88
+#define CANIF_PDU_ID_0x0A9_INFO   89
+#define CANIF_PDU_ID_0x498_INFO   90
+#define CANIF_PDU_ID_0x4F5_INFO   91
+#define CANIF_PDU_ID_0x35E_INFO   92
+#define CANIF_PDU_ID_0x400_INFO   93
+
+
+extern uint16_t gcanif_num_rx_lpdu;
+extern uint16_t gcanif_num_tx_lpdu;
+#endif
+

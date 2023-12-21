@@ -75,3 +75,12 @@ ivi_passengerTempCSet
 ivi_hvacAutoModeReq
 ivi_hvacRecircModeReq
 ivi_hvacDefrostMode
+IVI_drSeatRouteSet
+IVI_drSeatbackrestSet
+IVI_drSeatCushionSet
+IVI_drSeatCushionAngleSet
+IVI_LmirrorUDSet
+IVI_LmirrorLRSet
+IVI_RmirrorUDSet
+IVI_RmirrorLRSet
+IVI_DSMChargeCtrl

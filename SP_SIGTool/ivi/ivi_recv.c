@@ -85,6 +85,15 @@ extern const uint8_t Com_SignalInitValue_ivi_pcwOnOffSet_0x065_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_TJAFuncSet_0x065_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_esc_epbButtonRelease_0x065_INFO_Message;
 extern const uint8_t Com_SignalInitValue_IVI_SterringWheelHeatSw_0x105_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_drSeatRouteSet_0x098_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_drSeatbackrestSet_0x098_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_drSeatCushionSet_0x098_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_drSeatCushionAngleSet_0x098_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_LmirrorUDSet_0x098_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_LmirrorLRSet_0x098_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_RmirrorUDSet_0x098_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_RmirrorLRSet_0x098_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_DSMChargeCtrl_0x098_INFO_Message;
 extern const uint8_t Com_SignalInitValue_IVI_RearseatbeltVoiceWarningSet_0x0C5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_hudOnOffSet_0x0C5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_pdcOnOffSet_0x0C5_INFO_Message;
@@ -1079,15 +1088,33 @@ void setSignal_IVI_dsmmSet(uint8_t *sigbuff, uint8_t len)
     }
     memcpy(((uint8_t*)&p_IVI_dsmmSet_st) + 4, sigbuff, len);
 
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet_ComIn_VeCAN_IVI_drSeatRouteSet(&p_IVI_dsmmSet_st.IVI_drSeatRouteSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet_ComIn_VeCAN_IVI_drSeatbackrestSet(&p_IVI_dsmmSet_st.IVI_drSeatbackrestSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet_ComIn_VeCAN_IVI_drSeatCushionSet(&p_IVI_dsmmSet_st.IVI_drSeatCushionSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet_ComIn_VeCAN_IVI_drSeatCushionAngleSet(&p_IVI_dsmmSet_st.IVI_drSeatCushionAngleSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet_ComIn_VeCAN_IVI_LmirrorUDSet(&p_IVI_dsmmSet_st.IVI_LmirrorUDSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet_ComIn_VeCAN_IVI_LmirrorLRSet(&p_IVI_dsmmSet_st.IVI_LmirrorLRSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet_ComIn_VeCAN_IVI_RmirrorUDSet(&p_IVI_dsmmSet_st.IVI_RmirrorUDSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet_ComIn_VeCAN_IVI_RmirrorLRSet(&p_IVI_dsmmSet_st.IVI_RmirrorLRSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet_ComIn_VeCAN_IVI_DSMChargeCtrl(&p_IVI_dsmmSet_st.IVI_DSMChargeCtrl);
+    if(p_IVI_dsmmSet_st.IVI_drSeatRouteSet != Com_SignalInitValue_IVI_drSeatRouteSet_0x098_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet_ComIn_VeCAN_IVI_drSeatRouteSet(&p_IVI_dsmmSet_st.IVI_drSeatRouteSet);
+    }
+    if(p_IVI_dsmmSet_st.IVI_drSeatbackrestSet != Com_SignalInitValue_IVI_drSeatbackrestSet_0x098_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet_ComIn_VeCAN_IVI_drSeatbackrestSet(&p_IVI_dsmmSet_st.IVI_drSeatbackrestSet);
+    }
+    if(p_IVI_dsmmSet_st.IVI_drSeatCushionSet != Com_SignalInitValue_IVI_drSeatCushionSet_0x098_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet_ComIn_VeCAN_IVI_drSeatCushionSet(&p_IVI_dsmmSet_st.IVI_drSeatCushionSet);
+    }
+    if(p_IVI_dsmmSet_st.IVI_drSeatCushionAngleSet != Com_SignalInitValue_IVI_drSeatCushionAngleSet_0x098_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet_ComIn_VeCAN_IVI_drSeatCushionAngleSet(&p_IVI_dsmmSet_st.IVI_drSeatCushionAngleSet);
+    }
+    if(p_IVI_dsmmSet_st.IVI_LmirrorUDSet != Com_SignalInitValue_IVI_LmirrorUDSet_0x098_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet_ComIn_VeCAN_IVI_LmirrorUDSet(&p_IVI_dsmmSet_st.IVI_LmirrorUDSet);
+    }
+    if(p_IVI_dsmmSet_st.IVI_LmirrorLRSet != Com_SignalInitValue_IVI_LmirrorLRSet_0x098_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet_ComIn_VeCAN_IVI_LmirrorLRSet(&p_IVI_dsmmSet_st.IVI_LmirrorLRSet);
+    }
+    if(p_IVI_dsmmSet_st.IVI_RmirrorUDSet != Com_SignalInitValue_IVI_RmirrorUDSet_0x098_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet_ComIn_VeCAN_IVI_RmirrorUDSet(&p_IVI_dsmmSet_st.IVI_RmirrorUDSet);
+    }
+    if(p_IVI_dsmmSet_st.IVI_RmirrorLRSet != Com_SignalInitValue_IVI_RmirrorLRSet_0x098_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet_ComIn_VeCAN_IVI_RmirrorLRSet(&p_IVI_dsmmSet_st.IVI_RmirrorLRSet);
+    }
+    if(p_IVI_dsmmSet_st.IVI_DSMChargeCtrl != Com_SignalInitValue_IVI_DSMChargeCtrl_0x098_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet_ComIn_VeCAN_IVI_DSMChargeCtrl(&p_IVI_dsmmSet_st.IVI_DSMChargeCtrl);
+    }
 
     if (bResult != RTE_SIG_OK) {
         SystemApiLogPrintf(LOG_ERROR_OUTPUT,"setSignal_IVI_dsmmSet error bResult:0x%x\r\n", bResult);

@@ -922,6 +922,168 @@ void SpecialSignalProcessing(PduIdType PduId)
                 }
             }
 #endif
+#ifdef COMCONF_COMSIGNAL_IVI_DRSEATROUTESET_0X098_INFO
+            else if(IPdu->ComIPduSignalRef[i]->ComHandleId == COMCONF_COMSIGNAL_IVI_DRSEATROUTESET_0X098_INFO)
+            {
+                eventSendCnt[E_IVI_DRSEATROUTESET_0X098_INFO] += 1;
+                if (eventSendCnt[E_IVI_DRSEATROUTESET_0X098_INFO] >= SENT_CNT_TO_RESET) {
+                Com_Misc_WriteSignalDataToPdu(
+                    IPdu->ComIPduSignalRef[i]->ComSignalInitValue,
+                    IPdu->ComIPduSignalRef[i]->ComSignalType,
+                    As_IPdu->ComIPduDataPtr,
+                    IPdu->ComIPduSignalRef[i]->ComBitPosition,
+                    IPdu->ComIPduSignalRef[i]->ComBitSize,
+                    IPdu->ComIPduSignalRef[i]->ComSignalEndianess,
+                    &signalChanged);
+                    As_Signal->ComSignalUpdated = FALSE;
+                    eventSendCnt[E_IVI_DRSEATROUTESET_0X098_INFO] = 0;
+                }
+            }
+#endif
+#ifdef COMCONF_COMSIGNAL_IVI_DRSEATBACKRESTSET_0X098_INFO
+            else if(IPdu->ComIPduSignalRef[i]->ComHandleId == COMCONF_COMSIGNAL_IVI_DRSEATBACKRESTSET_0X098_INFO)
+            {
+                eventSendCnt[E_IVI_DRSEATBACKRESTSET_0X098_INFO] += 1;
+                if (eventSendCnt[E_IVI_DRSEATBACKRESTSET_0X098_INFO] >= SENT_CNT_TO_RESET) {
+                Com_Misc_WriteSignalDataToPdu(
+                    IPdu->ComIPduSignalRef[i]->ComSignalInitValue,
+                    IPdu->ComIPduSignalRef[i]->ComSignalType,
+                    As_IPdu->ComIPduDataPtr,
+                    IPdu->ComIPduSignalRef[i]->ComBitPosition,
+                    IPdu->ComIPduSignalRef[i]->ComBitSize,
+                    IPdu->ComIPduSignalRef[i]->ComSignalEndianess,
+                    &signalChanged);
+                    As_Signal->ComSignalUpdated = FALSE;
+                    eventSendCnt[E_IVI_DRSEATBACKRESTSET_0X098_INFO] = 0;
+                }
+            }
+#endif
+#ifdef COMCONF_COMSIGNAL_IVI_DRSEATCUSHIONSET_0X098_INFO
+            else if(IPdu->ComIPduSignalRef[i]->ComHandleId == COMCONF_COMSIGNAL_IVI_DRSEATCUSHIONSET_0X098_INFO)
+            {
+                eventSendCnt[E_IVI_DRSEATCUSHIONSET_0X098_INFO] += 1;
+                if (eventSendCnt[E_IVI_DRSEATCUSHIONSET_0X098_INFO] >= SENT_CNT_TO_RESET) {
+                Com_Misc_WriteSignalDataToPdu(
+                    IPdu->ComIPduSignalRef[i]->ComSignalInitValue,
+                    IPdu->ComIPduSignalRef[i]->ComSignalType,
+                    As_IPdu->ComIPduDataPtr,
+                    IPdu->ComIPduSignalRef[i]->ComBitPosition,
+                    IPdu->ComIPduSignalRef[i]->ComBitSize,
+                    IPdu->ComIPduSignalRef[i]->ComSignalEndianess,
+                    &signalChanged);
+                    As_Signal->ComSignalUpdated = FALSE;
+                    eventSendCnt[E_IVI_DRSEATCUSHIONSET_0X098_INFO] = 0;
+                }
+            }
+#endif
+#ifdef COMCONF_COMSIGNAL_IVI_DRSEATCUSHIONANGLESET_0X098_INFO
+            else if(IPdu->ComIPduSignalRef[i]->ComHandleId == COMCONF_COMSIGNAL_IVI_DRSEATCUSHIONANGLESET_0X098_INFO)
+            {
+                eventSendCnt[E_IVI_DRSEATCUSHIONANGLESET_0X098_INFO] += 1;
+                if (eventSendCnt[E_IVI_DRSEATCUSHIONANGLESET_0X098_INFO] >= SENT_CNT_TO_RESET) {
+                Com_Misc_WriteSignalDataToPdu(
+                    IPdu->ComIPduSignalRef[i]->ComSignalInitValue,
+                    IPdu->ComIPduSignalRef[i]->ComSignalType,
+                    As_IPdu->ComIPduDataPtr,
+                    IPdu->ComIPduSignalRef[i]->ComBitPosition,
+                    IPdu->ComIPduSignalRef[i]->ComBitSize,
+                    IPdu->ComIPduSignalRef[i]->ComSignalEndianess,
+                    &signalChanged);
+                    As_Signal->ComSignalUpdated = FALSE;
+                    eventSendCnt[E_IVI_DRSEATCUSHIONANGLESET_0X098_INFO] = 0;
+                }
+            }
+#endif
+#ifdef COMCONF_COMSIGNAL_IVI_LMIRRORUDSET_0X098_INFO
+            else if(IPdu->ComIPduSignalRef[i]->ComHandleId == COMCONF_COMSIGNAL_IVI_LMIRRORUDSET_0X098_INFO)
+            {
+                eventSendCnt[E_IVI_LMIRRORUDSET_0X098_INFO] += 1;
+                if (eventSendCnt[E_IVI_LMIRRORUDSET_0X098_INFO] >= SENT_CNT_TO_RESET) {
+                Com_Misc_WriteSignalDataToPdu(
+                    IPdu->ComIPduSignalRef[i]->ComSignalInitValue,
+                    IPdu->ComIPduSignalRef[i]->ComSignalType,
+                    As_IPdu->ComIPduDataPtr,
+                    IPdu->ComIPduSignalRef[i]->ComBitPosition,
+                    IPdu->ComIPduSignalRef[i]->ComBitSize,
+                    IPdu->ComIPduSignalRef[i]->ComSignalEndianess,
+                    &signalChanged);
+                    As_Signal->ComSignalUpdated = FALSE;
+                    eventSendCnt[E_IVI_LMIRRORUDSET_0X098_INFO] = 0;
+                }
+            }
+#endif
+#ifdef COMCONF_COMSIGNAL_IVI_LMIRRORLRSET_0X098_INFO
+            else if(IPdu->ComIPduSignalRef[i]->ComHandleId == COMCONF_COMSIGNAL_IVI_LMIRRORLRSET_0X098_INFO)
+            {
+                eventSendCnt[E_IVI_LMIRRORLRSET_0X098_INFO] += 1;
+                if (eventSendCnt[E_IVI_LMIRRORLRSET_0X098_INFO] >= SENT_CNT_TO_RESET) {
+                Com_Misc_WriteSignalDataToPdu(
+                    IPdu->ComIPduSignalRef[i]->ComSignalInitValue,
+                    IPdu->ComIPduSignalRef[i]->ComSignalType,
+                    As_IPdu->ComIPduDataPtr,
+                    IPdu->ComIPduSignalRef[i]->ComBitPosition,
+                    IPdu->ComIPduSignalRef[i]->ComBitSize,
+                    IPdu->ComIPduSignalRef[i]->ComSignalEndianess,
+                    &signalChanged);
+                    As_Signal->ComSignalUpdated = FALSE;
+                    eventSendCnt[E_IVI_LMIRRORLRSET_0X098_INFO] = 0;
+                }
+            }
+#endif
+#ifdef COMCONF_COMSIGNAL_IVI_RMIRRORUDSET_0X098_INFO
+            else if(IPdu->ComIPduSignalRef[i]->ComHandleId == COMCONF_COMSIGNAL_IVI_RMIRRORUDSET_0X098_INFO)
+            {
+                eventSendCnt[E_IVI_RMIRRORUDSET_0X098_INFO] += 1;
+                if (eventSendCnt[E_IVI_RMIRRORUDSET_0X098_INFO] >= SENT_CNT_TO_RESET) {
+                Com_Misc_WriteSignalDataToPdu(
+                    IPdu->ComIPduSignalRef[i]->ComSignalInitValue,
+                    IPdu->ComIPduSignalRef[i]->ComSignalType,
+                    As_IPdu->ComIPduDataPtr,
+                    IPdu->ComIPduSignalRef[i]->ComBitPosition,
+                    IPdu->ComIPduSignalRef[i]->ComBitSize,
+                    IPdu->ComIPduSignalRef[i]->ComSignalEndianess,
+                    &signalChanged);
+                    As_Signal->ComSignalUpdated = FALSE;
+                    eventSendCnt[E_IVI_RMIRRORUDSET_0X098_INFO] = 0;
+                }
+            }
+#endif
+#ifdef COMCONF_COMSIGNAL_IVI_RMIRRORLRSET_0X098_INFO
+            else if(IPdu->ComIPduSignalRef[i]->ComHandleId == COMCONF_COMSIGNAL_IVI_RMIRRORLRSET_0X098_INFO)
+            {
+                eventSendCnt[E_IVI_RMIRRORLRSET_0X098_INFO] += 1;
+                if (eventSendCnt[E_IVI_RMIRRORLRSET_0X098_INFO] >= SENT_CNT_TO_RESET) {
+                Com_Misc_WriteSignalDataToPdu(
+                    IPdu->ComIPduSignalRef[i]->ComSignalInitValue,
+                    IPdu->ComIPduSignalRef[i]->ComSignalType,
+                    As_IPdu->ComIPduDataPtr,
+                    IPdu->ComIPduSignalRef[i]->ComBitPosition,
+                    IPdu->ComIPduSignalRef[i]->ComBitSize,
+                    IPdu->ComIPduSignalRef[i]->ComSignalEndianess,
+                    &signalChanged);
+                    As_Signal->ComSignalUpdated = FALSE;
+                    eventSendCnt[E_IVI_RMIRRORLRSET_0X098_INFO] = 0;
+                }
+            }
+#endif
+#ifdef COMCONF_COMSIGNAL_IVI_DSMCHARGECTRL_0X098_INFO
+            else if(IPdu->ComIPduSignalRef[i]->ComHandleId == COMCONF_COMSIGNAL_IVI_DSMCHARGECTRL_0X098_INFO)
+            {
+                eventSendCnt[E_IVI_DSMCHARGECTRL_0X098_INFO] += 1;
+                if (eventSendCnt[E_IVI_DSMCHARGECTRL_0X098_INFO] >= SENT_CNT_TO_RESET) {
+                Com_Misc_WriteSignalDataToPdu(
+                    IPdu->ComIPduSignalRef[i]->ComSignalInitValue,
+                    IPdu->ComIPduSignalRef[i]->ComSignalType,
+                    As_IPdu->ComIPduDataPtr,
+                    IPdu->ComIPduSignalRef[i]->ComBitPosition,
+                    IPdu->ComIPduSignalRef[i]->ComBitSize,
+                    IPdu->ComIPduSignalRef[i]->ComSignalEndianess,
+                    &signalChanged);
+                    As_Signal->ComSignalUpdated = FALSE;
+                    eventSendCnt[E_IVI_DSMCHARGECTRL_0X098_INFO] = 0;
+                }
+            }
+#endif
 #ifdef COMCONF_COMSIGNAL_IVI_REARSEATBELTVOICEWARNINGSET_0X0C5_INFO
             else if(IPdu->ComIPduSignalRef[i]->ComHandleId == COMCONF_COMSIGNAL_IVI_REARSEATBELTVOICEWARNINGSET_0X0C5_INFO)
             {
@@ -1724,6 +1886,60 @@ void SpecialSignalSend(Com_SignalIdType SignalId, const void *SignalDataPtr, boo
         if(SignalId == COMCONF_COMSIGNAL_IVI_STERRINGWHEELHEATSW_0X105_INFO)
         {
             eventSendCnt[E_IVI_STERRINGWHEELHEATSW_0X105_INFO] = 0;
+        }
+#endif
+#ifdef COMCONF_COMSIGNAL_IVI_DRSEATROUTESET_0X098_INFO
+        if(SignalId == COMCONF_COMSIGNAL_IVI_DRSEATROUTESET_0X098_INFO)
+        {
+            eventSendCnt[E_IVI_DRSEATROUTESET_0X098_INFO] = 0;
+        }
+#endif
+#ifdef COMCONF_COMSIGNAL_IVI_DRSEATBACKRESTSET_0X098_INFO
+        if(SignalId == COMCONF_COMSIGNAL_IVI_DRSEATBACKRESTSET_0X098_INFO)
+        {
+            eventSendCnt[E_IVI_DRSEATBACKRESTSET_0X098_INFO] = 0;
+        }
+#endif
+#ifdef COMCONF_COMSIGNAL_IVI_DRSEATCUSHIONSET_0X098_INFO
+        if(SignalId == COMCONF_COMSIGNAL_IVI_DRSEATCUSHIONSET_0X098_INFO)
+        {
+            eventSendCnt[E_IVI_DRSEATCUSHIONSET_0X098_INFO] = 0;
+        }
+#endif
+#ifdef COMCONF_COMSIGNAL_IVI_DRSEATCUSHIONANGLESET_0X098_INFO
+        if(SignalId == COMCONF_COMSIGNAL_IVI_DRSEATCUSHIONANGLESET_0X098_INFO)
+        {
+            eventSendCnt[E_IVI_DRSEATCUSHIONANGLESET_0X098_INFO] = 0;
+        }
+#endif
+#ifdef COMCONF_COMSIGNAL_IVI_LMIRRORUDSET_0X098_INFO
+        if(SignalId == COMCONF_COMSIGNAL_IVI_LMIRRORUDSET_0X098_INFO)
+        {
+            eventSendCnt[E_IVI_LMIRRORUDSET_0X098_INFO] = 0;
+        }
+#endif
+#ifdef COMCONF_COMSIGNAL_IVI_LMIRRORLRSET_0X098_INFO
+        if(SignalId == COMCONF_COMSIGNAL_IVI_LMIRRORLRSET_0X098_INFO)
+        {
+            eventSendCnt[E_IVI_LMIRRORLRSET_0X098_INFO] = 0;
+        }
+#endif
+#ifdef COMCONF_COMSIGNAL_IVI_RMIRRORUDSET_0X098_INFO
+        if(SignalId == COMCONF_COMSIGNAL_IVI_RMIRRORUDSET_0X098_INFO)
+        {
+            eventSendCnt[E_IVI_RMIRRORUDSET_0X098_INFO] = 0;
+        }
+#endif
+#ifdef COMCONF_COMSIGNAL_IVI_RMIRRORLRSET_0X098_INFO
+        if(SignalId == COMCONF_COMSIGNAL_IVI_RMIRRORLRSET_0X098_INFO)
+        {
+            eventSendCnt[E_IVI_RMIRRORLRSET_0X098_INFO] = 0;
+        }
+#endif
+#ifdef COMCONF_COMSIGNAL_IVI_DSMCHARGECTRL_0X098_INFO
+        if(SignalId == COMCONF_COMSIGNAL_IVI_DSMCHARGECTRL_0X098_INFO)
+        {
+            eventSendCnt[E_IVI_DSMCHARGECTRL_0X098_INFO] = 0;
         }
 #endif
 #ifdef COMCONF_COMSIGNAL_IVI_REARSEATBELTVOICEWARNINGSET_0X0C5_INFO

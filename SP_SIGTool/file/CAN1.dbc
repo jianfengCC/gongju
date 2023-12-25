@@ -66,6 +66,7 @@ BO_ 1377 VCU_range: 8 GW_IF
  SG_ vcu_avgPwr : 0|15@1+ (0.01,-100) [-100|100] "KWh/100km" IVI_IF
  SG_ vcu_alertLevel : 30|2@1+ (1,0) [0|3] "" IVI_IF
  SG_ VCU_chargeFaultReason : 36|4@1+ (1,0) [0|15] "" IVI_IF
+ SG_ VCU_RegenWeakRemind : 48|2@1+ (1,0) [0|3] "" IVI_IF
 
 BO_ 849 VCU_range1: 8 GW_IF
  SG_ vcu_remainingMileage : 0|11@1+ (1,0) [0|2047] "km" IVI_IF
@@ -119,9 +120,18 @@ BO_ 817 VCU_Info: 8 GW_IF
  SG_ VCU_stEgyFlowMcuf0AndBatt : 45|2@1+ (1,0) [0|3] "" IVI_IF
  SG_ VCU_stEgyFlowMcur0AndBatt : 47|2@1+ (1,0) [0|3] "" IVI_IF
  SG_ VCU_IVI_HVDownRepairMode : 49|2@1+ (1,0) [0|3] "" IVI_IF
+ SG_ VCU_LowFuel : 51|1@1+ (1,0) [0|1] "" IVI_IF
  SG_ VCU_LowSOC : 52|1@1+ (1,0) [0|1] "" IVI_IF
  SG_ vcu_obcDschrgAllow : 53|1@1+ (1,0) [0|1] "" IVI_IF
+ SG_ vcu_v2vChrgFdbk : 54|1@1+ (1,0) [0|1] "" IVI_IF
  SG_ vcu_obcDschrgFdbk : 55|1@1+ (1,0) [0|1] "" IVI_IF
+ SG_ vcu_v2vChrgOutCurntFdbk : 56|4@1+ (1,0) [0|15] "A" IVI_IF
+ SG_ VCU_MaxFuelConsumptionSt : 60|1@1+ (1,0) [0|1] "" IVI_IF
+ SG_ VCU_MaxFuelConsumptionModeSt : 61|1@1+ (1,0) [0|1] "" IVI_IF
+ SG_ vcu_RangeExtenderNoSt : 62|1@1+ (1,0) [0|1] "" IVI_IF
+
+BO_ 268 GCU_state: 8 GW_IF
+ SG_ gcu_MotorControlMode : 46|2@1+ (1,0) [0|3] "" IVI_IF
 
 BO_ 2015 Diag_FuncReq: 8 GW_IF
  SG_ Diag_FuncReq_Data : 0|64@1+ (1,0) [0|0] "N/A" IVI_IF,HUD,MFW,HOD,WCM
@@ -142,7 +152,11 @@ BO_ 769 VCU_pwr: 8 GW_IF
  SG_ VCU_SysFaulttext : 61|3@1+ (1,0) [0|7] "" IVI_IF
 
 BO_ 816 VCU_RevV2V: 8 GW_IF
+ SG_ vcu_v2vChrgAllow : 2|1@1+ (1,0) [0|1] "" IVI_IF
+ SG_ vcu_v2vChrgOptVoltg : 3|13@1+ (0.1,0) [0|800] "V" IVI_IF
+ SG_ vcu_v2vChrgOptCurnt : 16|13@1+ (0.1,-400) [-400|400] "A" IVI_IF
  SG_ VCU_InstantaneousPower : 36|10@1+ (1,-500) [-500|523] "KW" IVI_IF
+ SG_ VCU_ConveyerBeltMode : 59|2@1+ (1,0) [0|3] "" IVI_IF
 
 BO_ 932 BMS_ASSt: 8 GW_IF
  SG_ BMS_ThrmlRunawaySt : 0|2@1+ (1,0) [0|3] "" IVI_IF,IC
@@ -157,6 +171,8 @@ BO_ 929 VCU_stateCha1: 8 GW_IF
  SG_ VCU_SuperPowerSavingModeReq : 5|1@1+ (1,0) [0|1] "" IVI_IF
  SG_ VCU_PercentInstantaneousPower : 9|8@1+ (1,-100) [-100|100] "" IVI_IF
  SG_ VCU_SuperPowerSavingModeFaultReason : 17|4@1+ (1,0) [0|15] "" IVI_IF
+ SG_ Vcu_ParkingChargeFB : 23|1@1+ (1,0) [0|1] "" IVI_IF
+ SG_ Vcu_ParkingChargeModFB : 24|2@1+ (1,0) [0|3] "" IVI_IF
  SG_ vcu_towMode : 26|2@1+ (1,0) [0|3] "" IVI_IF
  SG_ vcu_ready : 28|1@1+ (1,0) [0|1] "" IVI_IF
  SG_ vcu_traveModeSts : 29|2@1+ (1,0) [0|3] "" IVI_IF
@@ -164,10 +180,12 @@ BO_ 929 VCU_stateCha1: 8 GW_IF
  SG_ VCU_VehicleRepairModeFB : 32|2@1+ (1,0) [0|3] "" IVI_IF
  SG_ VCU_CampModeSts : 34|3@1+ (1,0) [0|7] "" IVI_IF
  SG_ vcu_RegenModeStatus : 37|3@1+ (1,0) [0|7] "" IVI_IF
+ SG_ VCU_RangeExtenderSt : 40|2@1+ (1,0) [0|3] "" IVI_IF
  SG_ vcu_highVoltageSuccess : 42|3@1+ (1,0) [0|7] "" IVI_IF,MFW
  SG_ vcu_hvOnMode : 48|2@1+ (1,0) [0|3] "" IVI_IF
  SG_ vcu_VehicleMode : 50|2@1+ (1,0) [0|3] "" IVI_IF
  SG_ vcu_memoryStatus : 55|1@1+ (1,0) [0|1] "" IVI_IF
+ SG_ VCU_Eng_SelfShieldStart : 56|1@1+ (1,0) [0|1] "" IVI_IF
  SG_ VCU_TrailerModeSts : 58|2@1+ (1,0) [0|3] "" IVI_IF
  SG_ VCU_ExhibitionRequest : 57|1@1+ (1,0) [0|1] "" IVI_IF
  SG_ vcu_ExhibitionMode : 61|2@1+ (1,0) [0|3] "" IVI_IF,MFW
@@ -420,15 +438,15 @@ BO_ 936 ADS_RPA_3A8: 8 GW_IF
  SG_ vcu_actualGear : 45|2@1+ (1,0) [0|3] "" IVI_IF
 
 BO_ 896 ABM_state: 8 GW_IF
- SG_ acu_warningLampStatus : 0|2@1+ (1,0) [0|3] "" IVI_IF,IC
+ SG_ acu_warningLampStatus : 0|2@1+ (1,0) [0|3] "" IVI_IF
  SG_ acu_crashOutputStatusValid : 2|2@1+ (1,0) [0|3] "" IVI_IF
  SG_ acu_crashOutputStatus : 4|2@1+ (1,0) [0|3] "" IVI_IF
  SG_ acu_driverSeatBeltStatus : 8|1@1+ (1,0) [0|1] "" IVI_IF
  SG_ acu_driverSeatBeltStatusValid : 9|1@1+ (1,0) [0|1] "" IVI_IF
  SG_ acu_passengerSeatBeltStatus : 10|1@1+ (1,0) [0|1] "" IVI_IF
  SG_ acu_passengerSeatBeltStatusValid : 11|1@1+ (1,0) [0|1] "" IVI_IF
- SG_ acu_rollingCounter : 52|4@1+ (1,0) [0|15] "" IVI_IF
- SG_ acu_checksum : 56|8@1+ (1,0) [0|255] "" IVI_IF
+ SG_ acu_rollingCounter_ : 52|4@1+ (1,0) [0|15] "" IVI_IF
+ SG_ acu_checksum_ : 56|8@1+ (1,0) [0|255] "" IVI_IF
  SG_ ABM_PassAirbSuppressionSt : 6|1@1+ (1,0) [0|1] "" IVI_IF
 
 BO_ 859 APA_35B: 8 GW_IF
@@ -507,6 +525,7 @@ BO_ 691 ADS_FunctionSt_2B3: 8 GW_IF
  SG_ ADS_SpeedAutoFollow : 47|3@1+ (1,0) [0|7] "" IVI_IF,HUD
  SG_ ADS_OneTouchSpeedAdjustment : 50|3@1+ (1,0) [0|7] "" IVI_IF,HUD
  SG_ ADS_TimeGapAdjustment : 53|3@1+ (1,0) [0|7] "" IVI_IF,HUD
+ SG_ ADS_HMAFunctionStatus : 56|3@1+ (1,0) [0|7] "" IVI_IF
  SG_ ADS_DriverSetSpeedDisplay : 59|3@1+ (1,0) [0|7] "" IVI_IF,HUD
 
 BO_ 693 ADS_FunctionSt_2B5: 8 GW_IF
@@ -575,6 +594,10 @@ BO_ 710 ADS_HMI_2C6: 8 GW_IF
  SG_ ADS_EthSignalState : 16|2@1+ (1,0) [0|3] "" IVI_IF
  SG_ ADS_EthPdcSignalState : 18|2@1+ (1,0) [0|3] "" IVI_IF
 
+BO_ 778 ADS_DisState_30A: 8 GW_IF
+ SG_ ADS_RAEBSts : 31|3@1+ (1,0) [0|7] "" IVI_IF
+ SG_ ADS_SLAWarnMode : 46|3@1+ (1,0) [0|7] "" IVI_IF
+
 BO_ 781 ADS_APAState_30D: 8 GW_IF
  SG_ ADS_RPAFuncSts : 0|3@1+ (1,0) [0|7] "" IVI_IF
  SG_ ADS_AVMRotationAngle_X : 3|9@1+ (1,0) [0|511] "" IVI_IF
@@ -629,18 +652,18 @@ BO_ 775 ADS_FunctionSt_307: 8 GW_IF
  SG_ ADS_APAViewSts : 0|3@1+ (1,0) [0|7] "" IVI_IF
  SG_ ADS_AVMViewSts : 3|4@1+ (1,0) [0|15] "" IVI_IF
  SG_ ADS_APAFuncType : 7|3@1+ (1,0) [0|7] "" IVI_IF
- SG_ ADS_VehParkModeAvil : 10|2@1+ (1,0) [0|3] "" IVI_IF
  SG_ ADS_APAParkInTypeSel : 12|2@1+ (1,0) [0|3] "" IVI_IF
  SG_ ADS_APACustomizeSlotFB : 14|2@1+ (1,0) [0|3] "" IVI_IF
  SG_ ADS_RpaApaSwitchFB : 16|2@1+ (1,0) [0|3] "" IVI_IF
  SG_ ADS_APAUIFuncSts : 18|4@1+ (1,0) [0|15] "" IVI_IF
  SG_ ADS_ParkSpcGrdLockSts : 22|2@1+ (1,0) [0|3] "" IVI_IF
  SG_ ADS_AVMSideViewSts : 24|2@1+ (1,0) [0|3] "" IVI_IF
- SG_ ADS_APACustomizedSlotSt : 26|1@1+ (1,0) [0|1] "" IVI_IF
  SG_ ADS_ParkFRmngDst : 27|9@1+ (0.1,0) [0|511] "m" IVI_IF
  SG_ ADS_ParkRRmngDst : 36|9@1+ (0.1,0) [0|511] "m" IVI_IF
  SG_ ADS_FrontPDCAlarmSts : 45|2@1+ (1,0) [0|3] "" IVI_IF
  SG_ ADS_PDCMuteSts : 47|2@1+ (1,0) [0|3] "" IVI_IF
+ SG_ ADS_APACustomizedSlotSt : 49|2@1+ (1,0) [0|3] "" IVI_IF
+ SG_ ADS_VehParkModeAvil : 51|3@1+ (1,0) [0|3] "" IVI_IF
 
 BO_ 795 ADS_FunctionSt_31B: 8 GW_IF
  SG_ ADS_APAToastID : 0|16@1+ (1,0) [0|65535] "" IVI_IF
@@ -689,9 +712,9 @@ BO_ 1032 IVI_SLA_408: 8 IVI_IF
  SG_ IVI_ModeSuppressSts : 38|2@1+ (1,0) [0|3] "" GW_IF
  SG_ IVI_UserClass : 40|2@1+ (1,0) [0|3] "" GW_IF
  SG_ IVI_AutoRainWiperReq : 47|2@1+ (1,0) [0|3] "" GW_IF
+ SG_ IVI_VehiclePosition : 50|2@1+ (1,0) [0|3] "" GW_IF
  SG_ IVI_AccountLoginStatus : 52|4@1+ (1,0) [0|15] "" GW_IF
  SG_ ivi_languageSet1 : 56|7@1+ (1,0) [0|255] "" GW_IF
- SG_ IVI_VehiclePosition : 50|2@1+ (1,0) [0|3] "" GW_IF
 
 BO_ 945 VCU_state2: 8 GW_IF
  SG_ VCU_CLTCEvRemainingMileage : 8|11@1+ (1,0) [0|2047] "km" IVI_IF
@@ -800,6 +823,7 @@ BO_ 962 BCM_state3: 8 GW_IF
 
 BO_ 773 BCM_state4: 8 GW_IF
  SG_ bcm_footLightSwitchSts : 5|2@1+ (1,0) [0|3] "" IVI_IF
+ SG_ BCM_HighBeamModel : 8|2@1+ (1,0) [0|3] "" IVI_IF
 
 BO_ 1041 BCM_tpms: 8 GW_IF
  SG_ bcm_tpmsLFStatus : 0|3@1+ (1,0) [0|7] "" IVI_IF
@@ -1018,6 +1042,7 @@ BO_ 165 IVI_pwrSet: 8 IVI_IF
  SG_ ivi_driveModeSet : 61|3@1+ (1,0) [0|7] "" GW_IF
 
 BO_ 469 IVI_chassisSet1: 8 IVI_IF
+ SG_ ivi_PreRefuelCtrl : 0|2@1+ (1,0) [0|3] "" GW_IF
  SG_ ivi_EmergencyHvOffRequestReserved : 24|1@1+ (1,0) [0|1] "" GW_IF
  SG_ ivi_ExhibitionModeCtrl : 25|2@1+ (1,0) [0|3] "" GW_IF
  SG_ ivi_DCDCAutoChargeSet : 27|2@1+ (1,0) [0|3] "" GW_IF
@@ -1106,6 +1131,7 @@ BO_ 105 IVI_ACCSet_069: 8 IVI_IF
  SG_ IVI_StartRemFuncSet : 39|2@1+ (1,0) [0|3] "" GW_IF
  SG_ IVI_AdsVoiceBroadcastTypeSet : 41|2@1+ (1,0) [0|3] "" GW_IF
  SG_ IVI_HmaFuncSet : 43|2@1+ (1,0) [0|3] "" GW_IF
+ SG_ IVI_SLAWarnModeSet : 45|2@1+ (1,0) [0|3] "" GW_IF
 
 BO_ 104 IVI_AVMSet_068: 8 IVI_IF
  SG_ IVI_AVMRotationAngle_X : 0|9@1+ (1,-180) [-180|331] "" GW_IF
@@ -1154,7 +1180,7 @@ BO_ 197 IVI_infoSet: 8 IVI_IF
  SG_ IVI_PEBSVoiceWarningSet : 18|2@1+ (1,0) [0|3] "" GW_IF
  SG_ ivi_NaviSwitchReserved : 20|1@1+ (1,0) [0|1] "" GW_IF
  SG_ ivi_themeSetReserved : 21|3@1+ (1,0) [0|7] "" GW_IF
- SG_ ivi_wcmLeftOnOffSet : 24|2@1+ (1,0) [0|3] "" WCM,GW_IF
+ SG_ ivi_wcmOnOffSet : 24|2@1+ (1,0) [0|3] "" WCM,GW_IF
  SG_ ivi_pdcOnOffSet : 26|2@1+ (1,0) [0|3] "" GW_IF
  SG_ ivi_ICthemegangedSetReserved : 28|2@1+ (1,0) [0|3] "" Vector__XXX
  SG_ IVI_FactoryResetCommand : 30|2@1+ (1,0) [0|3] "" GW_IF
@@ -1656,7 +1682,7 @@ BO_ 851 GW_EPS_state: 8 GW_IF
  SG_ eps_torsionBarTorqueValid : 19|1@1+ (1,0) [0|1] "" IVI_IF
 
 BO_ 590 VCU_stateCha2: 8 GW_IF
- SG_ vcu_brakePedalSts : 14|1@1+ (1,0) [0|1] "" IVI_IF
+ SG_ vcu_brakePedalSts : 14|1@1+ (1,0) [0|1] "" IVI_IF,HOD
  SG_ vcu_brakePedalStsValid : 15|1@1+ (1,0) [0|1] "" IVI_IF
  SG_ vcu_actualGearValid : 16|1@1+ (1,0) [0|1] "" IVI_IF,IC,HUD
  SG_ vcu_actualGear : 18|2@1+ (1,0) [0|3] "" IVI_IF,IC,HUD
@@ -1772,6 +1798,10 @@ BO_ 540 HOD_21C: 8 HOD
  SG_ HOD_Handoffmonitor : 0|2@1+ (1,0) [0|3] "" IVI_IF,GW_IF
  SG_ HOD_HandoffmonitorValid : 2|1@1+ (1,0) [0|1] "" IVI_IF,GW_IF
 
+BO_ 385 IC_info_181: 8 IC
+ SG_ ic_displayFail : 34|1@1+ (1,0) [0|1] "" IVI_IF
+ SG_ ic_IllumiLevelSts : 59|5@1+ (1,0) [0|31] "" IVI_IF
+
 BO_ 754 IC_state: 8 IVI_IF
  SG_ ic_totalMileage : 0|24@1+ (0.1,0) [0|1677721.4] "km" GW_IF
  SG_ ic_RRSeatDetectSts : 27|1@1+ (1,0) [0|1] "" GW_IF
@@ -1860,6 +1890,7 @@ BO_ 1173 IVI_StatusAndNotify: 8 IVI_IF
  SG_ IVI_SentryAlarmSts : 40|2@1+ (1,0) [0|3] "" GW_IF
  SG_ IVI_ModeReq : 42|2@1+ (1,0) [0|3] "" GW_IF
  SG_ IVI_SentryTimeFd : 44|5@1+ (1,0) [0|31] "" GW_IF
+ SG_ IVI_RangeExtenderdisenable : 49|2@1+ (1,0) [0|3] "" GW_IF
  SG_ IVI_ChildrenLeftremindSts : 51|2@1+ (1,0) [0|3] "" GW_IF
  SG_ IVI_PetModeSts : 53|2@1+ (1,0) [0|3] "" GW_IF
  SG_ IVI_SentryFaultReason : 55|5@1+ (1,0) [0|31] "" GW_IF
@@ -2061,6 +2092,7 @@ CM_ SG_ 1396 bms_ChgAmount "单次已充电电量(单次外插充电电量)";
 CM_ SG_ 1377 vcu_avgPwr "平均能耗";
 CM_ SG_ 1377 vcu_alertLevel "故障等级";
 CM_ SG_ 1377 VCU_chargeFaultReason "充电故障反馈";
+CM_ SG_ 1377 VCU_RegenWeakRemind "能量回收回收减弱提示";
 CM_ SG_ 849 vcu_remainingMileage "剩余里程WLTC（EV车型为CLTC续航里程）";
 CM_ SG_ 849 vcu_ComprehensiveRemainingMileage "综合工况剩余续航里程";
 CM_ SG_ 849 vcu_SysAlertLevel "系统故障等级";
@@ -2098,12 +2130,24 @@ VCU能量流来源于发动机";
 CM_ SG_ 817 VCU_stEgyFlowMcuf0AndBatt "前电机能量状态";
 CM_ SG_ 817 VCU_stEgyFlowMcur0AndBatt "后电机能量状态";
 CM_ SG_ 817 VCU_IVI_HVDownRepairMode "断高压进入维修模式反馈";
+CM_ SG_ 817 VCU_LowFuel "油量低提示
+V2V功能停止或禁用时不可用";
 CM_ SG_ 817 VCU_LowSOC "电量低提示
 V2V功能停止或禁用时不可用";
 CM_ SG_ 817 vcu_obcDschrgAllow "OBCdischargingallowsflag
 OBC互充允许标志位";
+CM_ SG_ 817 vcu_v2vChrgFdbk "V2Vchargingfeedbackflag
+V2V充电反馈标志位";
 CM_ SG_ 817 vcu_obcDschrgFdbk "OBCdischargingfeedbackflag
 OBC互充反馈标志位";
+CM_ SG_ 817 vcu_v2vChrgOutCurntFdbk "V2Vchargingoutputcurrentfeedback
+V2V互充输出电流反馈";
+CM_ SG_ 817 VCU_MaxFuelConsumptionSt "Maximumfuelconsumptionstatus
+最大燃料消耗状态";
+CM_ SG_ 817 VCU_MaxFuelConsumptionModeSt "Maximumfuelconsumptionmodestatus
+最大燃料消耗模式状态燃油检测开关";
+CM_ SG_ 817 vcu_RangeExtenderNoSt "RangeExtenderNotStart增程器未启动";
+CM_ SG_ 268 gcu_MotorControlMode "gcu_MotorControlMode";
 CM_ SG_ 2015 Diag_FuncReq_Data "Diag_FuncReq_Data";
 CM_ SG_ 1267 ic_avgSpdTripB "Averagevehiclespeedsincetripmeterreset.
 小计里程B平均车速";
@@ -2123,7 +2167,14 @@ CM_ SG_ 769 vcu_avgPwroftripB "AveragePoweroftripB
 CM_ SG_ 769 vcu_lowSocwarming "lowSocwarming
 动力电池电量低报警";
 CM_ SG_ 769 VCU_SysFaulttext "VCU系统故障文本提示";
+CM_ SG_ 816 vcu_v2vChrgAllow "V2Vchargingallowsflag
+V2V充电允许标志位";
+CM_ SG_ 816 vcu_v2vChrgOptVoltg "V2Vchargingoutputvoltage
+V2V充电输出电压";
+CM_ SG_ 816 vcu_v2vChrgOptCurnt "V2Vchargingoutputcurrent
+V2V充电输出电流";
 CM_ SG_ 816 VCU_InstantaneousPower "驱动系统瞬时功率值";
+CM_ SG_ 816 VCU_ConveyerBeltMode "VCU传送带洗车模式";
 CM_ SG_ 932 BMS_ThrmlRunawaySt "热失控状态";
 CM_ SG_ 932 BMS_ThrmlForecastersSt "烟雾传感器预警状态";
 CM_ SG_ 932 BMS_AcFullChargeToWarmState "交流充电满阈值保温模式状态";
@@ -2134,6 +2185,8 @@ CM_ SG_ 929 VCU_SuperPowerSavingModeSt "VCU 超级省电模式状态";
 CM_ SG_ 929 VCU_SuperPowerSavingModeReq "VCU 超级省电模式进入请求";
 CM_ SG_ 929 VCU_PercentInstantaneousPower "驱动系统瞬时功率百分比";
 CM_ SG_ 929 VCU_SuperPowerSavingModeFaultReason "VCU 超级省电模式失败原因";
+CM_ SG_ 929 Vcu_ParkingChargeFB "驻车充电请求开关反馈";
+CM_ SG_ 929 Vcu_ParkingChargeModFB "驻车充电模式反馈";
 CM_ SG_ 929 vcu_towMode "被拖模式";
 CM_ SG_ 929 vcu_ready "Powertrainready.
 Ready状态";
@@ -2142,11 +2195,13 @@ CM_ SG_ 929 vcu_highVoltagefaultSts "高压异常状态标志位";
 CM_ SG_ 929 VCU_VehicleRepairModeFB "维修模式模式反馈";
 CM_ SG_ 929 VCU_CampModeSts "露营模式状态反馈";
 CM_ SG_ 929 vcu_RegenModeStatus "Energyrecoveryonoffstatus";
+CM_ SG_ 929 VCU_RangeExtenderSt "增程器状态";
 CM_ SG_ 929 vcu_highVoltageSuccess "Highvoltagestatus.
 高压状态";
 CM_ SG_ 929 vcu_hvOnMode "高压模式本地或远程";
 CM_ SG_ 929 vcu_VehicleMode "Vehiclemodestatus";
 CM_ SG_ 929 vcu_memoryStatus "VCU记忆状态";
+CM_ SG_ 929 VCU_Eng_SelfShieldStart "发动机30天自保护启动标志";
 CM_ SG_ 929 VCU_TrailerModeSts "拖挂模式状态";
 CM_ SG_ 929 VCU_ExhibitionRequest "展车模式请求";
 CM_ SG_ 929 vcu_ExhibitionMode "展车模式状态反馈";
@@ -2441,8 +2496,8 @@ CM_ SG_ 896 acu_passengerSeatBeltStatus "Passengerseatbeltstatus
 副驾安全带状态";
 CM_ SG_ 896 acu_passengerSeatBeltStatusValid "Passengerseatbeltstatusvalidsignal
 副驾安全带状态有效位";
-CM_ SG_ 896 acu_rollingCounter "acu_rollingCounter";
-CM_ SG_ 896 acu_checksum "acu_checksum";
+CM_ SG_ 896 acu_rollingCounter_ "acu_rollingCounter";
+CM_ SG_ 896 acu_checksum_ "acu_checksum";
 CM_ SG_ 896 ABM_PassAirbSuppressionSt "PassengerAirBagSuppressionStatus
 副驾安全气囊抑制状态";
 CM_ SG_ 859 APA_voice_reminder "声音请求";
@@ -2454,7 +2509,7 @@ CM_ SG_ 682 ADS_Fault "ADS系统故障";
 CM_ SG_ 682 ADS_NicaReminderLEDVisual "ADS功能接告警灯提醒";
 CM_ SG_ 682 ADS_NicaReminderAcoustic "ADS功能告警声音提醒";
 CM_ SG_ 682 ADS_2AA_Counter "Message counter for the message";
-CM_ SG_ 682 ADS_2AA_Checksum "CRC8, message checksum ";
+CM_ SG_ 682 ADS_2AA_Checksum "CRC8, message checksum";
 CM_ SG_ 683 ADS_TakeoverLevel "TORLevel";
 CM_ SG_ 683 ADS_TakeoverID "ADS功能接管提醒信息";
 CM_ SG_ 683 ADS_TORIDCorrespErrorID "TOR对应的error code ID";
@@ -2506,6 +2561,7 @@ CM_ SG_ 691 ADS_SpeedLimitValue "ADS限速值";
 CM_ SG_ 691 ADS_SpeedAutoFollow "智能限速";
 CM_ SG_ 691 ADS_OneTouchSpeedAdjustment "一键调速";
 CM_ SG_ 691 ADS_TimeGapAdjustment "跟车时距";
+CM_ SG_ 691 ADS_HMAFunctionStatus "ADS_HMAFunctionStatus";
 CM_ SG_ 691 ADS_DriverSetSpeedDisplay "巡航车速调节";
 CM_ SG_ 693 ADS_CalibProcess "标定进度";
 CM_ SG_ 693 ADS_CalibState "标定状态";
@@ -2565,6 +2621,8 @@ CM_ SG_ 710 ADS_LaneChangeConfirm "换道确认";
 CM_ SG_ 710 ADS_LateralAction "换道状态";
 CM_ SG_ 710 ADS_EthSignalState "MDC和CDC断链异常";
 CM_ SG_ 710 ADS_EthPdcSignalState "APP投屏PDC正常";
+CM_ SG_ 778 ADS_RAEBSts "RAEB状态机";
+CM_ SG_ 778 ADS_SLAWarnMode "限速报警模式";
 CM_ SG_ 781 ADS_RPAFuncSts "遥控泊车功能状态";
 CM_ SG_ 781 ADS_AVMRotationAngle_X "当前水平角度";
 CM_ SG_ 781 ADS_AVMRotationAngle_Y "当前垂直角度";
@@ -2613,18 +2671,18 @@ CM_ SG_ 776 ADS_DOWRightSts "DOW状态机（右）";
 CM_ SG_ 775 ADS_APAViewSts "apa视图状态";
 CM_ SG_ 775 ADS_AVMViewSts "avm视图状态";
 CM_ SG_ 775 ADS_APAFuncType "APA功能类型";
-CM_ SG_ 775 ADS_VehParkModeAvil "车位可泊入方式";
 CM_ SG_ 775 ADS_APAParkInTypeSel "车头/车尾泊入选择反馈";
 CM_ SG_ 775 ADS_APACustomizeSlotFB "自定义车位选择反馈";
 CM_ SG_ 775 ADS_RpaApaSwitchFB "遥控泊车切换反馈";
 CM_ SG_ 775 ADS_APAUIFuncSts "APA功能状态（人机交互显示）";
 CM_ SG_ 775 ADS_ParkSpcGrdLockSts "停车位地锁状态";
 CM_ SG_ 775 ADS_AVMSideViewSts "轮毂视图状态";
-CM_ SG_ 775 ADS_APACustomizedSlotSt "自选车位按钮是否显示";
 CM_ SG_ 775 ADS_ParkFRmngDst "向前继续行驶距离";
 CM_ SG_ 775 ADS_ParkRRmngDst "向后继续行驶距离";
 CM_ SG_ 775 ADS_FrontPDCAlarmSts "前雷达告警设置状态";
 CM_ SG_ 775 ADS_PDCMuteSts "雷达静音设置状态";
+CM_ SG_ 775 ADS_APACustomizedSlotSt "自选车位按钮是否显示";
+CM_ SG_ 775 ADS_VehParkModeAvil "车位可泊入方式";
 CM_ SG_ 795 ADS_APAToastID "APA ToastID";
 CM_ SG_ 795 ADS_APATipsID "APA TipsID";
 CM_ SG_ 795 ADS_APAToastTTS "APA ToastTTS";
@@ -2640,8 +2698,7 @@ CM_ SG_ 801 ADS_SLAsetAdjustSts "偏移量设置状态";
 CM_ SG_ 801 ADS_ValueAdjustSts "告警阈值设置状态";
 CM_ SG_ 801 ADS_TrafficLightRemFuncSts "红绿灯提醒功能设置状态";
 CM_ SG_ 801 ADS_LaneAssitType "车道辅助形式设置状态";
-CM_ SG_ 801 ADS_LasWarnMode "车道辅助系统警告模式
-";
+CM_ SG_ 801 ADS_LasWarnMode "车道辅助系统警告模式";
 CM_ SG_ 801 ADS_ELKFuncSts "紧急车道保持功能设置状态";
 CM_ SG_ 801 ADS_FcwFuncSts "碰撞预警功能设置状态";
 CM_ SG_ 801 ADS_AEBFuncSts "AEB设置状态";
@@ -2668,9 +2725,9 @@ CM_ SG_ 1032 IVI_CarSearchControl "IVI_CarSearchControl（隐私模式设置）";
 CM_ SG_ 1032 IVI_ModeSuppressSts "智能模式状态";
 CM_ SG_ 1032 IVI_UserClass "用户状态";
 CM_ SG_ 1032 IVI_AutoRainWiperReq "自动雨刮控制开关";
+CM_ SG_ 1032 IVI_VehiclePosition "车辆位置上传开关";
 CM_ SG_ 1032 IVI_AccountLoginStatus "账号登录状态";
 CM_ SG_ 1032 ivi_languageSet1 "语言设置信号1";
-CM_ SG_ 1032 IVI_VehiclePosition "车辆位置上传开关";
 CM_ SG_ 945 VCU_CLTCEvRemainingMileage "CLTC电续航";
 CM_ SG_ 1043 TBOX_FuncReq_SentryMod "哨兵模式唤醒";
 CM_ SG_ 839 BLE_approachingUnlockFedb "approachingunlocksetfeedback";
@@ -2774,6 +2831,7 @@ CM_ SG_ 962 BCM_RRWINOpenDegree "右后窗开启比例";
 CM_ SG_ 962 BCM_NFC_PS_KeyReq "NFC钥匙请求";
 CM_ SG_ 962 BCM_PowerState "BCM电源状态机";
 CM_ SG_ 773 bcm_footLightSwitchSts "脚灯开关状态反馈";
+CM_ SG_ 773 BCM_HighBeamModel "远光灯模式";
 CM_ SG_ 1041 bcm_tpmsLFStatus "bcm_tpmsLFStatus";
 CM_ SG_ 1041 bcm_tyreLFPressure "bcm_tyreLFPressure";
 CM_ SG_ 1041 bcm_tyreLFTemp "bcm_tyreLFTemp";
@@ -3009,6 +3067,7 @@ CM_ SG_ 165 IVI_AcFullChargeToWarmSet "交流充电满阈值模式设置";
 CM_ SG_ 165 ivi_ChargeEndTimeValid "充电结束时间有效位";
 CM_ SG_ 165 ivi_ChargeStartTimeValid "充电开始时间有效位";
 CM_ SG_ 165 ivi_driveModeSet "Drivingmodeset.";
+CM_ SG_ 469 ivi_PreRefuelCtrl "预加油开关";
 CM_ SG_ 469 ivi_EmergencyHvOffRequestReserved "EmergencyHvOffRequest
 紧急下电设置预留";
 CM_ SG_ 469 ivi_ExhibitionModeCtrl "展车模式开关";
@@ -3092,6 +3151,7 @@ CM_ SG_ 105 IVI_DowFuncSet "DOW功能设置";
 CM_ SG_ 105 IVI_StartRemFuncSet "起步提醒功能设置";
 CM_ SG_ 105 IVI_AdsVoiceBroadcastTypeSet "智驾语音播报类型设置";
 CM_ SG_ 105 IVI_HmaFuncSet "智能远近光功能设置";
+CM_ SG_ 105 IVI_SLAWarnModeSet "限速报警模式设置请求";
 CM_ SG_ 104 IVI_AVMRotationAngle_X "3D 水平旋转增加角度";
 CM_ SG_ 104 IVI_AVMRotationAngle_Y "3D 垂直旋转增加角度";
 CM_ SG_ 104 IVI_APACustomizeSlot "自定义车位选择";
@@ -3132,7 +3192,7 @@ CM_ SG_ 197 ivi_NaviSwitchReserved "ivi_NaviSwitch预留
 Navi按键";
 CM_ SG_ 197 ivi_themeSetReserved "ICThememodeset.
 IC主题设置预留";
-CM_ SG_ 197 ivi_wcmLeftOnOffSet "左侧充电设置";
+CM_ SG_ 197 ivi_wcmOnOffSet "WCMONOFFset.";
 CM_ SG_ 197 ivi_pdcOnOffSet "PDCONOFFset.";
 CM_ SG_ 197 ivi_ICthemegangedSetReserved "ivi_ICthemegangedSet
 仪表和大屏主题联动开关设置预留";
@@ -3753,6 +3813,8 @@ CM_ SG_ 1176 MFW_APA_AVM_KeySt "泊车辅助功能开关";
 CM_ SG_ 1176 MFW_TJAICAACTIVEKeySt "巡航辅助功能开关";
 CM_ SG_ 540 HOD_Handoffmonitor "脱手监测";
 CM_ SG_ 540 HOD_HandoffmonitorValid "脱手监测信号有效位";
+CM_ SG_ 385 ic_displayFail "Errorinthedisplayordisplaycontrolunit.ADASReruirment";
+CM_ SG_ 385 ic_IllumiLevelSts "仪表亮度反馈";
 CM_ SG_ 754 ic_totalMileage "Totalmileage总里程";
 CM_ SG_ 754 ic_RRSeatDetectSts "二排座椅右边乘员检测状态";
 CM_ SG_ 754 ic_RMSeatDetectSts "二排座椅中间乘员检测状态";
@@ -3841,6 +3903,7 @@ CM_ SG_ 1173 IVI_SentryReq "智能卫士激活";
 CM_ SG_ 1173 IVI_SentryAlarmSts "哨兵状态";
 CM_ SG_ 1173 IVI_ModeReq "情景模式进入请求";
 CM_ SG_ 1173 IVI_SentryTimeFd "哨兵状态时间设置反馈信号";
+CM_ SG_ 1173 IVI_RangeExtenderdisenable "增程器禁止启动请求";
 CM_ SG_ 1173 IVI_ChildrenLeftremindSts "儿童遗留提醒状态";
 CM_ SG_ 1173 IVI_PetModeSts "宠物状态";
 CM_ SG_ 1173 IVI_SentryFaultReason "哨兵模式开启失败的原因";
@@ -4012,6 +4075,7 @@ BA_ "GenMsgCycleTime" BO_ 777 100;
 BA_ "GenMsgCycleTime" BO_ 906 100;
 BA_ "GenMsgCycleTime" BO_ 772 100;
 BA_ "GenMsgCycleTime" BO_ 817 100;
+BA_ "GenMsgCycleTime" BO_ 268 20;
 BA_ "GenMsgSendType" BO_ 2015 1;
 BA_ "GenMsgCycleTime" BO_ 1267 200;
 BA_ "GenMsgCycleTime" BO_ 769 100;
@@ -4057,6 +4121,7 @@ BA_ "GenMsgCycleTime" BO_ 693 50;
 BA_ "GenMsgCycleTime" BO_ 694 50;
 BA_ "GenMsgCycleTime" BO_ 695 50;
 BA_ "GenMsgCycleTime" BO_ 710 50;
+BA_ "GenMsgCycleTime" BO_ 778 100;
 BA_ "GenMsgCycleTime" BO_ 781 100;
 BA_ "GenMsgCycleTime" BO_ 782 100;
 BA_ "GenMsgCycleTime" BO_ 776 100;
@@ -4153,6 +4218,7 @@ BA_ "GenMsgCycleTime" BO_ 1018 100;
 BA_ "GenMsgSendType" BO_ 169 1;
 BA_ "GenMsgCycleTime" BO_ 1176 500;
 BA_ "GenMsgCycleTime" BO_ 540 20;
+BA_ "GenMsgCycleTime" BO_ 385 20;
 BA_ "GenMsgCycleTime" BO_ 754 20;
 BA_ "GenMsgCycleTime" BO_ 1015 100;
 BA_ "GenMsgCycleTime" BO_ 1154 500;
@@ -4204,6 +4270,7 @@ BA_ "GenSigStartValue" SG_ 1396 bms_ChgAmount 0;
 BA_ "GenSigStartValue" SG_ 1377 vcu_avgPwr 10000;
 BA_ "GenSigStartValue" SG_ 1377 vcu_alertLevel 0;
 BA_ "GenSigStartValue" SG_ 1377 VCU_chargeFaultReason 0;
+BA_ "GenSigStartValue" SG_ 1377 VCU_RegenWeakRemind 0;
 BA_ "GenSigStartValue" SG_ 849 vcu_remainingMileage 0;
 BA_ "GenSigStartValue" SG_ 849 vcu_ComprehensiveRemainingMileage 0;
 BA_ "GenSigStartValue" SG_ 849 vcu_SysAlertLevel 0;
@@ -4235,9 +4302,16 @@ BA_ "GenSigStartValue" SG_ 817 vcu_stEgyFlowEngAndGenMot 0;
 BA_ "GenSigStartValue" SG_ 817 VCU_stEgyFlowMcuf0AndBatt 0;
 BA_ "GenSigStartValue" SG_ 817 VCU_stEgyFlowMcur0AndBatt 0;
 BA_ "GenSigStartValue" SG_ 817 VCU_IVI_HVDownRepairMode 0;
+BA_ "GenSigStartValue" SG_ 817 VCU_LowFuel 0;
 BA_ "GenSigStartValue" SG_ 817 VCU_LowSOC 0;
 BA_ "GenSigStartValue" SG_ 817 vcu_obcDschrgAllow 0;
+BA_ "GenSigStartValue" SG_ 817 vcu_v2vChrgFdbk 0;
 BA_ "GenSigStartValue" SG_ 817 vcu_obcDschrgFdbk 0;
+BA_ "GenSigStartValue" SG_ 817 vcu_v2vChrgOutCurntFdbk 9;
+BA_ "GenSigStartValue" SG_ 817 VCU_MaxFuelConsumptionSt 0;
+BA_ "GenSigStartValue" SG_ 817 VCU_MaxFuelConsumptionModeSt 0;
+BA_ "GenSigStartValue" SG_ 817 vcu_RangeExtenderNoSt 0;
+BA_ "GenSigStartValue" SG_ 268 gcu_MotorControlMode 0;
 BA_ "GenSigSendType" SG_ 2015 Diag_FuncReq_Data 1;
 BA_ "GenSigStartValue" SG_ 2015 Diag_FuncReq_Data 0;
 BA_ "GenSigStartValue" SG_ 1267 ic_avgSpdTripB 0;
@@ -4251,7 +4325,11 @@ BA_ "GenSigStartValue" SG_ 769 vcu_PwroftripB 5000;
 BA_ "GenSigStartValue" SG_ 769 vcu_avgPwroftripB 500;
 BA_ "GenSigStartValue" SG_ 769 vcu_lowSocwarming 0;
 BA_ "GenSigStartValue" SG_ 769 VCU_SysFaulttext 0;
+BA_ "GenSigStartValue" SG_ 816 vcu_v2vChrgAllow 0;
+BA_ "GenSigStartValue" SG_ 816 vcu_v2vChrgOptVoltg 0;
+BA_ "GenSigStartValue" SG_ 816 vcu_v2vChrgOptCurnt 0;
 BA_ "GenSigStartValue" SG_ 816 VCU_InstantaneousPower 0;
+BA_ "GenSigStartValue" SG_ 816 VCU_ConveyerBeltMode 0;
 BA_ "GenSigStartValue" SG_ 932 BMS_ThrmlRunawaySt 0;
 BA_ "GenSigStartValue" SG_ 932 BMS_ThrmlForecastersSt 0;
 BA_ "GenSigStartValue" SG_ 932 BMS_AcFullChargeToWarmState 0;
@@ -4262,6 +4340,8 @@ BA_ "GenSigStartValue" SG_ 929 VCU_SuperPowerSavingModeSt 0;
 BA_ "GenSigStartValue" SG_ 929 VCU_SuperPowerSavingModeReq 0;
 BA_ "GenSigStartValue" SG_ 929 VCU_PercentInstantaneousPower 0;
 BA_ "GenSigStartValue" SG_ 929 VCU_SuperPowerSavingModeFaultReason 0;
+BA_ "GenSigStartValue" SG_ 929 Vcu_ParkingChargeFB 0;
+BA_ "GenSigStartValue" SG_ 929 Vcu_ParkingChargeModFB 0;
 BA_ "GenSigStartValue" SG_ 929 vcu_towMode 0;
 BA_ "GenSigStartValue" SG_ 929 vcu_ready 0;
 BA_ "GenSigStartValue" SG_ 929 vcu_traveModeSts 0;
@@ -4269,10 +4349,12 @@ BA_ "GenSigStartValue" SG_ 929 vcu_highVoltagefaultSts 0;
 BA_ "GenSigStartValue" SG_ 929 VCU_VehicleRepairModeFB 0;
 BA_ "GenSigStartValue" SG_ 929 VCU_CampModeSts 0;
 BA_ "GenSigStartValue" SG_ 929 vcu_RegenModeStatus 4;
+BA_ "GenSigStartValue" SG_ 929 VCU_RangeExtenderSt 0;
 BA_ "GenSigStartValue" SG_ 929 vcu_highVoltageSuccess 0;
 BA_ "GenSigStartValue" SG_ 929 vcu_hvOnMode 0;
 BA_ "GenSigStartValue" SG_ 929 vcu_VehicleMode 1;
 BA_ "GenSigStartValue" SG_ 929 vcu_memoryStatus 1;
+BA_ "GenSigStartValue" SG_ 929 VCU_Eng_SelfShieldStart 0;
 BA_ "GenSigStartValue" SG_ 929 VCU_TrailerModeSts 3;
 BA_ "GenSigStartValue" SG_ 929 VCU_ExhibitionRequest 0;
 BA_ "GenSigStartValue" SG_ 929 vcu_ExhibitionMode 0;
@@ -4532,6 +4614,7 @@ BA_ "GenSigStartValue" SG_ 691 ADS_SpeedLimitValue 0;
 BA_ "GenSigStartValue" SG_ 691 ADS_SpeedAutoFollow 0;
 BA_ "GenSigStartValue" SG_ 691 ADS_OneTouchSpeedAdjustment 0;
 BA_ "GenSigStartValue" SG_ 691 ADS_TimeGapAdjustment 0;
+BA_ "GenSigStartValue" SG_ 691 ADS_HMAFunctionStatus 0;
 BA_ "GenSigStartValue" SG_ 691 ADS_DriverSetSpeedDisplay 0;
 BA_ "GenSigStartValue" SG_ 693 ADS_CalibProcess 0;
 BA_ "GenSigStartValue" SG_ 693 ADS_CalibState 0;
@@ -4591,6 +4674,8 @@ BA_ "GenSigStartValue" SG_ 710 ADS_LaneChangeConfirm 0;
 BA_ "GenSigStartValue" SG_ 710 ADS_LateralAction 0;
 BA_ "GenSigStartValue" SG_ 710 ADS_EthSignalState 0;
 BA_ "GenSigStartValue" SG_ 710 ADS_EthPdcSignalState 0;
+BA_ "GenSigStartValue" SG_ 778 ADS_RAEBSts 0;
+BA_ "GenSigStartValue" SG_ 778 ADS_SLAWarnMode 0;
 BA_ "GenSigStartValue" SG_ 781 ADS_RPAFuncSts 0;
 BA_ "GenSigStartValue" SG_ 781 ADS_AVMRotationAngle_X 0;
 BA_ "GenSigStartValue" SG_ 781 ADS_AVMRotationAngle_Y 0;
@@ -4638,18 +4723,18 @@ BA_ "GenSigStartValue" SG_ 776 ADS_DOWRightSts 0;
 BA_ "GenSigStartValue" SG_ 775 ADS_APAViewSts 0;
 BA_ "GenSigStartValue" SG_ 775 ADS_AVMViewSts 0;
 BA_ "GenSigStartValue" SG_ 775 ADS_APAFuncType 0;
-BA_ "GenSigStartValue" SG_ 775 ADS_VehParkModeAvil 0;
 BA_ "GenSigStartValue" SG_ 775 ADS_APAParkInTypeSel 0;
 BA_ "GenSigStartValue" SG_ 775 ADS_APACustomizeSlotFB 0;
 BA_ "GenSigStartValue" SG_ 775 ADS_RpaApaSwitchFB 0;
 BA_ "GenSigStartValue" SG_ 775 ADS_APAUIFuncSts 0;
 BA_ "GenSigStartValue" SG_ 775 ADS_ParkSpcGrdLockSts 0;
 BA_ "GenSigStartValue" SG_ 775 ADS_AVMSideViewSts 0;
-BA_ "GenSigStartValue" SG_ 775 ADS_APACustomizedSlotSt 0;
 BA_ "GenSigStartValue" SG_ 775 ADS_ParkFRmngDst 0;
 BA_ "GenSigStartValue" SG_ 775 ADS_ParkRRmngDst 0;
 BA_ "GenSigStartValue" SG_ 775 ADS_FrontPDCAlarmSts 0;
 BA_ "GenSigStartValue" SG_ 775 ADS_PDCMuteSts 0;
+BA_ "GenSigStartValue" SG_ 775 ADS_APACustomizedSlotSt 0;
+BA_ "GenSigStartValue" SG_ 775 ADS_VehParkModeAvil 0;
 BA_ "GenSigStartValue" SG_ 795 ADS_APAToastID 0;
 BA_ "GenSigStartValue" SG_ 795 ADS_APATipsID 0;
 BA_ "GenSigStartValue" SG_ 795 ADS_APAToastTTS 0;
@@ -4692,9 +4777,9 @@ BA_ "GenSigStartValue" SG_ 1032 IVI_CarSearchControl 0;
 BA_ "GenSigStartValue" SG_ 1032 IVI_ModeSuppressSts 0;
 BA_ "GenSigStartValue" SG_ 1032 IVI_UserClass 0;
 BA_ "GenSigStartValue" SG_ 1032 IVI_AutoRainWiperReq 0;
+BA_ "GenSigStartValue" SG_ 1032 IVI_VehiclePosition 0;
 BA_ "GenSigStartValue" SG_ 1032 IVI_AccountLoginStatus 0;
 BA_ "GenSigStartValue" SG_ 1032 ivi_languageSet1 1;
-BA_ "GenSigStartValue" SG_ 1032 IVI_VehiclePosition 0;
 BA_ "GenSigStartValue" SG_ 945 VCU_CLTCEvRemainingMileage 0;
 BA_ "GenSigStartValue" SG_ 1043 TBOX_FuncReq_SentryMod 0;
 BA_ "GenSigStartValue" SG_ 885 BLE_User_ID 65535;
@@ -4776,6 +4861,7 @@ BA_ "GenSigStartValue" SG_ 962 BCM_RRWINOpenDegree 0;
 BA_ "GenSigStartValue" SG_ 962 BCM_NFC_PS_KeyReq 0;
 BA_ "GenSigStartValue" SG_ 962 BCM_PowerState 0;
 BA_ "GenSigStartValue" SG_ 773 bcm_footLightSwitchSts 1;
+BA_ "GenSigStartValue" SG_ 773 BCM_HighBeamModel 0;
 BA_ "GenSigStartValue" SG_ 1041 bcm_tpmsLFStatus 0;
 BA_ "GenSigStartValue" SG_ 1041 bcm_tyreLFPressure 0;
 BA_ "GenSigStartValue" SG_ 1041 bcm_tyreLFTemp 0;
@@ -5035,6 +5121,7 @@ BA_ "GenSigSendType" SG_ 165 ivi_ChargeStartTimeValid 1;
 BA_ "GenSigStartValue" SG_ 165 ivi_ChargeStartTimeValid 0;
 BA_ "GenSigSendType" SG_ 165 ivi_driveModeSet 1;
 BA_ "GenSigStartValue" SG_ 165 ivi_driveModeSet 0;
+BA_ "GenSigStartValue" SG_ 469 ivi_PreRefuelCtrl 0;
 BA_ "GenSigStartValue" SG_ 469 ivi_EmergencyHvOffRequestReserved 0;
 BA_ "GenSigStartValue" SG_ 469 ivi_ExhibitionModeCtrl 0;
 BA_ "GenSigStartValue" SG_ 469 ivi_DCDCAutoChargeSet 0;
@@ -5187,6 +5274,8 @@ BA_ "GenSigSendType" SG_ 105 IVI_AdsVoiceBroadcastTypeSet 1;
 BA_ "GenSigStartValue" SG_ 105 IVI_AdsVoiceBroadcastTypeSet 0;
 BA_ "GenSigSendType" SG_ 105 IVI_HmaFuncSet 1;
 BA_ "GenSigStartValue" SG_ 105 IVI_HmaFuncSet 0;
+BA_ "GenSigSendType" SG_ 105 IVI_SLAWarnModeSet 1;
+BA_ "GenSigStartValue" SG_ 105 IVI_SLAWarnModeSet 0;
 BA_ "GenSigSendType" SG_ 104 IVI_AVMRotationAngle_X 1;
 BA_ "GenSigStartValue" SG_ 104 IVI_AVMRotationAngle_X 0;
 BA_ "GenSigSendType" SG_ 104 IVI_AVMRotationAngle_Y 1;
@@ -5255,8 +5344,8 @@ BA_ "GenSigSendType" SG_ 197 ivi_NaviSwitchReserved 1;
 BA_ "GenSigStartValue" SG_ 197 ivi_NaviSwitchReserved 0;
 BA_ "GenSigSendType" SG_ 197 ivi_themeSetReserved 1;
 BA_ "GenSigStartValue" SG_ 197 ivi_themeSetReserved 0;
-BA_ "GenSigSendType" SG_ 197 ivi_wcmLeftOnOffSet 1;
-BA_ "GenSigStartValue" SG_ 197 ivi_wcmLeftOnOffSet 0;
+BA_ "GenSigSendType" SG_ 197 ivi_wcmOnOffSet 1;
+BA_ "GenSigStartValue" SG_ 197 ivi_wcmOnOffSet 0;
 BA_ "GenSigSendType" SG_ 197 ivi_pdcOnOffSet 1;
 BA_ "GenSigStartValue" SG_ 197 ivi_pdcOnOffSet 0;
 BA_ "GenSigSendType" SG_ 197 ivi_ICthemegangedSetReserved 1;
@@ -5792,6 +5881,8 @@ BA_ "GenSigSendType" SG_ 169 MFW_IVI_Reset 1;
 BA_ "GenSigStartValue" SG_ 169 MFW_IVI_Reset 0;
 BA_ "GenSigStartValue" SG_ 540 HOD_Handoffmonitor 0;
 BA_ "GenSigStartValue" SG_ 540 HOD_HandoffmonitorValid 0;
+BA_ "GenSigStartValue" SG_ 385 ic_displayFail 0;
+BA_ "GenSigStartValue" SG_ 385 ic_IllumiLevelSts 0;
 BA_ "GenSigStartValue" SG_ 754 ic_totalMileage 0;
 BA_ "GenSigStartValue" SG_ 754 ic_RRSeatDetectSts 0;
 BA_ "GenSigStartValue" SG_ 754 ic_RMSeatDetectSts 0;
@@ -5992,12 +6083,13 @@ VAL_ 863 tbox_ChargeStartTimeValid 0 "INVALID" 1 " VALID" ;
 VAL_ 1300 bms_maxChargeSOC 127 "invalid" ;
 VAL_ 1300 BMS_BatterFaultLightContro 0 "OFF" 1 "ON" ;
 VAL_ 1300 BMS_BatteryTempLowLight 0 "OFF" 1 "ON" ;
-VAL_ 1300 BMS_NavigChrgPostFB 0 "初始值；" 1 "导航制冷中；" 2 "导航加热中；" 3 "导航加热完成；" 4 "无需导航加热；" 5 "Reserved" 6 "Reserved" 7 "Reserved" ;
+VAL_ 1300 BMS_NavigChrgPostFB 0 "初始值；" 1 "导航制冷中；" 2 "导航加热中；" 3 "导航加热完成；" 4 "无需导航加热；" 5 "Reserved" 6 "Reserved" 7 " Reserved" ;
 VAL_ 1300 bms_stEgyFlowSysDischRgn 0 "NEUTRAL" 1 "BATTERY_CHARGE充电" 2 " BATTERY_DISCHARGE放电" ;
 VAL_ 1300 bms_stEgyFlowOBCAndBatt 0 "NEUTRAL" 1 "OBC_TO_BATTERY" 2 " BATTERY_TO_OBC" ;
 VAL_ 1300 bms_chargeFormstatus 0 "IMMEDIATE_CHARGE立即充电" 1 "TIMING_CHARGE预约充电" 2 "RESERVE_CHRGFORM1" 3 "RESERVE_CHRGFORM2" 4 "RESERVE_CHRGFORM3" 5 "RESERVE_CHRGFORM4" 6 "INVALID_CHRGFORM" 7 "Reserved" ;
 VAL_ 1377 vcu_alertLevel 0 "NORMAL" 1 "Level1" 2 "Level2" 3 "Level3" ;
 VAL_ 1377 VCU_chargeFaultReason 0 "Normal" 1 "车端问题-充电机故障" 2 "车端问题-电池系统故障" 3 "用户操作问题-驻车充电" 4 "车端问题" 5 "桩端问题" 6 "连接问题" 7 "用户操作问题1-双枪故障" 8 "用户操作问题3-插枪未刷卡" 9 "用户操作问题4-到达目标SOC" 10 "reserved" ;
+VAL_ 1377 VCU_RegenWeakRemind 0 "No Remind" 1 "Remind" 2 "Reserved" 3 " Invalid" ;
 VAL_ 849 vcu_SysAlertLevel 0 "NORMAL" 1 "Level1" 2 "Level2" 3 "Level3" 4 "Level4" 5 "Level5" 6 "Level6" 7 "Level7" 8 "Level8" 9 "Level9" 10 "Level10" 11 "Level11" 12 "Level12" 13 "Reserved" 14 "Reserved" 15 "Level15" ;
 VAL_ 849 VCU_PowerLimitLight 0 "OFF" 1 "ON" ;
 VAL_ 849 VCU_SysFaultLight 0 "OFF" 1 "ON" ;
@@ -6017,11 +6109,20 @@ VAL_ 817 vcu_stEgyFlowEngAndGenMot 0 "Neutral" 1 "Engine to Generator motor" 2 "
 VAL_ 817 VCU_stEgyFlowMcuf0AndBatt 0 "NEUTRAL" 1 "FRONT_MOTOR_TO_BATTERY" 2 " BATTERY_TO_FRONT_MOTOR" ;
 VAL_ 817 VCU_stEgyFlowMcur0AndBatt 0 "NEUTRAL" 1 "REAR_MOTOR_TO_BATTERY" 2 " BATTERY_TO_REAR_MOTOR" ;
 VAL_ 817 VCU_IVI_HVDownRepairMode 0 "INACTIVE" 1 "OFF" 2 "ON" 3 " INVALID" ;
+VAL_ 817 VCU_LowFuel 0 "NO Request" 1 " Request" ;
 VAL_ 817 VCU_LowSOC 0 "NO Request" 1 " Request" ;
 VAL_ 817 vcu_obcDschrgAllow 0 "Inhibit" 1 "Allow" ;
+VAL_ 817 vcu_v2vChrgFdbk 0 "OFF" 1 " ON" ;
 VAL_ 817 vcu_obcDschrgFdbk 0 "OFF" 1 " ON" ;
+VAL_ 817 vcu_v2vChrgOutCurntFdbk 0 "0" 1 "20" 2 "30" 3 "40" 4 "50" 5 "60" 6 "70" 7 "80" 8 "90" 9 " 100" ;
+VAL_ 817 VCU_MaxFuelConsumptionSt 0 "OFF" 1 " ON" ;
+VAL_ 817 VCU_MaxFuelConsumptionModeSt 0 "High Speed" 1 " Low Speed" ;
+VAL_ 817 vcu_RangeExtenderNoSt 0 "No_request" 1 " Request" ;
+VAL_ 268 gcu_MotorControlMode 0 "Disabled" 1 "Torque control mode" 2 "Speed control mode" ;
 VAL_ 769 vcu_lowSocwarming 0 "Normal" 1 "Level 1" 2 "Level 2" 3 "Level 3" ;
 VAL_ 769 VCU_SysFaulttext 0 "Normal" 1 "PowerLimit" 2 "SpeedLimit" 3 "PowerCut_Static" 4 "PowerCut_dynamic" 5 "Reserved" 6 "Reserved" 7 " Reserved" ;
+VAL_ 816 vcu_v2vChrgAllow 0 "Inhibit" 1 "Allow" ;
+VAL_ 816 VCU_ConveyerBeltMode 0 "Inactive" 1 "OFF" 2 "ON" 3 " Invalid" ;
 VAL_ 932 BMS_ThrmlRunawaySt 0 "无效" 1 "正常" 2 "热失控故障" 3 "预留" ;
 VAL_ 932 BMS_ThrmlForecastersSt 0 "No Active" 1 "Active" ;
 VAL_ 932 BMS_AcFullChargeToWarmState 0 "NO_REQUEST" 1 "OFF" 2 "ON" 3 "INVALID" ;
@@ -6029,6 +6130,8 @@ VAL_ 929 vcu_driveMode 0 "ECO" 1 "COMFORT" 2 "SPORT" 3 "FREEDOM_reserve" 4 "ACCE
 VAL_ 929 VCU_SuperPowerSavingModeSt 0 "INACIVE" 1 "OFF" 2 "ON" 3 " INVALID" ;
 VAL_ 929 VCU_SuperPowerSavingModeReq 0 "NO_REQUEST" 1 " REQUEST" ;
 VAL_ 929 VCU_SuperPowerSavingModeFaultReason 0 "Normal" 1 "充电中" 2 "SOC 高" 3 "ACC" 4 "哨兵模式" 5 "小憩模式" 6 "宠物模式" 7 "脱困模式" 8 "雪地模式" 9 "断高压" 10 "OTA 模式" 11 "维修模式" 12 "拖车模式" 13 "展车模式" 14 "远程模式" 15 " Other" ;
+VAL_ 929 Vcu_ParkingChargeFB 0 "OFF" 1 " ON" ;
+VAL_ 929 Vcu_ParkingChargeModFB 0 "HIGH" 1 "MIDDLE" 2 "LOW" 3 "Reserved" ;
 VAL_ 929 vcu_towMode 0 "Inactive" 1 "OFF" 2 "ON" 3 "INVALID" ;
 VAL_ 929 vcu_ready 0 "NOT_READY" 1 " READY" ;
 VAL_ 929 vcu_traveModeSts 0 "OFF" 1 "WET" 2 "SNOW" 3 " INVALID" ;
@@ -6036,10 +6139,12 @@ VAL_ 929 vcu_highVoltagefaultSts 0 "NORMAL" 1 "FAULT" ;
 VAL_ 929 VCU_VehicleRepairModeFB 0 "INACTIVE" 1 "OFF" 2 "ON" 3 " INVALID" ;
 VAL_ 929 VCU_CampModeSts 0 "Initial" 1 "CampOFF" 2 "Dynamic Camp" 3 "Static Camp" 4 "Reserved" 5 "Reserved" 6 "Reserved" 7 " INVALID" ;
 VAL_ 929 vcu_RegenModeStatus 0 "OFF" 1 "LOW_Reserved" 2 "NORMAL" 3 "Strong Recovery" 4 "Exstronge(增强)" 5 "Reserved" 6 "Reserved" 7 "Reserved" ;
+VAL_ 929 VCU_RangeExtenderSt 0 "OFF" 1 "ON" 2 "Reserved" 3 " Reserved" ;
 VAL_ 929 vcu_highVoltageSuccess 0 "LOW_VOLT" 1 "HIGH_VOLT_UP" 2 "HIGH_VOLT_DOWNING" 3 "HIGH_VOLT_UPING" 4 "FAILURE_AND_LOW_VOLT" 5 "RESERVE_HIGHVOLT1" 6 "RESERVE_HIGHVOLT2" 7 " RESERVE_HIGHVOLT3" ;
 VAL_ 929 vcu_hvOnMode 0 "OFF" 1 "LOCAL" 2 "REMOTE" 3 " INVALID" ;
 VAL_ 929 vcu_VehicleMode 0 "Inactive" 1 "Electric" 2 "AUTO" 3 " Fuel" ;
 VAL_ 929 vcu_memoryStatus 0 "No_Memory" 1 " Memory" ;
+VAL_ 929 VCU_Eng_SelfShieldStart 0 "OFF" 1 " ON" ;
 VAL_ 929 VCU_TrailerModeSts 0 "OFF" 1 "ON" 2 "Reserved" 3 " INVALID" ;
 VAL_ 929 VCU_ExhibitionRequest 0 "OFF" 1 " ON" ;
 VAL_ 929 vcu_ExhibitionMode 0 "OFF" 1 "ON" 2 "INVALID" 3 " Reserved" ;
@@ -6139,7 +6244,7 @@ VAL_ 858 MPC_LLLaneMarkerType 0 "DASHED_虚线" 1 "SOLID_实线" 2 "ROAD_EDGE_路沿" 
 VAL_ 858 MPC_RRLaneMarkerType 0 "DASHED_虚线" 1 "SOLID_实线" 2 "ROAD_EDGE_路沿" 3 "DOUBLELAND_MARK_双线" 4 "BOTTS' DOTS_点线" 5 "OTHER" 6 "RESERVED" 7 " INVALID" ;
 VAL_ 858 MPC_LleftVisualization 0 "NO_DISPLAY 未检测到车道线" 1 "LINE_TRACKING 检测到车道线" 2 "RESERVED" 3 " RESERVED" ;
 VAL_ 858 MPC_RrightVisualization 0 "NO_DISPLAY 未检测到车道线" 1 "LINE_TRACKING 检测到车道线" 2 "RESERVED" 3 " RESERVED" ;
-VAL_ 858 MPC_autododgeOnOffSts 0 "INACTIVE" 1 "OFF" 2 "ON" 3 " INVALID " ;
+VAL_ 858 MPC_autododgeOnOffSts 0 "INACTIVE" 1 "OFF" 2 "ON" 3 " INVALID" ;
 VAL_ 857 MPC_LaneEquationStatus 0 "no display" 1 "Left Lane" 2 "Right Lane" 3 "reserved" ;
 VAL_ 861 MPC_ELKSet 0 "0x0 OF" 1 " ON" ;
 VAL_ 861 MPC_ELKSts 0 "OFF" 1 "Passive" 2 "Standby" 3 "Active" 4 "Failure" 5 " Reserved" ;
@@ -6178,7 +6283,7 @@ VAL_ 940 ADS_ParkOutDir_PerpLeBack 0 "不可用" 1 " 可用" ;
 VAL_ 940 ADS_ParkOutDir_PerpRiBack 0 "不可用" 1 " 可用" ;
 VAL_ 940 ADS_ParkOutDir_PerpBack 0 "不可用" 1 " 可用" ;
 VAL_ 936 vcu_actualGear 0 "P" 1 "R" 2 "N" 3 " D" ;
-VAL_ 896 acu_warningLampStatus 0 "OFF" 1 "ON" 2 " FLASH" ;
+VAL_ 896 acu_warningLampStatus 0 "OFF" 1 "ON" 2 "FLASH" 3 " INVALID" ;
 VAL_ 896 acu_crashOutputStatusValid 0 "INVALID" 1 " VALID" ;
 VAL_ 896 acu_crashOutputStatus 0 "NO_CRASH" 1 " CRASH" ;
 VAL_ 896 acu_driverSeatBeltStatus 0 "UNTIED" 1 " TIED" ;
@@ -6225,6 +6330,7 @@ VAL_ 691 ADS_AvpFunctionStatus 0 "no request" 1 "AVP_STATE_OFF" 2 "AVP_STATE_STA
 VAL_ 691 ADS_SpeedAutoFollow 0 "no request" 1 "OFF" 2 "Active" 7 " Invalid" ;
 VAL_ 691 ADS_OneTouchSpeedAdjustment 0 "no request" 1 "Speed+" 2 "Speed-" 7 " Invalid" ;
 VAL_ 691 ADS_TimeGapAdjustment 0 "no request" 1 "Level1" 2 "Level2" 3 "Level3" 4 "Level4" 5 "Level5" 6 "reserved" 7 " Invalid" ;
+VAL_ 691 ADS_HMAFunctionStatus 0 "None" 1 "Off" 2 "Failure" 3 "Passive" 4 "Keep" 5 "Acitve" 6 " Reserved" ;
 VAL_ 691 ADS_DriverSetSpeedDisplay 0 "no request" 1 "no_Display" 2 "need_Display" 7 " invalid" ;
 VAL_ 693 ADS_CalibState 0 "no request" 1 "succ" 2 "fail" 3 "running" 4 "succ_fish" 5 "fail_fish" 6 "running_fish" 7 "monitor_fail" 8 "running_front_lidar" 9 "running_lidars" 10 "running_lidar_cam" 11 "running_cam_cam" 12 "running_fb_cam" 13 "running_side_cam" 14 "fail_restart" 15 "pause_sys_fault (预留)" 16 "fail_sys_fault (预留)" 17 "running_INS" 31 " invalid" ;
 VAL_ 693 ADS_CalibType 0 "no request" 1 "4S calibration" 2 "online calibration" 7 " invalid" ;
@@ -6280,6 +6386,8 @@ VAL_ 710 ADS_LaneChangeConfirm 0 "no request" 1 "lanechangewithoutconfirm" 2 "la
 VAL_ 710 ADS_LateralAction 0 "no request" 1 "LATERAL_ACTION_KEEP_LANE 巡航非变道过程" 2 "LATERAL_PREPARE_CHANGE_LEFT准备变道-左" 3 "LATERAL_PREPARE_CHANGE_RIGHT准备变道-右" 4 "LATERAL_ACTION_CHANGE_LEFT变道中-左" 5 "LATERAL_ACTION_CHANGE_RIGHT变道中-右" 6 "LATERAL_ACTION_PARKING不处理，按照上一帧显示动效 ！！" 7 "LATERAL_ACTION_SUMMO不处理，按照上一帧显示动效 ！！" 8 "LATERAL_ACTION_FREE_SUMMON不处理，按照上一帧显示动效 ！！" 9 "LATERAL_ACTION_CHANGE_HOLD变道受阻" 10 "LATERAL_ACTION_CHANGE_CANCEL变道取消（人为/自动取消）" 11 "LATERAL_ACTION_OVERRIDE 横向 自动变道取消" 12 "LATERAL_ACTION_ESCAPE不处理，按照上一帧显示动效 ！！" 13 "LATERAL_ACTION_PULLOVER不处理，按照上一帧显示动效 ！！" 14 "LATERAL_ACTION_CHANGE_AUTO_CANCEL 变道取消" 100 "LATERAL_ACTION_IDLE不处理，按照上一帧显示动效 ！！" 127 "Invalid" ;
 VAL_ 710 ADS_EthSignalState 0 "no request" 1 "normal" 2 "abnormal" 3 "invalid" ;
 VAL_ 710 ADS_EthPdcSignalState 0 "no request" 1 "normal" 2 "abnormal" 3 "invalid" ;
+VAL_ 778 ADS_RAEBSts 0 "OFF（开关关闭）" 1 "Standby" 2 "Active" 3 "Standstill" 4 "Fault（故障）" 5 "Reserved" ;
+VAL_ 778 ADS_SLAWarnMode 0 "No Request" 1 "Vision" 2 "Vision+Voice" 3 "Reserved" ;
 VAL_ 781 ADS_RPAFuncSts 0 "No  Request" 1 "OFF" 2 "ON" 3 " Invalid" ;
 VAL_ 781 ADS_AVMRotationAngle_X 0 "OFF" 1 "0" 2 "1" 360 "359" 361 "Invalid" ;
 VAL_ 781 ADS_AVMRotationAngle_Y 0 "OFF" 1 "0" 2 "1" 91 "90" 92 "Invalid" ;
@@ -6325,16 +6433,16 @@ VAL_ 776 ADS_DOWRightSts 0 "OFF" 1 "Standby" 2 "Front_ACTIVE" 3 "Rear_ACTIVE" 4 
 VAL_ 775 ADS_APAViewSts 0 "OFF" 1 "APA ON" 2 "APA Starting" 3 "APA AVM ON" 4 "APA AVM Customize Slot" 5 " Reserved" ;
 VAL_ 775 ADS_AVMViewSts 0 "OFF" 1 "AVM ON" 2 "AVM window ON" 3 "STARTING" 4 "Take Photo" 5 "video" 6 " ~0xF: reserved" ;
 VAL_ 775 ADS_APAFuncType 0 "None" 1 "APA Park In" 2 "APA Park Out" 3 "RPA Park In" 4 "RPA Park Out" 5 "Summon" 6 " HPP" ;
-VAL_ 775 ADS_VehParkModeAvil 0 "None" 1 "Only head park in" 2 "Only tail park in" 3 " Head and tail park in" ;
 VAL_ 775 ADS_APAParkInTypeSel 0 "None" 1 "Head park in" 2 " Tail Park in" ;
 VAL_ 775 ADS_APACustomizeSlotFB 0 "None" 1 "In Customize Slot" 2 " Not In Customize Slot" ;
 VAL_ 775 ADS_RpaApaSwitchFB 0 "None" 1 "RPA" 2 " APA" ;
 VAL_ 775 ADS_APAUIFuncSts 0 "Off" 1 "Standby" 2 "Searching" 3 "Parking In Standby" 4 "Parking Out Standby" 5 "Guidance active" 6 "Suspend" 7 "Continue" 8 "Completed Sucessfully" 9 " Failure" ;
 VAL_ 775 ADS_ParkSpcGrdLockSts 0 "None" 1 "LOCK" 2 "UNLOCK" 3 " UNKONWN" ;
 VAL_ 775 ADS_AVMSideViewSts 0 "None" 1 "middle side view" 2 "front side view" 3 " rear side view" ;
-VAL_ 775 ADS_APACustomizedSlotSt 0 "customized slot not available" 1 " customized slot available" ;
 VAL_ 775 ADS_FrontPDCAlarmSts 0 "None" 1 "OFF" 2 "ON" 3 " Invalid" ;
 VAL_ 775 ADS_PDCMuteSts 0 "No Request" 1 "OFF" 2 "ON" 3 " Invalid" ;
+VAL_ 775 ADS_APACustomizedSlotSt 0 "customized slot not available" 1 "customized slot available" 2 " customized slot not shown" ;
+VAL_ 775 ADS_VehParkModeAvil 0 "None" 1 "Only head park in" 2 "Only tail park in" 3 "head and tail park in_show head park in" 4 "head and tail park in_show tail park in" ;
 VAL_ 801 ADS_LanechangStyle 0 "No Request" 1 "comfort" 2 "standard" 3 "agile" ;
 VAL_ 801 ADS_TargetSpeedOffsetType 0 "No Request" 1 "Fixed value" 2 "Percentage" 3 " INVALID" ;
 VAL_ 801 ADS_TargetSpeedOffsetValue ;
@@ -6373,9 +6481,9 @@ VAL_ 1032 IVI_CarSearchControl 0 "Inactive" 1 "OFF" 2 "ON" 3 " Invalid" ;
 VAL_ 1032 IVI_ModeSuppressSts 0 "OFF" 1 "ON" 2 "UNKNOWN" ;
 VAL_ 1032 IVI_UserClass 0 "Guest" 1 "CarOwner" 2 "授权用户" 3 " 其他类型" ;
 VAL_ 1032 IVI_AutoRainWiperReq 0 "no request" 1 "ON" 2 "OFF" 3 " reserved" ;
+VAL_ 1032 IVI_VehiclePosition 0 "NO REQ" 1 "OFF" 2 "ON" 3 "Invalid" ;
 VAL_ 1032 IVI_AccountLoginStatus 0 "Guest" 1 "Family" 2 "TimeLimitedAccount" 3 "CarOwnersofUnboundVehicles" 4 "CarOwner" 15 " Invalid" ;
 VAL_ 1032 ivi_languageSet1 0 "SIMPLIFIED_CHINESE" 1 "ENGLISH" 2 "法语" 3 "德语" 4 "西班牙语" 5 "土耳其语" 6 "阿拉伯语" 7 "韩语" 8 "意大利语" 9 "挪威语" 10 "荷兰语" 11 "瑞典语" 12 "希伯来语" 13 "葡萄牙语" 14 "捷克语" 15 "斯洛文尼亚语" 16 "克罗地亚语" 17 "俄语" 18 "印尼语" 19 "波斯语" 20 "泰语" 21 "波兰语" 22 "匈牙利语" 23 "斯洛伐克语" 24 "丹麦语" 25 "芬兰语" 26 "冰岛语" 27 "立陶宛语" 28 "爱沙尼亚语" 29 "拉脱维亚语" 30 "塞尔维亚语" 31 "黑山语" 32 "奥地利语" 33 "罗马利亚语" 34 "希腊语" 35 "乌兹别克语" 36 "阿塞拜疆语" 255 "NO_COMMAND" ;
-VAL_ 1032 IVI_VehiclePosition 0 "NO REQ" 1 "OFF" 2 "ON" 3 "Invalid" ;
 VAL_ 1043 TBOX_FuncReq_SentryMod 0 "OFF" 1 "哨兵模式唤醒" ;
 VAL_ 839 BLE_approachingUnlockFedb 0 "RESERVED" 1 "ACTIVE" 2 "INACTIVE" 3 " INVALID" ;
 VAL_ 839 BLE_awayLockFeedback 0 "RESERVED" 1 "ACTIVE" 2 "INACTIVE" 3 " INVALID" ;
@@ -6409,8 +6517,8 @@ VAL_ 673 BCM_cruiseHeadway_increase_KeyStsValid 0 "Valid" 1 "Invalid" ;
 VAL_ 673 bcm_hoodSts 0 "CLOSE" 1 " OPEN" ;
 VAL_ 673 bcm_hazardLightSwSts 0 "OFF" 1 " ON" ;
 VAL_ 673 bcm_leftTurnLampSwSts 0 "OFF" 1 " ON" ;
-VAL_ 673 bcm_leftTurnLampSts 0 "OFF" 1 "ON" 2 "Reserved" 3 "Front Left Turn Light Failure" 4 "Rear Left Fender Turn Light Failure" 5 " Rear Left Trunk Turn Light Failure " ;
-VAL_ 673 bcm_rightTurnLampSts 0 "OFF" 1 "ON" 2 "Reserved" 3 "Front Right Turn Light Failure" 4 "Rear Right Fender Turn Light Failure" 5 " Rear Right Trunk Turn Light Failure " ;
+VAL_ 673 bcm_leftTurnLampSts 0 "OFF" 1 "ON" 2 "Reserved" 3 "Front Left Turn Light Failure" 4 "Rear Left Fender Turn Light Failure" 5 " Rear Left Trunk Turn Light Failure" ;
+VAL_ 673 bcm_rightTurnLampSts 0 "OFF" 1 "ON" 2 "Reserved" 3 "Front Right Turn Light Failure" 4 "Rear Right Fender Turn Light Failure" 5 " Rear Right Trunk Turn Light Failure" ;
 VAL_ 673 bcm_rightTurnLampSwSts 0 "OFF" 1 " ON" ;
 VAL_ 673 bcm_doorFLSts 0 "CLOSE" 1 " OPEN" ;
 VAL_ 673 bcm_doorFRSts 0 "CLOSE" 1 " OPEN" ;
@@ -6454,6 +6562,7 @@ VAL_ 962 BCM_RRWINOpenDegree 0 "NO_REQUEST" 1 "0%全关" 2 "1%" 3 "2%_按1%递增" 10
 VAL_ 962 BCM_NFC_PS_KeyReq 0 "NO_REQUEST" 1 "REQUEST" 2 "INVALID" ;
 VAL_ 962 BCM_PowerState 0 "Normal OFF" 1 "Present_ON" 2 "NOPresent_ON" 3 "BOOT_ON" 4 "Reserve" 5 "Reserve" 6 "Reserve" 7 "Invalid" ;
 VAL_ 773 bcm_footLightSwitchSts 0 "INACTIVE" 1 "OFF" 2 "ON" 3 " INVALID" ;
+VAL_ 773 BCM_HighBeamModel 0 "Auto-off" 1 "Auto-on is not activated" 2 " Auto-on is activated" ;
 VAL_ 1041 bcm_tpmsLFStatus 0 "INITIAL_TPMS" 1 "NORMAL_TPMS" 2 "SYS_ERROR胎压传感器丢失" 3 "LOW_BATT_VOL低电量" 4 "HIGH_TYRE_PRESSURE高压" 5 "HIGH_TEMP高温" 6 "RAPID_LEAK快速漏气预留" 7 " LOW_TYRE_PRESSURE低压" ;
 VAL_ 1041 bcm_tyreLFPressure 0 "0.9" 1 "1" 255 " invalid" ;
 VAL_ 1041 bcm_tyreLFTemp 0 "<-40" 1 "-40" 255 " invalid" ;
@@ -6567,7 +6676,7 @@ VAL_ 168 tbox_remotePetModeReq 0 "NO_REQUEST" 1 "OFF" 2 "ON" 3 " INVALID" ;
 VAL_ 168 TBOX_SentryReq 0 "NO_REQUEST" 1 "OFF" 2 "ON" 3 " INVALID" ;
 VAL_ 168 TBOX_TakeVideoPosReq 0 "NO_REQUEST" 1 "Front" 2 "Rear" 3 "Left" 4 "Right" 5 "INCAR" 6 "OFF" 7 "INVALID" ;
 VAL_ 168 TBOX_TakePhotoReq 0 "NO_REQUEST" 1 "OUTCAR" 2 "Rear_reserved" 3 "Left_reserved" 4 "Right_reserved" 5 "INCAR" 6 "OFF" 7 "INVALID" ;
-VAL_ 168 TBOX_SentryTimeSet 0 "Inactive" 1 "0.5" 2 "1" 3 "1.5" 4 "2" 5 "2.5" 6 "3" 7 "3.5" 8 "4" 9 "4.5" 10 "5" 11 "5.5" 12 "6" 13 "6.5" 14 "7" 15 "7.5" 16 "8" 17 "至0x1Ereserve" 31 "INVALID" ;
+VAL_ 168 TBOX_SentryTimeSet 0 "Inactive" 1 "0.5" 2 "1" 3 "1.5" 4 "2" 5 "2.5" 6 "3" 7 "3.5" 8 "4" 9 "4.5" 10 "5" 11 "5.5" 12 "6" 13 "6.5" 14 "7" 15 "7.5" 16 "8" 17 "至0x1Ereserve" 31 " INVALID" ;
 VAL_ 168 TBOX_CarSearchReq 0 "NO_REQUEST" 1 "OFF" 2 "ON" 3 " INVALID" ;
 VAL_ 168 TBOX_WaccMODERequest 0 "NO_REQUEST" 1 "standby" 2 "heating" 3 "refrigeration" 4 "isothermal" 5 "INVALID" ;
 VAL_ 168 TBOX_WaccEaultEliminate 0 "NO Request" 1 "Request" ;
@@ -6631,6 +6740,7 @@ VAL_ 165 IVI_AcFullChargeToWarmSet 0 "NO_REQUEST" 1 "OFF" 2 "ON" 3 "INVALID" ;
 VAL_ 165 ivi_ChargeEndTimeValid 0 "No Req" 1 "Set End Time" 2 "Not Set End Time" 3 "Invalid" ;
 VAL_ 165 ivi_ChargeStartTimeValid 0 "INVALID" 1 " VALID" ;
 VAL_ 165 ivi_driveModeSet 0 "NORequest" 1 "ECO" 2 "COMFORT" 3 "SPORT" 4 "FREEDOM_reserve" 5 "ACCELERATE" 6 "RESERVED" 7 " Invalid" ;
+VAL_ 469 ivi_PreRefuelCtrl 0 "NORequest" 1 "OFF" 2 "ON" 3 " INVALID" ;
 VAL_ 469 ivi_EmergencyHvOffRequestReserved 0 "NO_REQUEST" 1 " REQUEST" ;
 VAL_ 469 ivi_ExhibitionModeCtrl 0 "No_request" 1 "OFF" 2 "ON" 3 " Reserved" ;
 VAL_ 469 ivi_DCDCAutoChargeSet 0 "No_request" 1 "OFF" 2 "ON" 4 " Reserved" ;
@@ -6706,6 +6816,7 @@ VAL_ 105 IVI_DowFuncSet 0 "No  Request" 1 "OFF" 2 "ON" 3 " Invalid" ;
 VAL_ 105 IVI_StartRemFuncSet 0 "No  Request" 1 "OFF" 2 "ON" 3 " Invalid" ;
 VAL_ 105 IVI_AdsVoiceBroadcastTypeSet 0 "concise" 1 "standard" 2 "detailed" 3 " Invalid" ;
 VAL_ 105 IVI_HmaFuncSet 0 "No Request" 1 "OFF" 2 "ON" 3 " Invalid" ;
+VAL_ 105 IVI_SLAWarnModeSet 0 "No Request" 1 "Vision" 2 "Vision+Voice" 3 "Reserved" ;
 VAL_ 104 IVI_AVMRotationAngle_X 0 "No request" 1 "（-180~180）偏移量-180" ;
 VAL_ 104 IVI_AVMRotationAngle_Y 0 "No request" 1 "（-90~90）偏移量-90" ;
 VAL_ 104 IVI_APACustomizeSlot 0 "None" 1 "Enter Customize Slot" 2 " Quit Customize Slot" ;
@@ -6736,7 +6847,7 @@ VAL_ 197 ivi_hudOnOffSet 0 "OFF" 1 "ON" 2 "RESERVED" 3 " NO_COMMAND" ;
 VAL_ 197 IVI_PEBSVoiceWarningSet 0 "NORequest" 1 "OFF" 2 "ON" 3 " INVALID" ;
 VAL_ 197 ivi_NaviSwitchReserved 0 "NORequest" 1 " Navi" ;
 VAL_ 197 ivi_themeSetReserved 0 "NONE" 1 "ECO" 2 "COMMON" 3 "SPORT" 4 "DAY" 5 "NIGHT" 6 "RESERVED" 7 " INVALID" ;
-VAL_ 197 ivi_wcmLeftOnOffSet 0 "NORequest" 1 "OFF" 2 "ON" 3 " INVALID" ;
+VAL_ 197 ivi_wcmOnOffSet 0 "NORequest" 1 "OFF" 2 "ON" 3 " INVALID" ;
 VAL_ 197 ivi_pdcOnOffSet 0 "NORequest" 1 "OFF" 2 "ON" 3 " INVALID" ;
 VAL_ 197 ivi_ICthemegangedSetReserved 0 "NORequest" 1 "OFF" 2 "ON" 3 " INVALID" ;
 VAL_ 197 IVI_FactoryResetCommand 0 "No Request" 1 "OFF" 2 "开始恢厂" 3 " Invaild" ;
@@ -7107,8 +7218,8 @@ VAL_ 951 pdc_distanceRSL 0 "NO_DISTANCE" 1 "RANGE_1" 2 "RANGE_2" 3 "RANGE_3" 4 "
 VAL_ 951 pdc_sensorFaultRSL 0 "NORMAL" 1 " FAULT" ;
 VAL_ 951 pdc_distanceRSR 0 "NO_DISTANCE" 1 "RANGE_1" 2 "RANGE_2" 3 "RANGE_3" 4 "RESERVED" 5 "RESERVED" 6 "RESERVED" 7 " RESERVED" ;
 VAL_ 951 pdc_sensorFaultRSR 0 "NORMAL" 1 " FAULT" ;
-VAL_ 952 pdc_actualdistanceFL_ 0 " NO_DISTANCE " ;
-VAL_ 952 pdc_actualdistanceFML_ 0 " NO_DISTANCE " ;
+VAL_ 952 pdc_actualdistanceFL_ 0 " NO_DISTANCE" ;
+VAL_ 952 pdc_actualdistanceFML_ 0 " NO_DISTANCE" ;
 VAL_ 952 pdc_actualdistanceFMR_ 0 " NO_DISTANCE" ;
 VAL_ 952 pdc_actualdistanceFR_ 0 " NO_DISTANCE" ;
 VAL_ 952 pdc_actualdistanceFSL 0 " NO_DISTANCE" ;
@@ -7165,6 +7276,8 @@ VAL_ 1176 MFW_APA_AVM_KeySt 0 "No press" 1 "Press" 2 "INVALID" 3 "RESERVED" ;
 VAL_ 1176 MFW_TJAICAACTIVEKeySt 0 "No press" 1 "Press" 2 "INVALID" 3 "RESERVED" ;
 VAL_ 540 HOD_Handoffmonitor 0 "No_request" 1 "Hands OFF" 2 "Hands ON" 3 " Reserved" ;
 VAL_ 540 HOD_HandoffmonitorValid 0 "VALID" 1 " INVALID" ;
+VAL_ 385 ic_displayFail 0 "NORMAL" 1 " FAULT" ;
+VAL_ 385 ic_IllumiLevelSts 0 "INVALID" 1 "LEVEL1" 2 "LEVEL2" 3 "LEVEL3" 4 "LEVEL4" 5 "LEVEL5" 6 "LEVEL6" 7 "LEVEL7" 8 "LEVEL8" 9 "LEVEL9" 10 "LEVEL10" 11 "LEVEL11" 12 "LEVEL12" 13 "LEVEL13" 14 "LEVEL14" 15 "LEVEL15" 16 "LEVEL16" 17 "LEVEL17" 18 "LEVEL18" 19 "LEVEL19" 20 "LEVEL20" 21 "LEVEL21" 22 "LEVEL22" 23 "LEVEL23" 24 "LEVEL24" 25 "LEVEL25" 26 "LEVEL26" 27 "LEVEL27" 28 "LEVEL28" 29 "LEVEL29" 30 "LEVEL30" 31 " LEVEL31" ;
 VAL_ 754 ic_RRSeatDetectSts 0 "NOT_DETECTED" 1 " DETECTED" ;
 VAL_ 754 ic_RMSeatDetectSts 0 "NOT_DETECTED" 1 " DETECTED" ;
 VAL_ 754 ic_lowSocIndication 0 "INACTIVE" 1 " ACTIVE" ;
@@ -7208,7 +7321,8 @@ VAL_ 1173 IVI_ModeSts 0 "INACTIVE" 1 "OFF" 2 "ON" 3 " INVALID" ;
 VAL_ 1173 IVI_SentryReq 0 "NO_REQUEST" 1 "OFF" 2 "ON" 3 " INVALID" ;
 VAL_ 1173 IVI_SentryAlarmSts 0 "OFF" 1 "Active" 2 "Alert" 3 " Alarm" ;
 VAL_ 1173 IVI_ModeReq 0 "NO_REQUEST" 1 "OFF" 2 "ON" 3 " INVALID" ;
-VAL_ 1173 IVI_SentryTimeFd 0 "Inactive" 1 "0.5" 2 "1" 3 "1.5" 4 "2" 5 "2.5" 6 "3" 7 "3.5" 8 "4" 9 "4.5" 10 "5" 11 "5.5" 12 "6" 13 "6.5" 14 "7" 15 "7.5" 16 "8" 17 "reserve" 31 "INVALID" ;
+VAL_ 1173 IVI_SentryTimeFd 0 "Inactive" 1 "0.5" 2 "1" 3 "1.5" 4 "2" 5 "2.5" 6 "3" 7 "3.5" 8 "4" 9 "4.5" 10 "5" 11 "5.5" 12 "6" 13 "6.5" 14 "7" 15 "7.5" 16 "8" 17 "reserve" 31 " INVALID" ;
+VAL_ 1173 IVI_RangeExtenderdisenable 0 "NO_REQUEST" 1 "OFF" 2 "ON" 3 " INVALID" ;
 VAL_ 1173 IVI_ChildrenLeftremindSts 0 "NO 不提醒" 1 "YES 提醒" 2 "Reserved" 3 " INVALID" ;
 VAL_ 1173 IVI_PetModeSts 0 "OFF" 1 "ON" 2 "reserve" 3 " INVALID" ;
 VAL_ 1173 IVI_SentryFaultReason 0 "Normal" 1 "BCMSYSFault" 2 "APASYSFault" 3 "LOWSOC" 4 "CameraFault" 5 "USBUNCONNECTED" 6 "USBNearly FULL" 7 "ModeConflict" 8 "Emergency recording" 9 " Reserved" ;

@@ -50,6 +50,7 @@ const   uint16_t    Com_SignalInitValue_bms_ChgAmount_0x574_INFO_Message = 0x0;
 const   uint16_t    Com_SignalInitValue_vcu_avgPwr_0x561_INFO_Message = 0X2710;
 const   uint8_t    Com_SignalInitValue_vcu_alertLevel_0x561_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_VCU_chargeFaultReason_0x561_INFO_Message = 0x0;
+const   uint8_t    Com_SignalInitValue_VCU_RegenWeakRemind_0x561_INFO_Message = 0x0;
 const   uint16_t    Com_SignalInitValue_vcu_remainingMileage_0x351_INFO_Message = 0x0;
 const   uint16_t    Com_SignalInitValue_vcu_ComprehensiveRemainingMileage_0x351_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_vcu_SysAlertLevel_0x351_INFO_Message = 0x0;
@@ -83,9 +84,16 @@ const   uint8_t    Com_SignalInitValue_vcu_stEgyFlowEngAndGenMot_0x331_INFO_Mess
 const   uint8_t    Com_SignalInitValue_VCU_stEgyFlowMcuf0AndBatt_0x331_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_VCU_stEgyFlowMcur0AndBatt_0x331_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_VCU_IVI_HVDownRepairMode_0x331_INFO_Message = 0x0;
+const   uint8_t    Com_SignalInitValue_VCU_LowFuel_0x331_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_VCU_LowSOC_0x331_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_vcu_obcDschrgAllow_0x331_INFO_Message = 0x0;
+const   uint8_t    Com_SignalInitValue_vcu_v2vChrgFdbk_0x331_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_vcu_obcDschrgFdbk_0x331_INFO_Message = 0x0;
+const   uint8_t    Com_SignalInitValue_vcu_v2vChrgOutCurntFdbk_0x331_INFO_Message = 0x9;
+const   uint8_t    Com_SignalInitValue_VCU_MaxFuelConsumptionSt_0x331_INFO_Message = 0x0;
+const   uint8_t    Com_SignalInitValue_VCU_MaxFuelConsumptionModeSt_0x331_INFO_Message = 0x0;
+const   uint8_t    Com_SignalInitValue_vcu_RangeExtenderNoSt_0x331_INFO_Message = 0x0;
+const   uint8_t    Com_SignalInitValue_gcu_MotorControlMode_0x10C_INFO_Message = 0x0;
 const   uint64_t    Com_SignalInitValue_Diag_FuncReq_Data_0x7DF_INFO_Message = 0x0;
 const   uint16_t    Com_SignalInitValue_ic_avgSpdTripB_0x4F3_INFO_Message = 0x0;
 const   uint16_t    Com_SignalInitValue_ic_lastingtime_0x4F3_INFO_Message = 0x0;
@@ -98,7 +106,11 @@ const   uint16_t    Com_SignalInitValue_vcu_PwroftripB_0x301_INFO_Message = 0x13
 const   uint16_t    Com_SignalInitValue_vcu_avgPwroftripB_0x301_INFO_Message = 0x1F4;
 const   uint8_t    Com_SignalInitValue_vcu_lowSocwarming_0x301_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_VCU_SysFaulttext_0x301_INFO_Message = 0x0;
+const   uint8_t    Com_SignalInitValue_vcu_v2vChrgAllow_0x330_INFO_Message = 0x0;
+const   uint16_t    Com_SignalInitValue_vcu_v2vChrgOptVoltg_0x330_INFO_Message = 0x0;
+const   uint16_t    Com_SignalInitValue_vcu_v2vChrgOptCurnt_0x330_INFO_Message = 0x0;
 const   uint16_t    Com_SignalInitValue_VCU_InstantaneousPower_0x330_INFO_Message = 0x0;
+const   uint8_t    Com_SignalInitValue_VCU_ConveyerBeltMode_0x330_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_BMS_ThrmlRunawaySt_0x3A4_INFO_Message = 0x00;
 const   uint8_t    Com_SignalInitValue_BMS_ThrmlForecastersSt_0x3A4_INFO_Message = 0x00;
 const   uint8_t    Com_SignalInitValue_BMS_AcFullChargeToWarmState_0x3A4_INFO_Message = 0x0;
@@ -109,6 +121,8 @@ const   uint8_t    Com_SignalInitValue_VCU_SuperPowerSavingModeSt_0x3A1_INFO_Mes
 const   uint8_t    Com_SignalInitValue_VCU_SuperPowerSavingModeReq_0x3A1_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_VCU_PercentInstantaneousPower_0x3A1_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_VCU_SuperPowerSavingModeFaultReason_0x3A1_INFO_Message = 0x0;
+const   uint8_t    Com_SignalInitValue_Vcu_ParkingChargeFB_0x3A1_INFO_Message = 0x0;
+const   uint8_t    Com_SignalInitValue_Vcu_ParkingChargeModFB_0x3A1_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_vcu_towMode_0x3A1_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_vcu_ready_0x3A1_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_vcu_traveModeSts_0x3A1_INFO_Message = 0x0;
@@ -116,10 +130,12 @@ const   uint8_t    Com_SignalInitValue_vcu_highVoltagefaultSts_0x3A1_INFO_Messag
 const   uint8_t    Com_SignalInitValue_VCU_VehicleRepairModeFB_0x3A1_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_VCU_CampModeSts_0x3A1_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_vcu_RegenModeStatus_0x3A1_INFO_Message = 0x4;
+const   uint8_t    Com_SignalInitValue_VCU_RangeExtenderSt_0x3A1_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_vcu_highVoltageSuccess_0x3A1_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_vcu_hvOnMode_0x3A1_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_vcu_VehicleMode_0x3A1_INFO_Message = 0x1;
 const   uint8_t    Com_SignalInitValue_vcu_memoryStatus_0x3A1_INFO_Message = 0x1;
+const   uint8_t    Com_SignalInitValue_VCU_Eng_SelfShieldStart_0x3A1_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_VCU_TrailerModeSts_0x3A1_INFO_Message = 0x3;
 const   uint8_t    Com_SignalInitValue_VCU_ExhibitionRequest_0x3A1_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_vcu_ExhibitionMode_0x3A1_INFO_Message = 0x0;
@@ -325,8 +341,8 @@ const   uint8_t    Com_SignalInitValue_acu_driverSeatBeltStatus_0x380_INFO_Messa
 const   uint8_t    Com_SignalInitValue_acu_driverSeatBeltStatusValid_0x380_INFO_Message = 0x1;
 const   uint8_t    Com_SignalInitValue_acu_passengerSeatBeltStatus_0x380_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_acu_passengerSeatBeltStatusValid_0x380_INFO_Message = 0x1;
-const   uint8_t    Com_SignalInitValue_acu_rollingCounter_0x380_INFO_Message = 0x0;
-const   uint8_t    Com_SignalInitValue_acu_checksum_0x380_INFO_Message = 0x0;
+const   uint8_t    Com_SignalInitValue_acu_rollingCounter__0x380_INFO_Message = 0x0;
+const   uint8_t    Com_SignalInitValue_acu_checksum__0x380_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ABM_PassAirbSuppressionSt_0x380_INFO_Message = 0x1;
 const   uint8_t    Com_SignalInitValue_APA_voice_reminder_0x35B_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_APA_textinfo_0x35B_INFO_Message = 0x0;
@@ -389,6 +405,7 @@ const   uint8_t    Com_SignalInitValue_ADS_SpeedLimitValue_0x2B3_INFO_Message = 
 const   uint8_t    Com_SignalInitValue_ADS_SpeedAutoFollow_0x2B3_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ADS_OneTouchSpeedAdjustment_0x2B3_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ADS_TimeGapAdjustment_0x2B3_INFO_Message = 0x0;
+const   uint8_t    Com_SignalInitValue_ADS_HMAFunctionStatus_0x2B3_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ADS_DriverSetSpeedDisplay_0x2B3_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ADS_CalibProcess_0x2B5_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ADS_CalibState_0x2B5_INFO_Message = 0x0;
@@ -448,6 +465,8 @@ const   uint8_t    Com_SignalInitValue_ADS_LaneChangeConfirm_0x2C6_INFO_Message 
 const   uint8_t    Com_SignalInitValue_ADS_LateralAction_0x2C6_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ADS_EthSignalState_0x2C6_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ADS_EthPdcSignalState_0x2C6_INFO_Message = 0x0;
+const   uint8_t    Com_SignalInitValue_ADS_RAEBSts_0x30A_INFO_Message = 0x0;
+const   uint8_t    Com_SignalInitValue_ADS_SLAWarnMode_0x30A_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ADS_RPAFuncSts_0x30D_INFO_Message = 0x0;
 const   uint16_t    Com_SignalInitValue_ADS_AVMRotationAngle_X_0x30D_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ADS_AVMRotationAngle_Y_0x30D_INFO_Message = 0x0;
@@ -495,18 +514,18 @@ const   uint8_t    Com_SignalInitValue_ADS_DOWRightSts_0x308_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ADS_APAViewSts_0x307_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ADS_AVMViewSts_0x307_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ADS_APAFuncType_0x307_INFO_Message = 0x0;
-const   uint8_t    Com_SignalInitValue_ADS_VehParkModeAvil_0x307_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ADS_APAParkInTypeSel_0x307_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ADS_APACustomizeSlotFB_0x307_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ADS_RpaApaSwitchFB_0x307_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ADS_APAUIFuncSts_0x307_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ADS_ParkSpcGrdLockSts_0x307_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ADS_AVMSideViewSts_0x307_INFO_Message = 0x0;
-const   uint8_t    Com_SignalInitValue_ADS_APACustomizedSlotSt_0x307_INFO_Message = 0x0;
 const   uint16_t    Com_SignalInitValue_ADS_ParkFRmngDst_0x307_INFO_Message = 0x0;
 const   uint16_t    Com_SignalInitValue_ADS_ParkRRmngDst_0x307_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ADS_FrontPDCAlarmSts_0x307_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ADS_PDCMuteSts_0x307_INFO_Message = 0x0;
+const   uint8_t    Com_SignalInitValue_ADS_APACustomizedSlotSt_0x307_INFO_Message = 0x0;
+const   uint8_t    Com_SignalInitValue_ADS_VehParkModeAvil_0x307_INFO_Message = 0x0;
 const   uint16_t    Com_SignalInitValue_ADS_APAToastID_0x31B_INFO_Message = 0x0;
 const   uint16_t    Com_SignalInitValue_ADS_APATipsID_0x31B_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ADS_APAToastTTS_0x31B_INFO_Message = 0x0;
@@ -549,9 +568,9 @@ const   uint8_t    Com_SignalInitValue_IVI_CarSearchControl_0x408_INFO_Message =
 const   uint8_t    Com_SignalInitValue_IVI_ModeSuppressSts_0x408_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_IVI_UserClass_0x408_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_IVI_AutoRainWiperReq_0x408_INFO_Message = 0x0;
+const   uint8_t    Com_SignalInitValue_IVI_VehiclePosition_0x408_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_IVI_AccountLoginStatus_0x408_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ivi_languageSet1_0x408_INFO_Message = 0x1;
-const   uint8_t    Com_SignalInitValue_IVI_VehiclePosition_0x408_INFO_Message = 0x0;
 const   uint16_t    Com_SignalInitValue_VCU_CLTCEvRemainingMileage_0x3B1_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_TBOX_FuncReq_SentryMod_0x413_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_BLE_approachingUnlockFedb_0x347_INFO_Message = 0x0;
@@ -636,6 +655,7 @@ const   uint8_t    Com_SignalInitValue_BCM_RRWINOpenDegree_0x3C2_INFO_Message = 
 const   uint8_t    Com_SignalInitValue_BCM_NFC_PS_KeyReq_0x3C2_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_BCM_PowerState_0x3C2_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_bcm_footLightSwitchSts_0x305_INFO_Message = 0x1;
+const   uint8_t    Com_SignalInitValue_BCM_HighBeamModel_0x305_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_bcm_tpmsLFStatus_0x411_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_bcm_tyreLFPressure_0x411_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_bcm_tyreLFTemp_0x411_INFO_Message = 0x0;
@@ -816,6 +836,7 @@ const   uint8_t    Com_SignalInitValue_IVI_AcFullChargeToWarmSet_0x0A5_INFO_Mess
 const   uint8_t    Com_SignalInitValue_ivi_ChargeEndTimeValid_0x0A5_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ivi_ChargeStartTimeValid_0x0A5_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ivi_driveModeSet_0x0A5_INFO_Message = 0x0;
+const   uint8_t    Com_SignalInitValue_ivi_PreRefuelCtrl_0x1D5_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ivi_EmergencyHvOffRequestReserved_0x1D5_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ivi_ExhibitionModeCtrl_0x1D5_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ivi_DCDCAutoChargeSet_0x1D5_INFO_Message = 0x0;
@@ -896,6 +917,7 @@ const   uint8_t    Com_SignalInitValue_IVI_DowFuncSet_0x069_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_IVI_StartRemFuncSet_0x069_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_IVI_AdsVoiceBroadcastTypeSet_0x069_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_IVI_HmaFuncSet_0x069_INFO_Message = 0x0;
+const   uint8_t    Com_SignalInitValue_IVI_SLAWarnModeSet_0x069_INFO_Message = 0x0;
 const   uint16_t    Com_SignalInitValue_IVI_AVMRotationAngle_X_0x068_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_IVI_AVMRotationAngle_Y_0x068_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_IVI_APACustomizeSlot_0x068_INFO_Message = 0x0;
@@ -930,7 +952,7 @@ const   uint8_t    Com_SignalInitValue_ivi_hudOnOffSet_0x0C5_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_IVI_PEBSVoiceWarningSet_0x0C5_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ivi_NaviSwitchReserved_0x0C5_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ivi_themeSetReserved_0x0C5_INFO_Message = 0x0;
-const   uint8_t    Com_SignalInitValue_ivi_wcmLeftOnOffSet_0x0C5_INFO_Message = 0x0;
+const   uint8_t    Com_SignalInitValue_ivi_wcmOnOffSet_0x0C5_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ivi_pdcOnOffSet_0x0C5_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ivi_ICthemegangedSetReserved_0x0C5_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_IVI_FactoryResetCommand_0x0C5_INFO_Message = 0x0;
@@ -1453,6 +1475,8 @@ const   uint8_t    Com_SignalInitValue_MFW_APA_AVM_KeySt_0x498_INFO_Message = 0x
 const   uint8_t    Com_SignalInitValue_MFW_TJAICAACTIVEKeySt_0x498_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_HOD_Handoffmonitor_0x21C_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_HOD_HandoffmonitorValid_0x21C_INFO_Message = 0x0;
+const   uint8_t    Com_SignalInitValue_ic_displayFail_0x181_INFO_Message = 0x0;
+const   uint8_t    Com_SignalInitValue_ic_IllumiLevelSts_0x181_INFO_Message = 0x0;
 const   uint32_t    Com_SignalInitValue_ic_totalMileage_0x2F2_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ic_RRSeatDetectSts_0x2F2_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_ic_RMSeatDetectSts_0x2F2_INFO_Message = 0x0;
@@ -1526,6 +1550,7 @@ const   uint8_t    Com_SignalInitValue_IVI_SentryReq_0x495_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_IVI_SentryAlarmSts_0x495_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_IVI_ModeReq_0x495_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_IVI_SentryTimeFd_0x495_INFO_Message = 0x0;
+const   uint8_t    Com_SignalInitValue_IVI_RangeExtenderdisenable_0x495_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_IVI_ChildrenLeftremindSts_0x495_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_IVI_PetModeSts_0x495_INFO_Message = 0x0;
 const   uint8_t    Com_SignalInitValue_IVI_SentryFaultReason_0x495_INFO_Message = 0x0;
@@ -2257,6 +2282,30 @@ const ComSignal_type ComSignal[] =   {
         .ComSignalInitValue         = &Com_SignalInitValue_VCU_chargeFaultReason_0x561_INFO_Message,
         .ComBitPosition             = 36,
         .ComBitSize                 = 4,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
+    { // 0x561
+        .ComHandleId                = COMCONF_COMSIGNAL_VCU_REGENWEAKREMIND_0X561_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x561_INFO,
+        .ComFirstTimeoutFactor      = (5000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (5000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_VCU_RegenWeakRemind_0x561_INFO_Message,
+        .ComBitPosition             = 48,
+        .ComBitSize                 = 2,
         .ComSignalEndianess         = COM_LITTLE_ENDIAN,
         .ComSignalType              = COM_UINT8,
         .Com_As_IsSignalGroup       = FALSE,
@@ -3060,6 +3109,30 @@ const ComSignal_type ComSignal[] =   {
         .Com_As_EOL = 0
     },
     { // 0x331
+        .ComHandleId                = COMCONF_COMSIGNAL_VCU_LOWFUEL_0X331_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x331_INFO,
+        .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_VCU_LowFuel_0x331_INFO_Message,
+        .ComBitPosition             = 51,
+        .ComBitSize                 = 1,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
+    { // 0x331
         .ComHandleId                = COMCONF_COMSIGNAL_VCU_LOWSOC_0X331_INFO,
         .ComIPduHandleId            = ComConf_ComIPdu_0x331_INFO,
         .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
@@ -3108,6 +3181,30 @@ const ComSignal_type ComSignal[] =   {
         .Com_As_EOL = 0
     },
     { // 0x331
+        .ComHandleId                = COMCONF_COMSIGNAL_VCU_V2VCHRGFDBK_0X331_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x331_INFO,
+        .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_vcu_v2vChrgFdbk_0x331_INFO_Message,
+        .ComBitPosition             = 54,
+        .ComBitSize                 = 1,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
+    { // 0x331
         .ComHandleId                = COMCONF_COMSIGNAL_VCU_OBCDSCHRGFDBK_0X331_INFO,
         .ComIPduHandleId            = ComConf_ComIPdu_0x331_INFO,
         .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
@@ -3121,6 +3218,126 @@ const ComSignal_type ComSignal[] =   {
         .ComSignalInitValue         = &Com_SignalInitValue_vcu_obcDschrgFdbk_0x331_INFO_Message,
         .ComBitPosition             = 55,
         .ComBitSize                 = 1,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
+    { // 0x331
+        .ComHandleId                = COMCONF_COMSIGNAL_VCU_V2VCHRGOUTCURNTFDBK_0X331_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x331_INFO,
+        .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_vcu_v2vChrgOutCurntFdbk_0x331_INFO_Message,
+        .ComBitPosition             = 56,
+        .ComBitSize                 = 4,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
+    { // 0x331
+        .ComHandleId                = COMCONF_COMSIGNAL_VCU_MAXFUELCONSUMPTIONST_0X331_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x331_INFO,
+        .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_VCU_MaxFuelConsumptionSt_0x331_INFO_Message,
+        .ComBitPosition             = 60,
+        .ComBitSize                 = 1,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
+    { // 0x331
+        .ComHandleId                = COMCONF_COMSIGNAL_VCU_MAXFUELCONSUMPTIONMODEST_0X331_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x331_INFO,
+        .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_VCU_MaxFuelConsumptionModeSt_0x331_INFO_Message,
+        .ComBitPosition             = 61,
+        .ComBitSize                 = 1,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
+    { // 0x331
+        .ComHandleId                = COMCONF_COMSIGNAL_VCU_RANGEEXTENDERNOST_0X331_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x331_INFO,
+        .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_vcu_RangeExtenderNoSt_0x331_INFO_Message,
+        .ComBitPosition             = 62,
+        .ComBitSize                 = 1,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
+    { // 0x10C
+        .ComHandleId                = COMCONF_COMSIGNAL_GCU_MOTORCONTROLMODE_0X10C_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x10C_INFO,
+        .ComFirstTimeoutFactor      = (200/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (200/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_gcu_MotorControlMode_0x10C_INFO_Message,
+        .ComBitPosition             = 46,
+        .ComBitSize                 = 2,
         .ComSignalEndianess         = COM_LITTLE_ENDIAN,
         .ComSignalType              = COM_UINT8,
         .Com_As_IsSignalGroup       = FALSE,
@@ -3420,6 +3637,78 @@ const ComSignal_type ComSignal[] =   {
         .Com_As_EOL = 0
     },
     { // 0x330
+        .ComHandleId                = COMCONF_COMSIGNAL_VCU_V2VCHRGALLOW_0X330_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x330_INFO,
+        .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_vcu_v2vChrgAllow_0x330_INFO_Message,
+        .ComBitPosition             = 2,
+        .ComBitSize                 = 1,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
+    { // 0x330
+        .ComHandleId                = COMCONF_COMSIGNAL_VCU_V2VCHRGOPTVOLTG_0X330_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x330_INFO,
+        .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_vcu_v2vChrgOptVoltg_0x330_INFO_Message,
+        .ComBitPosition             = 3,
+        .ComBitSize                 = 13,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT16,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
+    { // 0x330
+        .ComHandleId                = COMCONF_COMSIGNAL_VCU_V2VCHRGOPTCURNT_0X330_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x330_INFO,
+        .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_vcu_v2vChrgOptCurnt_0x330_INFO_Message,
+        .ComBitPosition             = 16,
+        .ComBitSize                 = 13,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT16,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
+    { // 0x330
         .ComHandleId                = COMCONF_COMSIGNAL_VCU_INSTANTANEOUSPOWER_0X330_INFO,
         .ComIPduHandleId            = ComConf_ComIPdu_0x330_INFO,
         .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
@@ -3435,6 +3724,30 @@ const ComSignal_type ComSignal[] =   {
         .ComBitSize                 = 10,
         .ComSignalEndianess         = COM_LITTLE_ENDIAN,
         .ComSignalType              = COM_UINT16,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
+    { // 0x330
+        .ComHandleId                = COMCONF_COMSIGNAL_VCU_CONVEYERBELTMODE_0X330_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x330_INFO,
+        .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_VCU_ConveyerBeltMode_0x330_INFO_Message,
+        .ComBitPosition             = 59,
+        .ComBitSize                 = 2,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
         .Com_As_IsSignalGroup       = FALSE,
         .ComGroupSignal             = NULL,
         .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
@@ -3684,6 +3997,54 @@ const ComSignal_type ComSignal[] =   {
         .Com_As_EOL = 0
     },
     { // 0x3A1
+        .ComHandleId                = COMCONF_COMSIGNAL_VCU_PARKINGCHARGEFB_0X3A1_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x3A1_INFO,
+        .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_Vcu_ParkingChargeFB_0x3A1_INFO_Message,
+        .ComBitPosition             = 23,
+        .ComBitSize                 = 1,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
+    { // 0x3A1
+        .ComHandleId                = COMCONF_COMSIGNAL_VCU_PARKINGCHARGEMODFB_0X3A1_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x3A1_INFO,
+        .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_Vcu_ParkingChargeModFB_0x3A1_INFO_Message,
+        .ComBitPosition             = 24,
+        .ComBitSize                 = 2,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
+    { // 0x3A1
         .ComHandleId                = COMCONF_COMSIGNAL_VCU_TOWMODE_0X3A1_INFO,
         .ComIPduHandleId            = ComConf_ComIPdu_0x3A1_INFO,
         .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
@@ -3852,6 +4213,30 @@ const ComSignal_type ComSignal[] =   {
         .Com_As_EOL = 0
     },
     { // 0x3A1
+        .ComHandleId                = COMCONF_COMSIGNAL_VCU_RANGEEXTENDERST_0X3A1_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x3A1_INFO,
+        .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_VCU_RangeExtenderSt_0x3A1_INFO_Message,
+        .ComBitPosition             = 40,
+        .ComBitSize                 = 2,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
+    { // 0x3A1
         .ComHandleId                = COMCONF_COMSIGNAL_VCU_HIGHVOLTAGESUCCESS_0X3A1_INFO,
         .ComIPduHandleId            = ComConf_ComIPdu_0x3A1_INFO,
         .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
@@ -3936,6 +4321,30 @@ const ComSignal_type ComSignal[] =   {
         .ComSignalAsUseUpdateBit    = FALSE,
         .ComSignalInitValue         = &Com_SignalInitValue_vcu_memoryStatus_0x3A1_INFO_Message,
         .ComBitPosition             = 55,
+        .ComBitSize                 = 1,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
+    { // 0x3A1
+        .ComHandleId                = COMCONF_COMSIGNAL_VCU_ENG_SELFSHIELDSTART_0X3A1_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x3A1_INFO,
+        .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_VCU_Eng_SelfShieldStart_0x3A1_INFO_Message,
+        .ComBitPosition             = 56,
         .ComBitSize                 = 1,
         .ComSignalEndianess         = COM_LITTLE_ENDIAN,
         .ComSignalType              = COM_UINT8,
@@ -8868,7 +9277,7 @@ const ComSignal_type ComSignal[] =   {
         .Com_As_EOL = 0
     },
     { // 0x380
-        .ComHandleId                = COMCONF_COMSIGNAL_ACU_ROLLINGCOUNTER_0X380_INFO,
+        .ComHandleId                = COMCONF_COMSIGNAL_ACU_ROLLINGCOUNTER__0X380_INFO,
         .ComIPduHandleId            = ComConf_ComIPdu_0x380_INFO,
         .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
         .ComNotification            = COM_SIGNAL_CALLOUT,
@@ -8878,7 +9287,7 @@ const ComSignal_type ComSignal[] =   {
         .ComTransferProperty        = COM_PENDING,
         .ComUpdateBitPosition       = 0,
         .ComSignalAsUseUpdateBit    = FALSE,
-        .ComSignalInitValue         = &Com_SignalInitValue_acu_rollingCounter_0x380_INFO_Message,
+        .ComSignalInitValue         = &Com_SignalInitValue_acu_rollingCounter__0x380_INFO_Message,
         .ComBitPosition             = 52,
         .ComBitSize                 = 4,
         .ComSignalEndianess         = COM_LITTLE_ENDIAN,
@@ -8892,7 +9301,7 @@ const ComSignal_type ComSignal[] =   {
         .Com_As_EOL = 0
     },
     { // 0x380
-        .ComHandleId                = COMCONF_COMSIGNAL_ACU_CHECKSUM_0X380_INFO,
+        .ComHandleId                = COMCONF_COMSIGNAL_ACU_CHECKSUM__0X380_INFO,
         .ComIPduHandleId            = ComConf_ComIPdu_0x380_INFO,
         .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
         .ComNotification            = COM_SIGNAL_CALLOUT,
@@ -8902,7 +9311,7 @@ const ComSignal_type ComSignal[] =   {
         .ComTransferProperty        = COM_PENDING,
         .ComUpdateBitPosition       = 0,
         .ComSignalAsUseUpdateBit    = FALSE,
-        .ComSignalInitValue         = &Com_SignalInitValue_acu_checksum_0x380_INFO_Message,
+        .ComSignalInitValue         = &Com_SignalInitValue_acu_checksum__0x380_INFO_Message,
         .ComBitPosition             = 56,
         .ComBitSize                 = 8,
         .ComSignalEndianess         = COM_LITTLE_ENDIAN,
@@ -10404,6 +10813,30 @@ const ComSignal_type ComSignal[] =   {
         .Com_As_EOL = 0
     },
     { // 0x2B3
+        .ComHandleId                = COMCONF_COMSIGNAL_ADS_HMAFUNCTIONSTATUS_0X2B3_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x2B3_INFO,
+        .ComFirstTimeoutFactor      = (500/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (500/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_ADS_HMAFunctionStatus_0x2B3_INFO_Message,
+        .ComBitPosition             = 56,
+        .ComBitSize                 = 3,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
+    { // 0x2B3
         .ComHandleId                = COMCONF_COMSIGNAL_ADS_DRIVERSETSPEEDDISPLAY_0X2B3_INFO,
         .ComIPduHandleId            = ComConf_ComIPdu_0x2B3_INFO,
         .ComFirstTimeoutFactor      = (500/CAN_BASE_RX_TIMER_MS_FACTOR),
@@ -11819,6 +12252,54 @@ const ComSignal_type ComSignal[] =   {
         .ComOsekNmNodeId            = 0,
         .Com_As_EOL = 0
     },
+    { // 0x30A
+        .ComHandleId                = COMCONF_COMSIGNAL_ADS_RAEBSTS_0X30A_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x30A_INFO,
+        .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_ADS_RAEBSts_0x30A_INFO_Message,
+        .ComBitPosition             = 31,
+        .ComBitSize                 = 3,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
+    { // 0x30A
+        .ComHandleId                = COMCONF_COMSIGNAL_ADS_SLAWARNMODE_0X30A_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x30A_INFO,
+        .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_ADS_SLAWarnMode_0x30A_INFO_Message,
+        .ComBitPosition             = 46,
+        .ComBitSize                 = 3,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
     { // 0x30D
         .ComHandleId                = COMCONF_COMSIGNAL_ADS_RPAFUNCSTS_0X30D_INFO,
         .ComIPduHandleId            = ComConf_ComIPdu_0x30D_INFO,
@@ -12948,30 +13429,6 @@ const ComSignal_type ComSignal[] =   {
         .Com_As_EOL = 0
     },
     { // 0x307
-        .ComHandleId                = COMCONF_COMSIGNAL_ADS_VEHPARKMODEAVIL_0X307_INFO,
-        .ComIPduHandleId            = ComConf_ComIPdu_0x307_INFO,
-        .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
-        .ComNotification            = COM_SIGNAL_CALLOUT,
-        .ComTimeoutFactor           = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
-        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
-        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
-        .ComTransferProperty        = COM_PENDING,
-        .ComUpdateBitPosition       = 0,
-        .ComSignalAsUseUpdateBit    = FALSE,
-        .ComSignalInitValue         = &Com_SignalInitValue_ADS_VehParkModeAvil_0x307_INFO_Message,
-        .ComBitPosition             = 10,
-        .ComBitSize                 = 2,
-        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
-        .ComSignalType              = COM_UINT8,
-        .Com_As_IsSignalGroup       = FALSE,
-        .ComGroupSignal             = NULL,
-        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
-        .ComSigGwRoutingReq         = FALSE,
-        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
-        .ComOsekNmNodeId            = 0,
-        .Com_As_EOL = 0
-    },
-    { // 0x307
         .ComHandleId                = COMCONF_COMSIGNAL_ADS_APAPARKINTYPESEL_0X307_INFO,
         .ComIPduHandleId            = ComConf_ComIPdu_0x307_INFO,
         .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
@@ -13116,30 +13573,6 @@ const ComSignal_type ComSignal[] =   {
         .Com_As_EOL = 0
     },
     { // 0x307
-        .ComHandleId                = COMCONF_COMSIGNAL_ADS_APACUSTOMIZEDSLOTST_0X307_INFO,
-        .ComIPduHandleId            = ComConf_ComIPdu_0x307_INFO,
-        .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
-        .ComNotification            = COM_SIGNAL_CALLOUT,
-        .ComTimeoutFactor           = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
-        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
-        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
-        .ComTransferProperty        = COM_PENDING,
-        .ComUpdateBitPosition       = 0,
-        .ComSignalAsUseUpdateBit    = FALSE,
-        .ComSignalInitValue         = &Com_SignalInitValue_ADS_APACustomizedSlotSt_0x307_INFO_Message,
-        .ComBitPosition             = 26,
-        .ComBitSize                 = 1,
-        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
-        .ComSignalType              = COM_UINT8,
-        .Com_As_IsSignalGroup       = FALSE,
-        .ComGroupSignal             = NULL,
-        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
-        .ComSigGwRoutingReq         = FALSE,
-        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
-        .ComOsekNmNodeId            = 0,
-        .Com_As_EOL = 0
-    },
-    { // 0x307
         .ComHandleId                = COMCONF_COMSIGNAL_ADS_PARKFRMNGDST_0X307_INFO,
         .ComIPduHandleId            = ComConf_ComIPdu_0x307_INFO,
         .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
@@ -13225,6 +13658,54 @@ const ComSignal_type ComSignal[] =   {
         .ComSignalInitValue         = &Com_SignalInitValue_ADS_PDCMuteSts_0x307_INFO_Message,
         .ComBitPosition             = 47,
         .ComBitSize                 = 2,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
+    { // 0x307
+        .ComHandleId                = COMCONF_COMSIGNAL_ADS_APACUSTOMIZEDSLOTST_0X307_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x307_INFO,
+        .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_ADS_APACustomizedSlotSt_0x307_INFO_Message,
+        .ComBitPosition             = 49,
+        .ComBitSize                 = 2,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
+    { // 0x307
+        .ComHandleId                = COMCONF_COMSIGNAL_ADS_VEHPARKMODEAVIL_0X307_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x307_INFO,
+        .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_ADS_VehParkModeAvil_0x307_INFO_Message,
+        .ComBitPosition             = 51,
+        .ComBitSize                 = 3,
         .ComSignalEndianess         = COM_LITTLE_ENDIAN,
         .ComSignalType              = COM_UINT8,
         .Com_As_IsSignalGroup       = FALSE,
@@ -14244,6 +14725,30 @@ const ComSignal_type ComSignal[] =   {
         .Com_As_EOL = 0
     },
     { // 0x408
+        .ComHandleId                = COMCONF_COMSIGNAL_IVI_VEHICLEPOSITION_0X408_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x408_INFO,
+        .ComFirstTimeoutFactor      = (2000/CAN_BASE_TX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (2000/CAN_BASE_TX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_IVI_VehiclePosition_0x408_INFO_Message,
+        .ComBitPosition             = 50,
+        .ComBitSize                 = 2,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
+    { // 0x408
         .ComHandleId                = COMCONF_COMSIGNAL_IVI_ACCOUNTLOGINSTATUS_0X408_INFO,
         .ComIPduHandleId            = ComConf_ComIPdu_0x408_INFO,
         .ComFirstTimeoutFactor      = (2000/CAN_BASE_TX_TIMER_MS_FACTOR),
@@ -14281,30 +14786,6 @@ const ComSignal_type ComSignal[] =   {
         .ComSignalInitValue         = &Com_SignalInitValue_ivi_languageSet1_0x408_INFO_Message,
         .ComBitPosition             = 56,
         .ComBitSize                 = 7,
-        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
-        .ComSignalType              = COM_UINT8,
-        .Com_As_IsSignalGroup       = FALSE,
-        .ComGroupSignal             = NULL,
-        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
-        .ComSigGwRoutingReq         = FALSE,
-        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
-        .ComOsekNmNodeId            = 0,
-        .Com_As_EOL = 0
-    },
-    { // 0x408
-        .ComHandleId                = COMCONF_COMSIGNAL_IVI_VEHICLEPOSITION_0X408_INFO,
-        .ComIPduHandleId            = ComConf_ComIPdu_0x408_INFO,
-        .ComFirstTimeoutFactor      = (2000/CAN_BASE_TX_TIMER_MS_FACTOR),
-        .ComNotification            = COM_SIGNAL_CALLOUT,
-        .ComTimeoutFactor           = (2000/CAN_BASE_TX_TIMER_MS_FACTOR),
-        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
-        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
-        .ComTransferProperty        = COM_PENDING,
-        .ComUpdateBitPosition       = 0,
-        .ComSignalAsUseUpdateBit    = FALSE,
-        .ComSignalInitValue         = &Com_SignalInitValue_IVI_VehiclePosition_0x408_INFO_Message,
-        .ComBitPosition             = 50,
-        .ComBitSize                 = 2,
         .ComSignalEndianess         = COM_LITTLE_ENDIAN,
         .ComSignalType              = COM_UINT8,
         .Com_As_IsSignalGroup       = FALSE,
@@ -16320,6 +16801,30 @@ const ComSignal_type ComSignal[] =   {
         .ComSignalAsUseUpdateBit    = FALSE,
         .ComSignalInitValue         = &Com_SignalInitValue_bcm_footLightSwitchSts_0x305_INFO_Message,
         .ComBitPosition             = 5,
+        .ComBitSize                 = 2,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
+    { // 0x305
+        .ComHandleId                = COMCONF_COMSIGNAL_BCM_HIGHBEAMMODEL_0X305_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x305_INFO,
+        .ComFirstTimeoutFactor      = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (1000/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_BCM_HighBeamModel_0x305_INFO_Message,
+        .ComBitPosition             = 8,
         .ComBitSize                 = 2,
         .ComSignalEndianess         = COM_LITTLE_ENDIAN,
         .ComSignalType              = COM_UINT8,
@@ -20652,6 +21157,30 @@ const ComSignal_type ComSignal[] =   {
         .Com_As_EOL = 0
     },
     { // 0x1D5
+        .ComHandleId                = COMCONF_COMSIGNAL_IVI_PREREFUELCTRL_0X1D5_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x1D5_INFO,
+        .ComFirstTimeoutFactor      = (1000/CAN_BASE_TX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (1000/CAN_BASE_TX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_ivi_PreRefuelCtrl_0x1D5_INFO_Message,
+        .ComBitPosition             = 0,
+        .ComBitSize                 = 2,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
+    { // 0x1D5
         .ComHandleId                = COMCONF_COMSIGNAL_IVI_EMERGENCYHVOFFREQUESTRESERVED_0X1D5_INFO,
         .ComIPduHandleId            = ComConf_ComIPdu_0x1D5_INFO,
         .ComFirstTimeoutFactor      = (1000/CAN_BASE_TX_TIMER_MS_FACTOR),
@@ -22571,6 +23100,30 @@ const ComSignal_type ComSignal[] =   {
         .ComOsekNmNodeId            = 0,
         .Com_As_EOL = 0
     },
+    { // 0x069
+        .ComHandleId                = COMCONF_COMSIGNAL_IVI_SLAWARNMODESET_0X069_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x069_INFO,
+        .ComFirstTimeoutFactor      = (500/CAN_BASE_TX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (500/CAN_BASE_TX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_TRIGGERED,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_IVI_SLAWarnModeSet_0x069_INFO_Message,
+        .ComBitPosition             = 45,
+        .ComBitSize                 = 2,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
     { // 0x068
         .ComHandleId                = COMCONF_COMSIGNAL_IVI_AVMROTATIONANGLE_X_0X068_INFO,
         .ComIPduHandleId            = ComConf_ComIPdu_0x068_INFO,
@@ -23388,7 +23941,7 @@ const ComSignal_type ComSignal[] =   {
         .Com_As_EOL = 0
     },
     { // 0x0C5
-        .ComHandleId                = COMCONF_COMSIGNAL_IVI_WCMLEFTONOFFSET_0X0C5_INFO,
+        .ComHandleId                = COMCONF_COMSIGNAL_IVI_WCMONOFFSET_0X0C5_INFO,
         .ComIPduHandleId            = ComConf_ComIPdu_0x0C5_INFO,
         .ComFirstTimeoutFactor      = (500/CAN_BASE_TX_TIMER_MS_FACTOR),
         .ComNotification            = COM_SIGNAL_CALLOUT,
@@ -23398,7 +23951,7 @@ const ComSignal_type ComSignal[] =   {
         .ComTransferProperty        = COM_TRIGGERED,
         .ComUpdateBitPosition       = 0,
         .ComSignalAsUseUpdateBit    = FALSE,
-        .ComSignalInitValue         = &Com_SignalInitValue_ivi_wcmLeftOnOffSet_0x0C5_INFO_Message,
+        .ComSignalInitValue         = &Com_SignalInitValue_ivi_wcmOnOffSet_0x0C5_INFO_Message,
         .ComBitPosition             = 24,
         .ComBitSize                 = 2,
         .ComSignalEndianess         = COM_LITTLE_ENDIAN,
@@ -35939,6 +36492,54 @@ const ComSignal_type ComSignal[] =   {
         .ComOsekNmNodeId            = 0,
         .Com_As_EOL = 0
     },
+    { // 0x181
+        .ComHandleId                = COMCONF_COMSIGNAL_IC_DISPLAYFAIL_0X181_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x181_INFO,
+        .ComFirstTimeoutFactor      = (200/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (200/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_ic_displayFail_0x181_INFO_Message,
+        .ComBitPosition             = 34,
+        .ComBitSize                 = 1,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
+    { // 0x181
+        .ComHandleId                = COMCONF_COMSIGNAL_IC_ILLUMILEVELSTS_0X181_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x181_INFO,
+        .ComFirstTimeoutFactor      = (200/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (200/CAN_BASE_RX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_PENDING,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_ic_IllumiLevelSts_0x181_INFO_Message,
+        .ComBitPosition             = 59,
+        .ComBitSize                 = 5,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
     { // 0x2F2
         .ComHandleId                = COMCONF_COMSIGNAL_IC_TOTALMILEAGE_0X2F2_INFO,
         .ComIPduHandleId            = ComConf_ComIPdu_0x2F2_INFO,
@@ -37681,6 +38282,30 @@ const ComSignal_type ComSignal[] =   {
         .ComSignalInitValue         = &Com_SignalInitValue_IVI_SentryTimeFd_0x495_INFO_Message,
         .ComBitPosition             = 44,
         .ComBitSize                 = 5,
+        .ComSignalEndianess         = COM_LITTLE_ENDIAN,
+        .ComSignalType              = COM_UINT8,
+        .Com_As_IsSignalGroup       = FALSE,
+        .ComGroupSignal             = NULL,
+        .ComRxDataTimeoutAction     = COM_TIMEOUT_DATA_ACTION_NONE,
+        .ComSigGwRoutingReq         = FALSE,
+        .ComOsekNmNetId             = COM_OSEKNM_INVALID_NET_ID,
+        .ComOsekNmNodeId            = 0,
+        .Com_As_EOL = 0
+    },
+    { // 0x495
+        .ComHandleId                = COMCONF_COMSIGNAL_IVI_RANGEEXTENDERDISENABLE_0X495_INFO,
+        .ComIPduHandleId            = ComConf_ComIPdu_0x495_INFO,
+        .ComFirstTimeoutFactor      = (5000/CAN_BASE_TX_TIMER_MS_FACTOR),
+        .ComNotification            = COM_SIGNAL_CALLOUT,
+        .ComTimeoutFactor           = (5000/CAN_BASE_TX_TIMER_MS_FACTOR),
+        .ComTimeoutNotification     = COM_SIGNAL_CALLOUT,
+        .ComErrorNotification       = COM_NO_FUNCTION_CALLOUT,
+        .ComTransferProperty        = COM_TRIGGERED,
+        .ComUpdateBitPosition       = 0,
+        .ComSignalAsUseUpdateBit    = FALSE,
+        .ComSignalInitValue         = &Com_SignalInitValue_IVI_RangeExtenderdisenable_0x495_INFO_Message,
+        .ComBitPosition             = 49,
+        .ComBitSize                 = 2,
         .ComSignalEndianess         = COM_LITTLE_ENDIAN,
         .ComSignalType              = COM_UINT8,
         .Com_As_IsSignalGroup       = FALSE,
@@ -40948,6 +41573,7 @@ const ComSignal_type * const ComIPduSignalRefs_0x561_INFO[] = {
     &ComSignal[COMCONF_COMSIGNAL_VCU_AVGPWR_0X561_INFO],
     &ComSignal[COMCONF_COMSIGNAL_VCU_ALERTLEVEL_0X561_INFO],
     &ComSignal[COMCONF_COMSIGNAL_VCU_CHARGEFAULTREASON_0X561_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_VCU_REGENWEAKREMIND_0X561_INFO],
     NULL
 };
 const ComSignal_type * const ComIPduSignalRefs_0x351_INFO[] = {
@@ -41011,9 +41637,19 @@ const ComSignal_type * const ComIPduSignalRefs_0x331_INFO[] = {
     &ComSignal[COMCONF_COMSIGNAL_VCU_STEGYFLOWMCUF0ANDBATT_0X331_INFO],
     &ComSignal[COMCONF_COMSIGNAL_VCU_STEGYFLOWMCUR0ANDBATT_0X331_INFO],
     &ComSignal[COMCONF_COMSIGNAL_VCU_IVI_HVDOWNREPAIRMODE_0X331_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_VCU_LOWFUEL_0X331_INFO],
     &ComSignal[COMCONF_COMSIGNAL_VCU_LOWSOC_0X331_INFO],
     &ComSignal[COMCONF_COMSIGNAL_VCU_OBCDSCHRGALLOW_0X331_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_VCU_V2VCHRGFDBK_0X331_INFO],
     &ComSignal[COMCONF_COMSIGNAL_VCU_OBCDSCHRGFDBK_0X331_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_VCU_V2VCHRGOUTCURNTFDBK_0X331_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_VCU_MAXFUELCONSUMPTIONST_0X331_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_VCU_MAXFUELCONSUMPTIONMODEST_0X331_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_VCU_RANGEEXTENDERNOST_0X331_INFO],
+    NULL
+};
+const ComSignal_type * const ComIPduSignalRefs_0x10C_INFO[] = {
+    &ComSignal[COMCONF_COMSIGNAL_GCU_MOTORCONTROLMODE_0X10C_INFO],
     NULL
 };
 const ComSignal_type * const ComIPduSignalRefs_0x7DF_INFO[] = {
@@ -41038,7 +41674,11 @@ const ComSignal_type * const ComIPduSignalRefs_0x301_INFO[] = {
     NULL
 };
 const ComSignal_type * const ComIPduSignalRefs_0x330_INFO[] = {
+    &ComSignal[COMCONF_COMSIGNAL_VCU_V2VCHRGALLOW_0X330_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_VCU_V2VCHRGOPTVOLTG_0X330_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_VCU_V2VCHRGOPTCURNT_0X330_INFO],
     &ComSignal[COMCONF_COMSIGNAL_VCU_INSTANTANEOUSPOWER_0X330_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_VCU_CONVEYERBELTMODE_0X330_INFO],
     NULL
 };
 const ComSignal_type * const ComIPduSignalRefs_0x3A4_INFO[] = {
@@ -41055,6 +41695,8 @@ const ComSignal_type * const ComIPduSignalRefs_0x3A1_INFO[] = {
     &ComSignal[COMCONF_COMSIGNAL_VCU_SUPERPOWERSAVINGMODEREQ_0X3A1_INFO],
     &ComSignal[COMCONF_COMSIGNAL_VCU_PERCENTINSTANTANEOUSPOWER_0X3A1_INFO],
     &ComSignal[COMCONF_COMSIGNAL_VCU_SUPERPOWERSAVINGMODEFAULTREASON_0X3A1_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_VCU_PARKINGCHARGEFB_0X3A1_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_VCU_PARKINGCHARGEMODFB_0X3A1_INFO],
     &ComSignal[COMCONF_COMSIGNAL_VCU_TOWMODE_0X3A1_INFO],
     &ComSignal[COMCONF_COMSIGNAL_VCU_READY_0X3A1_INFO],
     &ComSignal[COMCONF_COMSIGNAL_VCU_TRAVEMODESTS_0X3A1_INFO],
@@ -41062,10 +41704,12 @@ const ComSignal_type * const ComIPduSignalRefs_0x3A1_INFO[] = {
     &ComSignal[COMCONF_COMSIGNAL_VCU_VEHICLEREPAIRMODEFB_0X3A1_INFO],
     &ComSignal[COMCONF_COMSIGNAL_VCU_CAMPMODESTS_0X3A1_INFO],
     &ComSignal[COMCONF_COMSIGNAL_VCU_REGENMODESTATUS_0X3A1_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_VCU_RANGEEXTENDERST_0X3A1_INFO],
     &ComSignal[COMCONF_COMSIGNAL_VCU_HIGHVOLTAGESUCCESS_0X3A1_INFO],
     &ComSignal[COMCONF_COMSIGNAL_VCU_HVONMODE_0X3A1_INFO],
     &ComSignal[COMCONF_COMSIGNAL_VCU_VEHICLEMODE_0X3A1_INFO],
     &ComSignal[COMCONF_COMSIGNAL_VCU_MEMORYSTATUS_0X3A1_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_VCU_ENG_SELFSHIELDSTART_0X3A1_INFO],
     &ComSignal[COMCONF_COMSIGNAL_VCU_TRAILERMODESTS_0X3A1_INFO],
     &ComSignal[COMCONF_COMSIGNAL_VCU_EXHIBITIONREQUEST_0X3A1_INFO],
     &ComSignal[COMCONF_COMSIGNAL_VCU_EXHIBITIONMODE_0X3A1_INFO],
@@ -41352,8 +41996,8 @@ const ComSignal_type * const ComIPduSignalRefs_0x380_INFO[] = {
     &ComSignal[COMCONF_COMSIGNAL_ACU_DRIVERSEATBELTSTATUSVALID_0X380_INFO],
     &ComSignal[COMCONF_COMSIGNAL_ACU_PASSENGERSEATBELTSTATUS_0X380_INFO],
     &ComSignal[COMCONF_COMSIGNAL_ACU_PASSENGERSEATBELTSTATUSVALID_0X380_INFO],
-    &ComSignal[COMCONF_COMSIGNAL_ACU_ROLLINGCOUNTER_0X380_INFO],
-    &ComSignal[COMCONF_COMSIGNAL_ACU_CHECKSUM_0X380_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_ACU_ROLLINGCOUNTER__0X380_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_ACU_CHECKSUM__0X380_INFO],
     &ComSignal[COMCONF_COMSIGNAL_ABM_PASSAIRBSUPPRESSIONST_0X380_INFO],
     NULL
 };
@@ -41440,6 +42084,7 @@ const ComSignal_type * const ComIPduSignalRefs_0x2B3_INFO[] = {
     &ComSignal[COMCONF_COMSIGNAL_ADS_SPEEDAUTOFOLLOW_0X2B3_INFO],
     &ComSignal[COMCONF_COMSIGNAL_ADS_ONETOUCHSPEEDADJUSTMENT_0X2B3_INFO],
     &ComSignal[COMCONF_COMSIGNAL_ADS_TIMEGAPADJUSTMENT_0X2B3_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_ADS_HMAFUNCTIONSTATUS_0X2B3_INFO],
     &ComSignal[COMCONF_COMSIGNAL_ADS_DRIVERSETSPEEDDISPLAY_0X2B3_INFO],
     NULL
 };
@@ -41513,6 +42158,11 @@ const ComSignal_type * const ComIPduSignalRefs_0x2C6_INFO[] = {
     &ComSignal[COMCONF_COMSIGNAL_ADS_ETHPDCSIGNALSTATE_0X2C6_INFO],
     NULL
 };
+const ComSignal_type * const ComIPduSignalRefs_0x30A_INFO[] = {
+    &ComSignal[COMCONF_COMSIGNAL_ADS_RAEBSTS_0X30A_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_ADS_SLAWARNMODE_0X30A_INFO],
+    NULL
+};
 const ComSignal_type * const ComIPduSignalRefs_0x30D_INFO[] = {
     &ComSignal[COMCONF_COMSIGNAL_ADS_RPAFUNCSTS_0X30D_INFO],
     &ComSignal[COMCONF_COMSIGNAL_ADS_AVMROTATIONANGLE_X_0X30D_INFO],
@@ -41570,18 +42220,18 @@ const ComSignal_type * const ComIPduSignalRefs_0x307_INFO[] = {
     &ComSignal[COMCONF_COMSIGNAL_ADS_APAVIEWSTS_0X307_INFO],
     &ComSignal[COMCONF_COMSIGNAL_ADS_AVMVIEWSTS_0X307_INFO],
     &ComSignal[COMCONF_COMSIGNAL_ADS_APAFUNCTYPE_0X307_INFO],
-    &ComSignal[COMCONF_COMSIGNAL_ADS_VEHPARKMODEAVIL_0X307_INFO],
     &ComSignal[COMCONF_COMSIGNAL_ADS_APAPARKINTYPESEL_0X307_INFO],
     &ComSignal[COMCONF_COMSIGNAL_ADS_APACUSTOMIZESLOTFB_0X307_INFO],
     &ComSignal[COMCONF_COMSIGNAL_ADS_RPAAPASWITCHFB_0X307_INFO],
     &ComSignal[COMCONF_COMSIGNAL_ADS_APAUIFUNCSTS_0X307_INFO],
     &ComSignal[COMCONF_COMSIGNAL_ADS_PARKSPCGRDLOCKSTS_0X307_INFO],
     &ComSignal[COMCONF_COMSIGNAL_ADS_AVMSIDEVIEWSTS_0X307_INFO],
-    &ComSignal[COMCONF_COMSIGNAL_ADS_APACUSTOMIZEDSLOTST_0X307_INFO],
     &ComSignal[COMCONF_COMSIGNAL_ADS_PARKFRMNGDST_0X307_INFO],
     &ComSignal[COMCONF_COMSIGNAL_ADS_PARKRRMNGDST_0X307_INFO],
     &ComSignal[COMCONF_COMSIGNAL_ADS_FRONTPDCALARMSTS_0X307_INFO],
     &ComSignal[COMCONF_COMSIGNAL_ADS_PDCMUTESTS_0X307_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_ADS_APACUSTOMIZEDSLOTST_0X307_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_ADS_VEHPARKMODEAVIL_0X307_INFO],
     NULL
 };
 const ComSignal_type * const ComIPduSignalRefs_0x31B_INFO[] = {
@@ -41633,9 +42283,9 @@ const ComSignal_type * const ComIPduSignalRefs_0x408_INFO[] = {
     &ComSignal[COMCONF_COMSIGNAL_IVI_MODESUPPRESSSTS_0X408_INFO],
     &ComSignal[COMCONF_COMSIGNAL_IVI_USERCLASS_0X408_INFO],
     &ComSignal[COMCONF_COMSIGNAL_IVI_AUTORAINWIPERREQ_0X408_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_IVI_VEHICLEPOSITION_0X408_INFO],
     &ComSignal[COMCONF_COMSIGNAL_IVI_ACCOUNTLOGINSTATUS_0X408_INFO],
     &ComSignal[COMCONF_COMSIGNAL_IVI_LANGUAGESET1_0X408_INFO],
-    &ComSignal[COMCONF_COMSIGNAL_IVI_VEHICLEPOSITION_0X408_INFO],
     NULL
 };
 const ComSignal_type * const ComIPduSignalRefs_0x3B1_INFO[] = {
@@ -41756,6 +42406,7 @@ const ComSignal_type * const ComIPduSignalRefs_0x3C2_INFO[] = {
 };
 const ComSignal_type * const ComIPduSignalRefs_0x305_INFO[] = {
     &ComSignal[COMCONF_COMSIGNAL_BCM_FOOTLIGHTSWITCHSTS_0X305_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_BCM_HIGHBEAMMODEL_0X305_INFO],
     NULL
 };
 const ComSignal_type * const ComIPduSignalRefs_0x411_INFO[] = {
@@ -41993,6 +42644,7 @@ const ComSignal_type * const ComIPduSignalRefs_0x0A5_INFO[] = {
     NULL
 };
 const ComSignal_type * const ComIPduSignalRefs_0x1D5_INFO[] = {
+    &ComSignal[COMCONF_COMSIGNAL_IVI_PREREFUELCTRL_0X1D5_INFO],
     &ComSignal[COMCONF_COMSIGNAL_IVI_EMERGENCYHVOFFREQUESTRESERVED_0X1D5_INFO],
     &ComSignal[COMCONF_COMSIGNAL_IVI_EXHIBITIONMODECTRL_0X1D5_INFO],
     &ComSignal[COMCONF_COMSIGNAL_IVI_DCDCAUTOCHARGESET_0X1D5_INFO],
@@ -42085,6 +42737,7 @@ const ComSignal_type * const ComIPduSignalRefs_0x069_INFO[] = {
     &ComSignal[COMCONF_COMSIGNAL_IVI_STARTREMFUNCSET_0X069_INFO],
     &ComSignal[COMCONF_COMSIGNAL_IVI_ADSVOICEBROADCASTTYPESET_0X069_INFO],
     &ComSignal[COMCONF_COMSIGNAL_IVI_HMAFUNCSET_0X069_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_IVI_SLAWARNMODESET_0X069_INFO],
     NULL
 };
 const ComSignal_type * const ComIPduSignalRefs_0x068_INFO[] = {
@@ -42140,7 +42793,7 @@ const ComSignal_type * const ComIPduSignalRefs_0x0C5_INFO[] = {
     &ComSignal[COMCONF_COMSIGNAL_IVI_PEBSVOICEWARNINGSET_0X0C5_INFO],
     &ComSignal[COMCONF_COMSIGNAL_IVI_NAVISWITCHRESERVED_0X0C5_INFO],
     &ComSignal[COMCONF_COMSIGNAL_IVI_THEMESETRESERVED_0X0C5_INFO],
-    &ComSignal[COMCONF_COMSIGNAL_IVI_WCMLEFTONOFFSET_0X0C5_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_IVI_WCMONOFFSET_0X0C5_INFO],
     &ComSignal[COMCONF_COMSIGNAL_IVI_PDCONOFFSET_0X0C5_INFO],
     &ComSignal[COMCONF_COMSIGNAL_IVI_ICTHEMEGANGEDSETRESERVED_0X0C5_INFO],
     &ComSignal[COMCONF_COMSIGNAL_IVI_FACTORYRESETCOMMAND_0X0C5_INFO],
@@ -42806,6 +43459,11 @@ const ComSignal_type * const ComIPduSignalRefs_0x21C_INFO[] = {
     &ComSignal[COMCONF_COMSIGNAL_HOD_HANDOFFMONITORVALID_0X21C_INFO],
     NULL
 };
+const ComSignal_type * const ComIPduSignalRefs_0x181_INFO[] = {
+    &ComSignal[COMCONF_COMSIGNAL_IC_DISPLAYFAIL_0X181_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_IC_ILLUMILEVELSTS_0X181_INFO],
+    NULL
+};
 const ComSignal_type * const ComIPduSignalRefs_0x2F2_INFO[] = {
     &ComSignal[COMCONF_COMSIGNAL_IC_TOTALMILEAGE_0X2F2_INFO],
     &ComSignal[COMCONF_COMSIGNAL_IC_RRSEATDETECTSTS_0X2F2_INFO],
@@ -42901,6 +43559,7 @@ const ComSignal_type * const ComIPduSignalRefs_0x495_INFO[] = {
     &ComSignal[COMCONF_COMSIGNAL_IVI_SENTRYALARMSTS_0X495_INFO],
     &ComSignal[COMCONF_COMSIGNAL_IVI_MODEREQ_0X495_INFO],
     &ComSignal[COMCONF_COMSIGNAL_IVI_SENTRYTIMEFD_0X495_INFO],
+    &ComSignal[COMCONF_COMSIGNAL_IVI_RANGEEXTENDERDISENABLE_0X495_INFO],
     &ComSignal[COMCONF_COMSIGNAL_IVI_CHILDRENLEFTREMINDSTS_0X495_INFO],
     &ComSignal[COMCONF_COMSIGNAL_IVI_PETMODESTS_0X495_INFO],
     &ComSignal[COMCONF_COMSIGNAL_IVI_SENTRYFAULTREASON_0X495_INFO],
@@ -43574,6 +44233,41 @@ const ComIPdu_type ComIPdu[] = {
             },
         },
         .ComIPduSignalRef           = ComIPduSignalRefs_0x331_INFO,
+        .ComIPduDynSignalRef        = NULL,
+        .ComIpduCounterRef          = NULL,
+        .ComIpduChecksumRef         = NULL,
+        .ComIPduGwMapSigDescHandle  = NULL,
+        .ComIPduGwRoutingReq        = FALSE,
+        .Com_As_EOL                = 0
+    },
+    { // 0x10C
+        .AsIPduOutgoingId          = PDUR_REVERSE_PDU_ID_GCU_state_INFO_COM,
+        .ComRxIPduCallout           = COM_NO_FUNCTION_CALLOUT,
+        .ComTxIPduCallout           = COM_NO_FUNCTION_CALLOUT,
+        .ComTriggerTransmitIPduCallout = COM_NO_FUNCTION_CALLOUT,
+        .ComIPduSignalProcessing    = COM_DEFERRED,
+        .ComIPduSize                = 8,
+        .ComIPduDirection           = COM_RECEIVE,
+        .ComIPduGroupRefs           = ComIpduGroupRefs_Ecu01,
+        .ComTxIPdu = {
+            .ComTxIPduMinimumDelayFactor    = 0,
+            .ComTxIPduUnusedAreasDefault    = 0,
+            .ComTxModeTrue = {
+                .ComTxModeMode                      = COM_NONE,
+                .ComTxModeNumberOfRepetitions       = 0,
+                .ComTxModeRepetitionPeriodFactor    = 0,
+                .ComTxModeTimeOffsetFactor          = 0,
+                .ComTxModeTimePeriodFactor          = 20/CAN_BASE_TX_TIMER_MS_FACTOR,
+            },
+            .ComTxModeFalse = {
+                .ComTxModeMode                      = COM_NONE,
+                .ComTxModeNumberOfRepetitions       = 0,
+                .ComTxModeRepetitionPeriodFactor    = 0,
+                .ComTxModeTimeOffsetFactor          = 0,
+                .ComTxModeTimePeriodFactor          = 0,
+            },
+        },
+        .ComIPduSignalRef           = ComIPduSignalRefs_0x10C_INFO,
         .ComIPduDynSignalRef        = NULL,
         .ComIpduCounterRef          = NULL,
         .ComIpduChecksumRef         = NULL,
@@ -45114,6 +45808,41 @@ const ComIPdu_type ComIPdu[] = {
             },
         },
         .ComIPduSignalRef           = ComIPduSignalRefs_0x2C6_INFO,
+        .ComIPduDynSignalRef        = NULL,
+        .ComIpduCounterRef          = NULL,
+        .ComIpduChecksumRef         = NULL,
+        .ComIPduGwMapSigDescHandle  = NULL,
+        .ComIPduGwRoutingReq        = FALSE,
+        .Com_As_EOL                = 0
+    },
+    { // 0x30A
+        .AsIPduOutgoingId          = PDUR_REVERSE_PDU_ID_ADS_DisState_30A_INFO_COM,
+        .ComRxIPduCallout           = COM_NO_FUNCTION_CALLOUT,
+        .ComTxIPduCallout           = COM_NO_FUNCTION_CALLOUT,
+        .ComTriggerTransmitIPduCallout = COM_NO_FUNCTION_CALLOUT,
+        .ComIPduSignalProcessing    = COM_DEFERRED,
+        .ComIPduSize                = 8,
+        .ComIPduDirection           = COM_RECEIVE,
+        .ComIPduGroupRefs           = ComIpduGroupRefs_Ecu01,
+        .ComTxIPdu = {
+            .ComTxIPduMinimumDelayFactor    = 0,
+            .ComTxIPduUnusedAreasDefault    = 0,
+            .ComTxModeTrue = {
+                .ComTxModeMode                      = COM_NONE,
+                .ComTxModeNumberOfRepetitions       = 0,
+                .ComTxModeRepetitionPeriodFactor    = 0,
+                .ComTxModeTimeOffsetFactor          = 0,
+                .ComTxModeTimePeriodFactor          = 100/CAN_BASE_TX_TIMER_MS_FACTOR,
+            },
+            .ComTxModeFalse = {
+                .ComTxModeMode                      = COM_NONE,
+                .ComTxModeNumberOfRepetitions       = 0,
+                .ComTxModeRepetitionPeriodFactor    = 0,
+                .ComTxModeTimeOffsetFactor          = 0,
+                .ComTxModeTimePeriodFactor          = 0,
+            },
+        },
+        .ComIPduSignalRef           = ComIPduSignalRefs_0x30A_INFO,
         .ComIPduDynSignalRef        = NULL,
         .ComIpduCounterRef          = NULL,
         .ComIpduChecksumRef         = NULL,
@@ -47144,6 +47873,41 @@ const ComIPdu_type ComIPdu[] = {
             },
         },
         .ComIPduSignalRef           = ComIPduSignalRefs_0x21C_INFO,
+        .ComIPduDynSignalRef        = NULL,
+        .ComIpduCounterRef          = NULL,
+        .ComIpduChecksumRef         = NULL,
+        .ComIPduGwMapSigDescHandle  = NULL,
+        .ComIPduGwRoutingReq        = FALSE,
+        .Com_As_EOL                = 0
+    },
+    { // 0x181
+        .AsIPduOutgoingId          = PDUR_REVERSE_PDU_ID_IC_info_181_INFO_COM,
+        .ComRxIPduCallout           = COM_NO_FUNCTION_CALLOUT,
+        .ComTxIPduCallout           = COM_NO_FUNCTION_CALLOUT,
+        .ComTriggerTransmitIPduCallout = COM_NO_FUNCTION_CALLOUT,
+        .ComIPduSignalProcessing    = COM_DEFERRED,
+        .ComIPduSize                = 8,
+        .ComIPduDirection           = COM_RECEIVE,
+        .ComIPduGroupRefs           = ComIpduGroupRefs_Ecu01,
+        .ComTxIPdu = {
+            .ComTxIPduMinimumDelayFactor    = 0,
+            .ComTxIPduUnusedAreasDefault    = 0,
+            .ComTxModeTrue = {
+                .ComTxModeMode                      = COM_NONE,
+                .ComTxModeNumberOfRepetitions       = 0,
+                .ComTxModeRepetitionPeriodFactor    = 0,
+                .ComTxModeTimeOffsetFactor          = 0,
+                .ComTxModeTimePeriodFactor          = 20/CAN_BASE_TX_TIMER_MS_FACTOR,
+            },
+            .ComTxModeFalse = {
+                .ComTxModeMode                      = COM_NONE,
+                .ComTxModeNumberOfRepetitions       = 0,
+                .ComTxModeRepetitionPeriodFactor    = 0,
+                .ComTxModeTimeOffsetFactor          = 0,
+                .ComTxModeTimePeriodFactor          = 0,
+            },
+        },
+        .ComIPduSignalRef           = ComIPduSignalRefs_0x181_INFO,
         .ComIPduDynSignalRef        = NULL,
         .ComIpduCounterRef          = NULL,
         .ComIpduChecksumRef         = NULL,

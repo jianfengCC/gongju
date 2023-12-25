@@ -36,45 +36,102 @@
 
 #define IVI_SIG_BUF_MAX 50
 #define READFLASHOK     1
+extern const uint8_t Com_SignalInitValue_ivi_currentRoadType_0x408_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_VehicleRepairModeReq_0x408_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_VehicleRepairModeSts_0x408_INFO_Message;
 extern const uint8_t Com_SignalInitValue_IVI_UserGearFb_0x408_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_CarSearchSts_0x408_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_CarSearchControl_0x408_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_AutoRainWiperReq_0x408_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_VehiclePosition_0x408_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_AccountLoginStatus_0x408_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_languageSet1_0x408_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_danceOnOffSet_0x096_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_unlockAnimatSet_0x096_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_lockAnimatSet_0x096_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_FLWINOpenDegreeRe_0x096_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_FRWINOpenDegreeRe_0x096_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_RLWINOpenDegreeRe_0x096_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_RRWINOpenDegreeRe_0x096_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_BCMlockSoundSet_0x096_INFO_Message;
 extern const uint8_t Com_SignalInitValue_IVI_LockCloseWinSet_0x096_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_FrontDefrostLevelSet_0x096_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_childLockCtrl_0x075_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_centralLockCtrl_0x075_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_fuelPortCapOpenCtrl_0x075_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_lowBeamOnOffCtrl_0x075_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_v2vChrgOnOffSet_0x075_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_obcDschrgOnOffSet_0x075_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_rearFogLampOnOffCtrl_0x075_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_roofLampOnOffCtrl_0x075_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_chrgPortCapOpenCtrl_0x075_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_NormalHvOffRequest_0x075_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_tailgateCtrl_0x075_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_MirrorSw_0x075_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_rearDefrostCtrl_0x075_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_footLightSwitchCtrl_0x075_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_MaxFuelConsumptionSW_0x075_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_MaxFuelConsumptionModeSW_0x075_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_v2vChrgOptCurntSet_0x075_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_approachingUnlockCtrl_0x075_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_awayLockCtrl_0x075_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_wipperMaintModeCtrl_0x075_INFO_Message;
 extern const uint8_t Com_SignalInitValue_IVI_NozzleHeatingSw_0x095_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_ambientLightOnOffSet_0x095_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_OneKeyModeSet_0x095_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_ambientLightColorSet_0x095_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_ambientLightLumiLvSet_0x095_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_limitmodeset_0x095_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_doorTopSwitch_0x095_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_rvMirrorAutoTurnDownSet_0x095_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_followMeHomeSet_0x095_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_WinLFCtrlRqst_0x095_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_WinRFCtrlRqst_0x095_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_WinLRCtrlRqst_0x095_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_WinRRCtrlRqst_0x095_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_childLockRLCtrl_0x095_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_childLockRRCtrl_0x095_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_DriveDoorUnlockCtrl_0x095_INFO_Message;
 extern const uint8_t Com_SignalInitValue_IVI_AutoDrySet_0x095_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_TripAReset_0x0A5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_TripBReset_0x0A5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_VehicleModeSet_0x0A5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_RegenModeSet_0x0A5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_traveModeSet_0x0A5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_ChargeControl_0x0A5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_ParkingChargeReq_0x0A5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_TowModeSet_0x0A5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_maxChrgSocSet_0x0A5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_chargeFormSet_0x0A5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_remainningMilModeSet_0x0A5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_ParkingChargeModeSet_0x0A5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_chargeSetValid_0x0A5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_ChargeEndTimeHour_0x0A5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_ChargeStartTimeHour_0x0A5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_ChargeEndTimeMinute_0x0A5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_ChargeStartTimeMinute_0x0A5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_ResetCurrentTrip_0x0A5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_AcFullChargeToWarmSet_0x0A5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_ChargeEndTimeValid_0x0A5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_ChargeStartTimeValid_0x0A5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_driveModeSet_0x0A5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_EmergencyHvOffRequestReserved_0x1D5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_ExhibitionModeCtrl_0x1D5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_DCDCAutoChargeSet_0x1D5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_HVDownRepairMode_0x1D5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_epsModeSet_0x065_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_escOffSw_0x065_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_hdcOnOffSet_0x065_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_aebOnOffSet_0x065_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_iBModeSet_0x065_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_lcaBsdOnOffSet_0x065_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_rctaOnOffSetReserved_0x065_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_dowOnOffSet_0x065_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_StartRevSOCSet_0x065_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_hmaOnOffSet_0x065_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_speedLimitOnOffSet_0x065_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_ASCHeightModeSelected_0x065_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_ASCMoveModeControl_0x065_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_laneAssistFuncSet_0x065_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_lasWarningModeSelection_0x065_INFO_Message;
 extern const uint8_t Com_SignalInitValue_TrailerModeReq_0x065_INFO_Message;
@@ -83,7 +140,58 @@ extern const uint8_t Com_SignalInitValue_IVI_ELKOnOffSet_0x065_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_avhOnOffSet_0x065_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_pcwOnOffSet_0x065_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_TJAFuncSet_0x065_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_autododgeOnOffSet_0x065_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_trailerModeOnOffSet_0x065_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_esc_epbButtonRelease_0x065_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_ApaOnOffReq_0x065_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_APAFuncSet_0x066_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_RPAFuncSet_0x066_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_APADrvSpeedSet_0x066_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_AVMViewSet_0x066_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_AVMCarBodyTranspSet_0x066_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_AVMtrigByTurnningSet_0x066_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_AVMTrajectoryDisplaySet_0x066_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_AVMtrigBySensorSet_0x066_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_PDCSoundSet_0x066_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_PDCMuteReq_0x066_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_laeb_SW_0x066_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_FrontPDCAlarmSet_0x066_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_APAParkInTypeSel_0x066_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_ParkSceneReconSw_0x066_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_ICAOnOffSet_0x067_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_lanechangestaly_0x067_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_autolanechangeSet_0x067_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_RampfollowcarSet_0x067_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_NCAOnOffSet_0x067_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_SpeedlimitSet_0x067_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_voicebroadcastSet_0x067_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_SpeedProportionSet_0x067_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_SpeedValueSet_0x067_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_LanechangStyleSet_0x067_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_TargetSpeedOffsetSet_0x067_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_NCAFuncSet_0x067_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_ICAFuncSet_0x067_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_ALCFuncSet_0x067_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_LaneChangeConfirmSet_0x067_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_SLAFuncSet_0x069_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_TrafficLightRemFuncSet_0x069_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_LaneAssistTypeSet_0x069_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_LasWarnModeSet_0x069_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_ELKFuncSet_0x069_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_FcwFuncSet_0x069_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_AEBFuncSet_0x069_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_LaebFuncSet_0x069_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_RCWFuncSet_0x069_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_BsdLcaFuncSet_0x069_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_DowFuncSet_0x069_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_StartRemFuncSet_0x069_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_HmaFuncSet_0x069_INFO_Message;
+extern const uint16_t Com_SignalInitValue_IVI_AVMRotationAngle_X_0x068_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_AVMRotationAngle_Y_0x068_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_RpaApaSwitch_0x068_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_APAFuncReq_0x068_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_AVMViewSelect_0x068_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_ParkSpcGrdLockCfim_0x068_INFO_Message;
 extern const uint8_t Com_SignalInitValue_IVI_SterringWheelHeatSw_0x105_INFO_Message;
 extern const uint8_t Com_SignalInitValue_IVI_drSeatRouteSet_0x098_INFO_Message;
 extern const uint8_t Com_SignalInitValue_IVI_drSeatbackrestSet_0x098_INFO_Message;
@@ -94,22 +202,75 @@ extern const uint8_t Com_SignalInitValue_IVI_LmirrorLRSet_0x098_INFO_Message;
 extern const uint8_t Com_SignalInitValue_IVI_RmirrorUDSet_0x098_INFO_Message;
 extern const uint8_t Com_SignalInitValue_IVI_RmirrorLRSet_0x098_INFO_Message;
 extern const uint8_t Com_SignalInitValue_IVI_DSMChargeCtrl_0x098_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_PassSeatRouteSet_0x093_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_PassSeatbackrestSet_0x093_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_PassSeatCushionSet_0x093_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_PassSeatCushionAngleSet_0x093_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_darkIllumiLevelSetReserved_0x0C5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_TripSwitchReserved_0x0C5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_IVI_RearseatbeltVoiceWarningSet_0x0C5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_hudOnOffSet_0x0C5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_themeSetReserved_0x0C5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_wcmOnOffSet_0x0C5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_pdcOnOffSet_0x0C5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_ICthemegangedSetReserved_0x0C5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_FactoryResetCommand_0x0C5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_ICIllumiLevelSet_0x0C5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_laeb_SW_0x0C5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_vspOnOffSet_0x0C5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_vsp_SoundConfigure_0x0C5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_IVI_unlocksoundSet_0x0C5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_locksoundSet_0x0C5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_IVI_ISAOnOffSet_0x0C5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_IllumiLevelSetReserved_0x0C5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_VehMntnMileClea_0x0C6_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_OilMntnMileClea_0x0C6_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_OilFilMntnMileClea_0x0C6_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_AirFilMntnMileClea_0x0C6_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_VehMntnTimeClea_0x0C6_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_IVIthemeSet1_0x3D2_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_TakeINVideoPosReq_0x3D2_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_AlarmListrequest_0x3D2_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_easyEntrySet_0x0F5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_drSeatHeatLevelSet_0x0F5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_drSeatVentLevelSet_0x0F5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_passSeatHeatLevelSet_0x0F5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_passSeatVentLevelSet_0x0F5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_drSeatMassLevelSet_0x0F5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_passSeatMassLevelSet_0x0F5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_MirrorAutoFoldUnfoldSet_0x0F5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_RLSeatHeatLevelSet_0x0F5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_dsmSetMemoryReqReserved_0x0F5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_DrMassgIntenSet_0x0F5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_PsgMassgIntenSet_0x0F5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_DSMMemoryReq_0x0F5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_RRSeatHeatLevelSet_0x0F5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_NavigChrgPostReq_0x33E_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IC_songFaultNum_0x052_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IC_songWarningSts_0x052_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ic_hudillumiLvSet_0x3F2_INFO_Message;
 extern const uint8_t Com_SignalInitValue_IVI_PassAirbSuppressionStSet_0x3F8_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IC_AlarmListflag_0x571_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IC_WarningStatus_0x571_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IC_WarningStatus2_0x571_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IC_WarningStatus3_0x571_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IC_WarningStatus4_0x571_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IC_WarningStatus5_0x571_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IC_WarningStatus6_0x571_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IC_DMS_DistractionIconFB_0x570_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IC_DMS_FatigueIconFB_0x570_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IC_VehMntnMileRmnReq_0x492_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IC_VehMntnTimeRmnReq_0x492_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IC_REMntnRmnReq_0x492_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ic_PowerReset_0x492_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_IC_Sync_0x495_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_SentryReq_0x495_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_ModeReq_0x495_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_RangeExtenderdisenable_0x495_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_HCUcontrol_0x495_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_DMS_DistractionIcon_0x496_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_DMS_FatigueIcon_0x496_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_CampModeReq_0x496_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_hvacDefrostMode_0x3B5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_hvacOnOffReq_0x3B5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_hvacAutoModeReq_0x3B5_INFO_Message;
@@ -121,6 +282,13 @@ extern const uint8_t Com_SignalInitValue_ivi_hvacBlowLvReq_0x3B5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_passengerTempCSet_0x3B5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_hvacDualMode_0x3B5_INFO_Message;
 extern const uint8_t Com_SignalInitValue_ivi_acReq_0x3B5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_NavigatioRecircReq_0x3B5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_ScreenOutReq_0x3B5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_InterfaceSwitchReq_0x3B5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_ivi_languageSet_0x3B5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_IntPuficationSw_0x3B5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_NaturalwindSw_0x3B5_INFO_Message;
+extern const uint8_t Com_SignalInitValue_IVI_TakePhotoReq_0x3B5_INFO_Message;
 void setSignal_IC_info(uint8_t *sigbuff, uint8_t len);
 void setSignal_IVI_SLA_408(uint8_t *sigbuff, uint8_t len);
 void setSignal_IVI_User_ID(uint8_t *sigbuff, uint8_t len);
@@ -554,26 +722,44 @@ void setSignal_IVI_SLA_408(uint8_t *sigbuff, uint8_t len)
     }
     memcpy(((uint8_t*)&p_IVI_SLA_408_st) + 4, sigbuff, len);
 
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_ivi_currentRoadType(&p_IVI_SLA_408_st.ivi_currentRoadType);
+    if(p_IVI_SLA_408_st.ivi_currentRoadType != Com_SignalInitValue_ivi_currentRoadType_0x408_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_ivi_currentRoadType(&p_IVI_SLA_408_st.ivi_currentRoadType);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_ivi_NAVIcameraspeedLimitvalueValid(&p_IVI_SLA_408_st.ivi_NAVIcameraspeedLimitvalueValid);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_ivi_NAVIspeedLimitvalueValid(&p_IVI_SLA_408_st.ivi_NAVIspeedLimitvalueValid);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_ivi_NAVItype(&p_IVI_SLA_408_st.ivi_NAVItype);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_ivi_NAVIcameraspeedLimitvalue(&p_IVI_SLA_408_st.ivi_NAVIcameraspeedLimitvalue);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_ivi_NAVIspeedLimitvalue(&p_IVI_SLA_408_st.ivi_NAVIspeedLimitvalue);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_ivi_NAVIStaus(&p_IVI_SLA_408_st.ivi_NAVIStaus);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_IVI_VehicleRepairModeReq(&p_IVI_SLA_408_st.IVI_VehicleRepairModeReq);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_IVI_VehicleRepairModeSts(&p_IVI_SLA_408_st.IVI_VehicleRepairModeSts);
+    if(p_IVI_SLA_408_st.IVI_VehicleRepairModeReq != Com_SignalInitValue_IVI_VehicleRepairModeReq_0x408_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_IVI_VehicleRepairModeReq(&p_IVI_SLA_408_st.IVI_VehicleRepairModeReq);
+    }
+    if(p_IVI_SLA_408_st.IVI_VehicleRepairModeSts != Com_SignalInitValue_IVI_VehicleRepairModeSts_0x408_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_IVI_VehicleRepairModeSts(&p_IVI_SLA_408_st.IVI_VehicleRepairModeSts);
+    }
     if(p_IVI_SLA_408_st.IVI_UserGearFb != Com_SignalInitValue_IVI_UserGearFb_0x408_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_IVI_UserGearFb(&p_IVI_SLA_408_st.IVI_UserGearFb);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_IVI_CarSearchSts(&p_IVI_SLA_408_st.IVI_CarSearchSts);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_IVI_CarSearchControl(&p_IVI_SLA_408_st.IVI_CarSearchControl);
+    if(p_IVI_SLA_408_st.IVI_CarSearchSts != Com_SignalInitValue_IVI_CarSearchSts_0x408_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_IVI_CarSearchSts(&p_IVI_SLA_408_st.IVI_CarSearchSts);
+    }
+    if(p_IVI_SLA_408_st.IVI_CarSearchControl != Com_SignalInitValue_IVI_CarSearchControl_0x408_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_IVI_CarSearchControl(&p_IVI_SLA_408_st.IVI_CarSearchControl);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_IVI_ModeSuppressSts(&p_IVI_SLA_408_st.IVI_ModeSuppressSts);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_IVI_UserClass(&p_IVI_SLA_408_st.IVI_UserClass);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_IVI_AutoRainWiperReq(&p_IVI_SLA_408_st.IVI_AutoRainWiperReq);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_IVI_VehiclePosition(&p_IVI_SLA_408_st.IVI_VehiclePosition);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_IVI_AccountLoginStatus(&p_IVI_SLA_408_st.IVI_AccountLoginStatus);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_ivi_languageSet1(&p_IVI_SLA_408_st.ivi_languageSet1);
+    if(p_IVI_SLA_408_st.IVI_AutoRainWiperReq != Com_SignalInitValue_IVI_AutoRainWiperReq_0x408_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_IVI_AutoRainWiperReq(&p_IVI_SLA_408_st.IVI_AutoRainWiperReq);
+    }
+    if(p_IVI_SLA_408_st.IVI_VehiclePosition != Com_SignalInitValue_IVI_VehiclePosition_0x408_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_IVI_VehiclePosition(&p_IVI_SLA_408_st.IVI_VehiclePosition);
+    }
+    if(p_IVI_SLA_408_st.IVI_AccountLoginStatus != Com_SignalInitValue_IVI_AccountLoginStatus_0x408_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_IVI_AccountLoginStatus(&p_IVI_SLA_408_st.IVI_AccountLoginStatus);
+    }
+    if(p_IVI_SLA_408_st.ivi_languageSet1 != Com_SignalInitValue_ivi_languageSet1_0x408_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_SLA_408_ComIn_VeCAN_ivi_languageSet1(&p_IVI_SLA_408_st.ivi_languageSet1);
+    }
 
     if (bResult != RTE_SIG_OK) {
         SystemApiLogPrintf(LOG_ERROR_OUTPUT,"setSignal_IVI_SLA_408 error bResult:0x%x\r\n", bResult);
@@ -614,18 +800,36 @@ void setSignal_IVI_096(uint8_t *sigbuff, uint8_t len)
     }
     memcpy(((uint8_t*)&p_IVI_096_st) + 4, sigbuff, len);
 
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_096_ComIn_VeCAN_IVI_danceOnOffSet(&p_IVI_096_st.IVI_danceOnOffSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_096_ComIn_VeCAN_IVI_unlockAnimatSet(&p_IVI_096_st.IVI_unlockAnimatSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_096_ComIn_VeCAN_IVI_lockAnimatSet(&p_IVI_096_st.IVI_lockAnimatSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_096_ComIn_VeCAN_IVI_FLWINOpenDegreeRe(&p_IVI_096_st.IVI_FLWINOpenDegreeRe);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_096_ComIn_VeCAN_IVI_FRWINOpenDegreeRe(&p_IVI_096_st.IVI_FRWINOpenDegreeRe);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_096_ComIn_VeCAN_IVI_RLWINOpenDegreeRe(&p_IVI_096_st.IVI_RLWINOpenDegreeRe);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_096_ComIn_VeCAN_IVI_RRWINOpenDegreeRe(&p_IVI_096_st.IVI_RRWINOpenDegreeRe);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_096_ComIn_VeCAN_IVI_BCMlockSoundSet(&p_IVI_096_st.IVI_BCMlockSoundSet);
+    if(p_IVI_096_st.IVI_danceOnOffSet != Com_SignalInitValue_IVI_danceOnOffSet_0x096_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_096_ComIn_VeCAN_IVI_danceOnOffSet(&p_IVI_096_st.IVI_danceOnOffSet);
+    }
+    if(p_IVI_096_st.IVI_unlockAnimatSet != Com_SignalInitValue_IVI_unlockAnimatSet_0x096_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_096_ComIn_VeCAN_IVI_unlockAnimatSet(&p_IVI_096_st.IVI_unlockAnimatSet);
+    }
+    if(p_IVI_096_st.IVI_lockAnimatSet != Com_SignalInitValue_IVI_lockAnimatSet_0x096_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_096_ComIn_VeCAN_IVI_lockAnimatSet(&p_IVI_096_st.IVI_lockAnimatSet);
+    }
+    if(p_IVI_096_st.IVI_FLWINOpenDegreeRe != Com_SignalInitValue_IVI_FLWINOpenDegreeRe_0x096_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_096_ComIn_VeCAN_IVI_FLWINOpenDegreeRe(&p_IVI_096_st.IVI_FLWINOpenDegreeRe);
+    }
+    if(p_IVI_096_st.IVI_FRWINOpenDegreeRe != Com_SignalInitValue_IVI_FRWINOpenDegreeRe_0x096_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_096_ComIn_VeCAN_IVI_FRWINOpenDegreeRe(&p_IVI_096_st.IVI_FRWINOpenDegreeRe);
+    }
+    if(p_IVI_096_st.IVI_RLWINOpenDegreeRe != Com_SignalInitValue_IVI_RLWINOpenDegreeRe_0x096_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_096_ComIn_VeCAN_IVI_RLWINOpenDegreeRe(&p_IVI_096_st.IVI_RLWINOpenDegreeRe);
+    }
+    if(p_IVI_096_st.IVI_RRWINOpenDegreeRe != Com_SignalInitValue_IVI_RRWINOpenDegreeRe_0x096_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_096_ComIn_VeCAN_IVI_RRWINOpenDegreeRe(&p_IVI_096_st.IVI_RRWINOpenDegreeRe);
+    }
+    if(p_IVI_096_st.IVI_BCMlockSoundSet != Com_SignalInitValue_IVI_BCMlockSoundSet_0x096_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_096_ComIn_VeCAN_IVI_BCMlockSoundSet(&p_IVI_096_st.IVI_BCMlockSoundSet);
+    }
     if(p_IVI_096_st.IVI_LockCloseWinSet != Com_SignalInitValue_IVI_LockCloseWinSet_0x096_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_096_ComIn_VeCAN_IVI_LockCloseWinSet(&p_IVI_096_st.IVI_LockCloseWinSet);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_096_ComIn_VeCAN_ivi_FrontDefrostLevelSet(&p_IVI_096_st.ivi_FrontDefrostLevelSet);
+    if(p_IVI_096_st.ivi_FrontDefrostLevelSet != Com_SignalInitValue_ivi_FrontDefrostLevelSet_0x096_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_096_ComIn_VeCAN_ivi_FrontDefrostLevelSet(&p_IVI_096_st.ivi_FrontDefrostLevelSet);
+    }
 
     if (bResult != RTE_SIG_OK) {
         SystemApiLogPrintf(LOG_ERROR_OUTPUT,"setSignal_IVI_096 error bResult:0x%x\r\n", bResult);
@@ -650,43 +854,57 @@ void setSignal_IVI_control(uint8_t *sigbuff, uint8_t len)
     if(p_IVI_control_st.ivi_fuelPortCapOpenCtrl != Com_SignalInitValue_ivi_fuelPortCapOpenCtrl_0x075_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_fuelPortCapOpenCtrl(&p_IVI_control_st.ivi_fuelPortCapOpenCtrl);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_lowBeamOnOffCtrl(&p_IVI_control_st.ivi_lowBeamOnOffCtrl);
+    if(p_IVI_control_st.ivi_lowBeamOnOffCtrl != Com_SignalInitValue_ivi_lowBeamOnOffCtrl_0x075_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_lowBeamOnOffCtrl(&p_IVI_control_st.ivi_lowBeamOnOffCtrl);
+    }
     if(p_IVI_control_st.ivi_v2vChrgOnOffSet != Com_SignalInitValue_ivi_v2vChrgOnOffSet_0x075_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_v2vChrgOnOffSet(&p_IVI_control_st.ivi_v2vChrgOnOffSet);
     }
     if(p_IVI_control_st.ivi_obcDschrgOnOffSet != Com_SignalInitValue_ivi_obcDschrgOnOffSet_0x075_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_obcDschrgOnOffSet(&p_IVI_control_st.ivi_obcDschrgOnOffSet);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_rearFogLampOnOffCtrl(&p_IVI_control_st.ivi_rearFogLampOnOffCtrl);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_roofLampOnOffCtrl(&p_IVI_control_st.ivi_roofLampOnOffCtrl);
+    if(p_IVI_control_st.ivi_rearFogLampOnOffCtrl != Com_SignalInitValue_ivi_rearFogLampOnOffCtrl_0x075_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_rearFogLampOnOffCtrl(&p_IVI_control_st.ivi_rearFogLampOnOffCtrl);
+    }
+    if(p_IVI_control_st.ivi_roofLampOnOffCtrl != Com_SignalInitValue_ivi_roofLampOnOffCtrl_0x075_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_roofLampOnOffCtrl(&p_IVI_control_st.ivi_roofLampOnOffCtrl);
+    }
     if(p_IVI_control_st.ivi_chrgPortCapOpenCtrl != Com_SignalInitValue_ivi_chrgPortCapOpenCtrl_0x075_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_chrgPortCapOpenCtrl(&p_IVI_control_st.ivi_chrgPortCapOpenCtrl);
     }
     if(p_IVI_control_st.ivi_NormalHvOffRequest != Com_SignalInitValue_ivi_NormalHvOffRequest_0x075_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_NormalHvOffRequest(&p_IVI_control_st.ivi_NormalHvOffRequest);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_tailgateCtrl(&p_IVI_control_st.ivi_tailgateCtrl);
+    if(p_IVI_control_st.ivi_tailgateCtrl != Com_SignalInitValue_ivi_tailgateCtrl_0x075_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_tailgateCtrl(&p_IVI_control_st.ivi_tailgateCtrl);
+    }
     if(p_IVI_control_st.ivi_MirrorSw != Com_SignalInitValue_ivi_MirrorSw_0x075_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_MirrorSw(&p_IVI_control_st.ivi_MirrorSw);
     }
     if(p_IVI_control_st.ivi_rearDefrostCtrl != Com_SignalInitValue_ivi_rearDefrostCtrl_0x075_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_rearDefrostCtrl(&p_IVI_control_st.ivi_rearDefrostCtrl);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_footLightSwitchCtrl(&p_IVI_control_st.ivi_footLightSwitchCtrl);
+    if(p_IVI_control_st.ivi_footLightSwitchCtrl != Com_SignalInitValue_ivi_footLightSwitchCtrl_0x075_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_footLightSwitchCtrl(&p_IVI_control_st.ivi_footLightSwitchCtrl);
+    }
     if(p_IVI_control_st.ivi_MaxFuelConsumptionSW != Com_SignalInitValue_ivi_MaxFuelConsumptionSW_0x075_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_MaxFuelConsumptionSW(&p_IVI_control_st.ivi_MaxFuelConsumptionSW);
     }
     if(p_IVI_control_st.ivi_MaxFuelConsumptionModeSW != Com_SignalInitValue_ivi_MaxFuelConsumptionModeSW_0x075_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_MaxFuelConsumptionModeSW(&p_IVI_control_st.ivi_MaxFuelConsumptionModeSW);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_v2vChrgOptCurntSet(&p_IVI_control_st.ivi_v2vChrgOptCurntSet);
+    if(p_IVI_control_st.ivi_v2vChrgOptCurntSet != Com_SignalInitValue_ivi_v2vChrgOptCurntSet_0x075_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_v2vChrgOptCurntSet(&p_IVI_control_st.ivi_v2vChrgOptCurntSet);
+    }
     if(p_IVI_control_st.ivi_approachingUnlockCtrl != Com_SignalInitValue_ivi_approachingUnlockCtrl_0x075_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_approachingUnlockCtrl(&p_IVI_control_st.ivi_approachingUnlockCtrl);
     }
     if(p_IVI_control_st.ivi_awayLockCtrl != Com_SignalInitValue_ivi_awayLockCtrl_0x075_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_awayLockCtrl(&p_IVI_control_st.ivi_awayLockCtrl);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_wipperMaintModeCtrl(&p_IVI_control_st.ivi_wipperMaintModeCtrl);
+    if(p_IVI_control_st.ivi_wipperMaintModeCtrl != Com_SignalInitValue_ivi_wipperMaintModeCtrl_0x075_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_wipperMaintModeCtrl(&p_IVI_control_st.ivi_wipperMaintModeCtrl);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IVI_control_ComIn_VeCAN_ivi_modememory(&p_IVI_control_st.ivi_modememory);
 
     if (bResult != RTE_SIG_OK) {
@@ -706,25 +924,51 @@ void setSignal_IVI_comfortSet(uint8_t *sigbuff, uint8_t len)
     if(p_IVI_comfortSet_st.IVI_NozzleHeatingSw != Com_SignalInitValue_IVI_NozzleHeatingSw_0x095_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_IVI_NozzleHeatingSw(&p_IVI_comfortSet_st.IVI_NozzleHeatingSw);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_ambientLightOnOffSet(&p_IVI_comfortSet_st.ivi_ambientLightOnOffSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_IVI_OneKeyModeSet(&p_IVI_comfortSet_st.IVI_OneKeyModeSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_ambientLightColorSet(&p_IVI_comfortSet_st.ivi_ambientLightColorSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_ambientLightLumiLvSet(&p_IVI_comfortSet_st.ivi_ambientLightLumiLvSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_limitmodeset(&p_IVI_comfortSet_st.ivi_limitmodeset);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_doorTopSwitch(&p_IVI_comfortSet_st.ivi_doorTopSwitch);
+    if(p_IVI_comfortSet_st.ivi_ambientLightOnOffSet != Com_SignalInitValue_ivi_ambientLightOnOffSet_0x095_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_ambientLightOnOffSet(&p_IVI_comfortSet_st.ivi_ambientLightOnOffSet);
+    }
+    if(p_IVI_comfortSet_st.IVI_OneKeyModeSet != Com_SignalInitValue_IVI_OneKeyModeSet_0x095_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_IVI_OneKeyModeSet(&p_IVI_comfortSet_st.IVI_OneKeyModeSet);
+    }
+    if(p_IVI_comfortSet_st.ivi_ambientLightColorSet != Com_SignalInitValue_ivi_ambientLightColorSet_0x095_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_ambientLightColorSet(&p_IVI_comfortSet_st.ivi_ambientLightColorSet);
+    }
+    if(p_IVI_comfortSet_st.ivi_ambientLightLumiLvSet != Com_SignalInitValue_ivi_ambientLightLumiLvSet_0x095_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_ambientLightLumiLvSet(&p_IVI_comfortSet_st.ivi_ambientLightLumiLvSet);
+    }
+    if(p_IVI_comfortSet_st.ivi_limitmodeset != Com_SignalInitValue_ivi_limitmodeset_0x095_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_limitmodeset(&p_IVI_comfortSet_st.ivi_limitmodeset);
+    }
+    if(p_IVI_comfortSet_st.ivi_doorTopSwitch != Com_SignalInitValue_ivi_doorTopSwitch_0x095_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_doorTopSwitch(&p_IVI_comfortSet_st.ivi_doorTopSwitch);
+    }
     if(p_IVI_comfortSet_st.ivi_rvMirrorAutoTurnDownSet != Com_SignalInitValue_ivi_rvMirrorAutoTurnDownSet_0x095_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_rvMirrorAutoTurnDownSet(&p_IVI_comfortSet_st.ivi_rvMirrorAutoTurnDownSet);
     }
     if(p_IVI_comfortSet_st.ivi_followMeHomeSet != Com_SignalInitValue_ivi_followMeHomeSet_0x095_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_followMeHomeSet(&p_IVI_comfortSet_st.ivi_followMeHomeSet);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_WinLFCtrlRqst(&p_IVI_comfortSet_st.ivi_WinLFCtrlRqst);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_WinRFCtrlRqst(&p_IVI_comfortSet_st.ivi_WinRFCtrlRqst);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_WinLRCtrlRqst(&p_IVI_comfortSet_st.ivi_WinLRCtrlRqst);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_WinRRCtrlRqst(&p_IVI_comfortSet_st.ivi_WinRRCtrlRqst);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_childLockRLCtrl(&p_IVI_comfortSet_st.ivi_childLockRLCtrl);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_childLockRRCtrl(&p_IVI_comfortSet_st.ivi_childLockRRCtrl);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_DriveDoorUnlockCtrl(&p_IVI_comfortSet_st.ivi_DriveDoorUnlockCtrl);
+    if(p_IVI_comfortSet_st.ivi_WinLFCtrlRqst != Com_SignalInitValue_ivi_WinLFCtrlRqst_0x095_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_WinLFCtrlRqst(&p_IVI_comfortSet_st.ivi_WinLFCtrlRqst);
+    }
+    if(p_IVI_comfortSet_st.ivi_WinRFCtrlRqst != Com_SignalInitValue_ivi_WinRFCtrlRqst_0x095_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_WinRFCtrlRqst(&p_IVI_comfortSet_st.ivi_WinRFCtrlRqst);
+    }
+    if(p_IVI_comfortSet_st.ivi_WinLRCtrlRqst != Com_SignalInitValue_ivi_WinLRCtrlRqst_0x095_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_WinLRCtrlRqst(&p_IVI_comfortSet_st.ivi_WinLRCtrlRqst);
+    }
+    if(p_IVI_comfortSet_st.ivi_WinRRCtrlRqst != Com_SignalInitValue_ivi_WinRRCtrlRqst_0x095_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_WinRRCtrlRqst(&p_IVI_comfortSet_st.ivi_WinRRCtrlRqst);
+    }
+    if(p_IVI_comfortSet_st.ivi_childLockRLCtrl != Com_SignalInitValue_ivi_childLockRLCtrl_0x095_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_childLockRLCtrl(&p_IVI_comfortSet_st.ivi_childLockRLCtrl);
+    }
+    if(p_IVI_comfortSet_st.ivi_childLockRRCtrl != Com_SignalInitValue_ivi_childLockRRCtrl_0x095_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_childLockRRCtrl(&p_IVI_comfortSet_st.ivi_childLockRRCtrl);
+    }
+    if(p_IVI_comfortSet_st.ivi_DriveDoorUnlockCtrl != Com_SignalInitValue_ivi_DriveDoorUnlockCtrl_0x095_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_ivi_DriveDoorUnlockCtrl(&p_IVI_comfortSet_st.ivi_DriveDoorUnlockCtrl);
+    }
     if(p_IVI_comfortSet_st.IVI_AutoDrySet != Com_SignalInitValue_IVI_AutoDrySet_0x095_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_comfortSet_ComIn_VeCAN_IVI_AutoDrySet(&p_IVI_comfortSet_st.IVI_AutoDrySet);
     }
@@ -743,15 +987,21 @@ void setSignal_IVI_pwrSet(uint8_t *sigbuff, uint8_t len)
     }
     memcpy(((uint8_t*)&p_IVI_pwrSet_st) + 4, sigbuff, len);
 
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_TripAReset(&p_IVI_pwrSet_st.ivi_TripAReset);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_TripBReset(&p_IVI_pwrSet_st.ivi_TripBReset);
+    if(p_IVI_pwrSet_st.ivi_TripAReset != Com_SignalInitValue_ivi_TripAReset_0x0A5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_TripAReset(&p_IVI_pwrSet_st.ivi_TripAReset);
+    }
+    if(p_IVI_pwrSet_st.ivi_TripBReset != Com_SignalInitValue_ivi_TripBReset_0x0A5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_TripBReset(&p_IVI_pwrSet_st.ivi_TripBReset);
+    }
     if(p_IVI_pwrSet_st.ivi_VehicleModeSet != Com_SignalInitValue_ivi_VehicleModeSet_0x0A5_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_VehicleModeSet(&p_IVI_pwrSet_st.ivi_VehicleModeSet);
     }
     if(p_IVI_pwrSet_st.ivi_RegenModeSet != Com_SignalInitValue_ivi_RegenModeSet_0x0A5_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_RegenModeSet(&p_IVI_pwrSet_st.ivi_RegenModeSet);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_traveModeSet(&p_IVI_pwrSet_st.ivi_traveModeSet);
+    if(p_IVI_pwrSet_st.ivi_traveModeSet != Com_SignalInitValue_ivi_traveModeSet_0x0A5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_traveModeSet(&p_IVI_pwrSet_st.ivi_traveModeSet);
+    }
     if(p_IVI_pwrSet_st.ivi_ChargeControl != Com_SignalInitValue_ivi_ChargeControl_0x0A5_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_ChargeControl(&p_IVI_pwrSet_st.ivi_ChargeControl);
     }
@@ -764,25 +1014,39 @@ void setSignal_IVI_pwrSet(uint8_t *sigbuff, uint8_t len)
     if(p_IVI_pwrSet_st.ivi_maxChrgSocSet != Com_SignalInitValue_ivi_maxChrgSocSet_0x0A5_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_maxChrgSocSet(&p_IVI_pwrSet_st.ivi_maxChrgSocSet);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_chargeFormSet(&p_IVI_pwrSet_st.ivi_chargeFormSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_remainningMilModeSet(&p_IVI_pwrSet_st.ivi_remainningMilModeSet);
+    if(p_IVI_pwrSet_st.ivi_chargeFormSet != Com_SignalInitValue_ivi_chargeFormSet_0x0A5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_chargeFormSet(&p_IVI_pwrSet_st.ivi_chargeFormSet);
+    }
+    if(p_IVI_pwrSet_st.ivi_remainningMilModeSet != Com_SignalInitValue_ivi_remainningMilModeSet_0x0A5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_remainningMilModeSet(&p_IVI_pwrSet_st.ivi_remainningMilModeSet);
+    }
     if(p_IVI_pwrSet_st.ivi_ParkingChargeModeSet != Com_SignalInitValue_ivi_ParkingChargeModeSet_0x0A5_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_ParkingChargeModeSet(&p_IVI_pwrSet_st.ivi_ParkingChargeModeSet);
     }
     if(p_IVI_pwrSet_st.ivi_chargeSetValid != Com_SignalInitValue_ivi_chargeSetValid_0x0A5_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_chargeSetValid(&p_IVI_pwrSet_st.ivi_chargeSetValid);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_ChargeEndTimeHour(&p_IVI_pwrSet_st.ivi_ChargeEndTimeHour);
+    if(p_IVI_pwrSet_st.ivi_ChargeEndTimeHour != Com_SignalInitValue_ivi_ChargeEndTimeHour_0x0A5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_ChargeEndTimeHour(&p_IVI_pwrSet_st.ivi_ChargeEndTimeHour);
+    }
     if(p_IVI_pwrSet_st.ivi_ChargeStartTimeHour != Com_SignalInitValue_ivi_ChargeStartTimeHour_0x0A5_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_ChargeStartTimeHour(&p_IVI_pwrSet_st.ivi_ChargeStartTimeHour);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_ChargeEndTimeMinute(&p_IVI_pwrSet_st.ivi_ChargeEndTimeMinute);
+    if(p_IVI_pwrSet_st.ivi_ChargeEndTimeMinute != Com_SignalInitValue_ivi_ChargeEndTimeMinute_0x0A5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_ChargeEndTimeMinute(&p_IVI_pwrSet_st.ivi_ChargeEndTimeMinute);
+    }
     if(p_IVI_pwrSet_st.ivi_ChargeStartTimeMinute != Com_SignalInitValue_ivi_ChargeStartTimeMinute_0x0A5_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_ChargeStartTimeMinute(&p_IVI_pwrSet_st.ivi_ChargeStartTimeMinute);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_ResetCurrentTrip(&p_IVI_pwrSet_st.ivi_ResetCurrentTrip);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_IVI_AcFullChargeToWarmSet(&p_IVI_pwrSet_st.IVI_AcFullChargeToWarmSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_ChargeEndTimeValid(&p_IVI_pwrSet_st.ivi_ChargeEndTimeValid);
+    if(p_IVI_pwrSet_st.ivi_ResetCurrentTrip != Com_SignalInitValue_ivi_ResetCurrentTrip_0x0A5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_ResetCurrentTrip(&p_IVI_pwrSet_st.ivi_ResetCurrentTrip);
+    }
+    if(p_IVI_pwrSet_st.IVI_AcFullChargeToWarmSet != Com_SignalInitValue_IVI_AcFullChargeToWarmSet_0x0A5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_IVI_AcFullChargeToWarmSet(&p_IVI_pwrSet_st.IVI_AcFullChargeToWarmSet);
+    }
+    if(p_IVI_pwrSet_st.ivi_ChargeEndTimeValid != Com_SignalInitValue_ivi_ChargeEndTimeValid_0x0A5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_ChargeEndTimeValid(&p_IVI_pwrSet_st.ivi_ChargeEndTimeValid);
+    }
     if(p_IVI_pwrSet_st.ivi_ChargeStartTimeValid != Com_SignalInitValue_ivi_ChargeStartTimeValid_0x0A5_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_pwrSet_ComIn_VeCAN_ivi_ChargeStartTimeValid(&p_IVI_pwrSet_st.ivi_ChargeStartTimeValid);
     }
@@ -804,11 +1068,20 @@ void setSignal_IVI_chassisSet1(uint8_t *sigbuff, uint8_t len)
     }
     memcpy(((uint8_t*)&p_IVI_chassisSet1_st) + 4, sigbuff, len);
 
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet1_ComIn_VeCAN_ivi_EmergencyHvOffRequestReserved(&p_IVI_chassisSet1_st.ivi_EmergencyHvOffRequestReserved);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet1_ComIn_VeCAN_ivi_ExhibitionModeCtrl(&p_IVI_chassisSet1_st.ivi_ExhibitionModeCtrl);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet1_ComIn_VeCAN_ivi_DCDCAutoChargeSet(&p_IVI_chassisSet1_st.ivi_DCDCAutoChargeSet);
+    bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet1_ComIn_VeCAN_ivi_PreRefuelCtrl(&p_IVI_chassisSet1_st.ivi_PreRefuelCtrl);
+    if(p_IVI_chassisSet1_st.ivi_EmergencyHvOffRequestReserved != Com_SignalInitValue_ivi_EmergencyHvOffRequestReserved_0x1D5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet1_ComIn_VeCAN_ivi_EmergencyHvOffRequestReserved(&p_IVI_chassisSet1_st.ivi_EmergencyHvOffRequestReserved);
+    }
+    if(p_IVI_chassisSet1_st.ivi_ExhibitionModeCtrl != Com_SignalInitValue_ivi_ExhibitionModeCtrl_0x1D5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet1_ComIn_VeCAN_ivi_ExhibitionModeCtrl(&p_IVI_chassisSet1_st.ivi_ExhibitionModeCtrl);
+    }
+    if(p_IVI_chassisSet1_st.ivi_DCDCAutoChargeSet != Com_SignalInitValue_ivi_DCDCAutoChargeSet_0x1D5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet1_ComIn_VeCAN_ivi_DCDCAutoChargeSet(&p_IVI_chassisSet1_st.ivi_DCDCAutoChargeSet);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet1_ComIn_VeCAN_ivi_OTAModeStatus(&p_IVI_chassisSet1_st.ivi_OTAModeStatus);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet1_ComIn_VeCAN_IVI_HVDownRepairMode(&p_IVI_chassisSet1_st.IVI_HVDownRepairMode);
+    if(p_IVI_chassisSet1_st.IVI_HVDownRepairMode != Com_SignalInitValue_IVI_HVDownRepairMode_0x1D5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet1_ComIn_VeCAN_IVI_HVDownRepairMode(&p_IVI_chassisSet1_st.IVI_HVDownRepairMode);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet1_ComIn_VeCAN_IVI_FactoryRestHold(&p_IVI_chassisSet1_st.IVI_FactoryRestHold);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet1_ComIn_VeCAN_ivi_chassisSet1_rollingCounter(&p_IVI_chassisSet1_st.ivi_chassisSet1_rollingCounter);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet1_ComIn_VeCAN_ivi_chassisSet1_CheckSum(&p_IVI_chassisSet1_st.ivi_chassisSet1_CheckSum);
@@ -839,7 +1112,9 @@ void setSignal_IVI_chassisSet_065(uint8_t *sigbuff, uint8_t len)
     if(p_IVI_chassisSet_065_st.ivi_aebOnOffSet != Com_SignalInitValue_ivi_aebOnOffSet_0x065_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet_065_ComIn_VeCAN_ivi_aebOnOffSet(&p_IVI_chassisSet_065_st.ivi_aebOnOffSet);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet_065_ComIn_VeCAN_ivi_iBModeSet(&p_IVI_chassisSet_065_st.ivi_iBModeSet);
+    if(p_IVI_chassisSet_065_st.ivi_iBModeSet != Com_SignalInitValue_ivi_iBModeSet_0x065_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet_065_ComIn_VeCAN_ivi_iBModeSet(&p_IVI_chassisSet_065_st.ivi_iBModeSet);
+    }
     if(p_IVI_chassisSet_065_st.ivi_lcaBsdOnOffSet != Com_SignalInitValue_ivi_lcaBsdOnOffSet_0x065_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet_065_ComIn_VeCAN_ivi_lcaBsdOnOffSet(&p_IVI_chassisSet_065_st.ivi_lcaBsdOnOffSet);
     }
@@ -849,13 +1124,21 @@ void setSignal_IVI_chassisSet_065(uint8_t *sigbuff, uint8_t len)
     if(p_IVI_chassisSet_065_st.ivi_dowOnOffSet != Com_SignalInitValue_ivi_dowOnOffSet_0x065_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet_065_ComIn_VeCAN_ivi_dowOnOffSet(&p_IVI_chassisSet_065_st.ivi_dowOnOffSet);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet_065_ComIn_VeCAN_ivi_StartRevSOCSet(&p_IVI_chassisSet_065_st.ivi_StartRevSOCSet);
+    if(p_IVI_chassisSet_065_st.ivi_StartRevSOCSet != Com_SignalInitValue_ivi_StartRevSOCSet_0x065_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet_065_ComIn_VeCAN_ivi_StartRevSOCSet(&p_IVI_chassisSet_065_st.ivi_StartRevSOCSet);
+    }
     if(p_IVI_chassisSet_065_st.ivi_hmaOnOffSet != Com_SignalInitValue_ivi_hmaOnOffSet_0x065_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet_065_ComIn_VeCAN_ivi_hmaOnOffSet(&p_IVI_chassisSet_065_st.ivi_hmaOnOffSet);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet_065_ComIn_VeCAN_ivi_speedLimitOnOffSet(&p_IVI_chassisSet_065_st.ivi_speedLimitOnOffSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet_065_ComIn_VeCAN_ivi_ASCHeightModeSelected(&p_IVI_chassisSet_065_st.ivi_ASCHeightModeSelected);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet_065_ComIn_VeCAN_ivi_ASCMoveModeControl(&p_IVI_chassisSet_065_st.ivi_ASCMoveModeControl);
+    if(p_IVI_chassisSet_065_st.ivi_speedLimitOnOffSet != Com_SignalInitValue_ivi_speedLimitOnOffSet_0x065_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet_065_ComIn_VeCAN_ivi_speedLimitOnOffSet(&p_IVI_chassisSet_065_st.ivi_speedLimitOnOffSet);
+    }
+    if(p_IVI_chassisSet_065_st.ivi_ASCHeightModeSelected != Com_SignalInitValue_ivi_ASCHeightModeSelected_0x065_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet_065_ComIn_VeCAN_ivi_ASCHeightModeSelected(&p_IVI_chassisSet_065_st.ivi_ASCHeightModeSelected);
+    }
+    if(p_IVI_chassisSet_065_st.ivi_ASCMoveModeControl != Com_SignalInitValue_ivi_ASCMoveModeControl_0x065_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet_065_ComIn_VeCAN_ivi_ASCMoveModeControl(&p_IVI_chassisSet_065_st.ivi_ASCMoveModeControl);
+    }
     if(p_IVI_chassisSet_065_st.ivi_laneAssistFuncSet != Com_SignalInitValue_ivi_laneAssistFuncSet_0x065_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet_065_ComIn_VeCAN_ivi_laneAssistFuncSet(&p_IVI_chassisSet_065_st.ivi_laneAssistFuncSet);
     }
@@ -880,12 +1163,18 @@ void setSignal_IVI_chassisSet_065(uint8_t *sigbuff, uint8_t len)
     if(p_IVI_chassisSet_065_st.ivi_TJAFuncSet != Com_SignalInitValue_ivi_TJAFuncSet_0x065_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet_065_ComIn_VeCAN_ivi_TJAFuncSet(&p_IVI_chassisSet_065_st.ivi_TJAFuncSet);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet_065_ComIn_VeCAN_IVI_autododgeOnOffSet(&p_IVI_chassisSet_065_st.IVI_autododgeOnOffSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet_065_ComIn_VeCAN_ivi_trailerModeOnOffSet(&p_IVI_chassisSet_065_st.ivi_trailerModeOnOffSet);
+    if(p_IVI_chassisSet_065_st.IVI_autododgeOnOffSet != Com_SignalInitValue_IVI_autododgeOnOffSet_0x065_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet_065_ComIn_VeCAN_IVI_autododgeOnOffSet(&p_IVI_chassisSet_065_st.IVI_autododgeOnOffSet);
+    }
+    if(p_IVI_chassisSet_065_st.ivi_trailerModeOnOffSet != Com_SignalInitValue_ivi_trailerModeOnOffSet_0x065_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet_065_ComIn_VeCAN_ivi_trailerModeOnOffSet(&p_IVI_chassisSet_065_st.ivi_trailerModeOnOffSet);
+    }
     if(p_IVI_chassisSet_065_st.ivi_esc_epbButtonRelease != Com_SignalInitValue_ivi_esc_epbButtonRelease_0x065_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet_065_ComIn_VeCAN_ivi_esc_epbButtonRelease(&p_IVI_chassisSet_065_st.ivi_esc_epbButtonRelease);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet_065_ComIn_VeCAN_IVI_ApaOnOffReq(&p_IVI_chassisSet_065_st.IVI_ApaOnOffReq);
+    if(p_IVI_chassisSet_065_st.IVI_ApaOnOffReq != Com_SignalInitValue_IVI_ApaOnOffReq_0x065_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_chassisSet_065_ComIn_VeCAN_IVI_ApaOnOffReq(&p_IVI_chassisSet_065_st.IVI_ApaOnOffReq);
+    }
 
     if (bResult != RTE_SIG_OK) {
         SystemApiLogPrintf(LOG_ERROR_OUTPUT,"setSignal_IVI_chassisSet_065 error bResult:0x%x\r\n", bResult);
@@ -901,20 +1190,48 @@ void setSignal_IVI_APASet_066(uint8_t *sigbuff, uint8_t len)
     }
     memcpy(((uint8_t*)&p_IVI_APASet_066_st) + 4, sigbuff, len);
 
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_APAFuncSet(&p_IVI_APASet_066_st.IVI_APAFuncSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_RPAFuncSet(&p_IVI_APASet_066_st.IVI_RPAFuncSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_APADrvSpeedSet(&p_IVI_APASet_066_st.IVI_APADrvSpeedSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_AVMViewSet(&p_IVI_APASet_066_st.IVI_AVMViewSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_AVMCarBodyTranspSet(&p_IVI_APASet_066_st.IVI_AVMCarBodyTranspSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_AVMtrigByTurnningSet(&p_IVI_APASet_066_st.IVI_AVMtrigByTurnningSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_AVMTrajectoryDisplaySet(&p_IVI_APASet_066_st.IVI_AVMTrajectoryDisplaySet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_AVMtrigBySensorSet(&p_IVI_APASet_066_st.IVI_AVMtrigBySensorSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_PDCSoundSet(&p_IVI_APASet_066_st.IVI_PDCSoundSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_PDCMuteReq(&p_IVI_APASet_066_st.IVI_PDCMuteReq);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_laeb_SW(&p_IVI_APASet_066_st.IVI_laeb_SW);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_FrontPDCAlarmSet(&p_IVI_APASet_066_st.IVI_FrontPDCAlarmSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_APAParkInTypeSel(&p_IVI_APASet_066_st.IVI_APAParkInTypeSel);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_ParkSceneReconSw(&p_IVI_APASet_066_st.IVI_ParkSceneReconSw);
+    if(p_IVI_APASet_066_st.IVI_APAFuncSet != Com_SignalInitValue_IVI_APAFuncSet_0x066_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_APAFuncSet(&p_IVI_APASet_066_st.IVI_APAFuncSet);
+    }
+    if(p_IVI_APASet_066_st.IVI_RPAFuncSet != Com_SignalInitValue_IVI_RPAFuncSet_0x066_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_RPAFuncSet(&p_IVI_APASet_066_st.IVI_RPAFuncSet);
+    }
+    if(p_IVI_APASet_066_st.IVI_APADrvSpeedSet != Com_SignalInitValue_IVI_APADrvSpeedSet_0x066_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_APADrvSpeedSet(&p_IVI_APASet_066_st.IVI_APADrvSpeedSet);
+    }
+    if(p_IVI_APASet_066_st.IVI_AVMViewSet != Com_SignalInitValue_IVI_AVMViewSet_0x066_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_AVMViewSet(&p_IVI_APASet_066_st.IVI_AVMViewSet);
+    }
+    if(p_IVI_APASet_066_st.IVI_AVMCarBodyTranspSet != Com_SignalInitValue_IVI_AVMCarBodyTranspSet_0x066_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_AVMCarBodyTranspSet(&p_IVI_APASet_066_st.IVI_AVMCarBodyTranspSet);
+    }
+    if(p_IVI_APASet_066_st.IVI_AVMtrigByTurnningSet != Com_SignalInitValue_IVI_AVMtrigByTurnningSet_0x066_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_AVMtrigByTurnningSet(&p_IVI_APASet_066_st.IVI_AVMtrigByTurnningSet);
+    }
+    if(p_IVI_APASet_066_st.IVI_AVMTrajectoryDisplaySet != Com_SignalInitValue_IVI_AVMTrajectoryDisplaySet_0x066_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_AVMTrajectoryDisplaySet(&p_IVI_APASet_066_st.IVI_AVMTrajectoryDisplaySet);
+    }
+    if(p_IVI_APASet_066_st.IVI_AVMtrigBySensorSet != Com_SignalInitValue_IVI_AVMtrigBySensorSet_0x066_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_AVMtrigBySensorSet(&p_IVI_APASet_066_st.IVI_AVMtrigBySensorSet);
+    }
+    if(p_IVI_APASet_066_st.IVI_PDCSoundSet != Com_SignalInitValue_IVI_PDCSoundSet_0x066_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_PDCSoundSet(&p_IVI_APASet_066_st.IVI_PDCSoundSet);
+    }
+    if(p_IVI_APASet_066_st.IVI_PDCMuteReq != Com_SignalInitValue_IVI_PDCMuteReq_0x066_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_PDCMuteReq(&p_IVI_APASet_066_st.IVI_PDCMuteReq);
+    }
+    if(p_IVI_APASet_066_st.IVI_laeb_SW != Com_SignalInitValue_IVI_laeb_SW_0x066_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_laeb_SW(&p_IVI_APASet_066_st.IVI_laeb_SW);
+    }
+    if(p_IVI_APASet_066_st.IVI_FrontPDCAlarmSet != Com_SignalInitValue_IVI_FrontPDCAlarmSet_0x066_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_FrontPDCAlarmSet(&p_IVI_APASet_066_st.IVI_FrontPDCAlarmSet);
+    }
+    if(p_IVI_APASet_066_st.IVI_APAParkInTypeSel != Com_SignalInitValue_IVI_APAParkInTypeSel_0x066_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_APAParkInTypeSel(&p_IVI_APASet_066_st.IVI_APAParkInTypeSel);
+    }
+    if(p_IVI_APASet_066_st.IVI_ParkSceneReconSw != Com_SignalInitValue_IVI_ParkSceneReconSw_0x066_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_APASet_066_ComIn_VeCAN_IVI_ParkSceneReconSw(&p_IVI_APASet_066_st.IVI_ParkSceneReconSw);
+    }
 
     if (bResult != RTE_SIG_OK) {
         SystemApiLogPrintf(LOG_ERROR_OUTPUT,"setSignal_IVI_APASet_066 error bResult:0x%x\r\n", bResult);
@@ -931,25 +1248,55 @@ void setSignal_IVI_ACCSet_067(uint8_t *sigbuff, uint8_t len)
     }
     memcpy(((uint8_t*)&p_IVI_ACCSet_067_st) + 4, sigbuff, len);
 
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_ICAOnOffSet(&p_IVI_ACCSet_067_st.IVI_ICAOnOffSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_lanechangestaly(&p_IVI_ACCSet_067_st.IVI_lanechangestaly);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_ivi_autolanechangeSet(&p_IVI_ACCSet_067_st.ivi_autolanechangeSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_ivi_RampfollowcarSet(&p_IVI_ACCSet_067_st.ivi_RampfollowcarSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_NCAOnOffSet(&p_IVI_ACCSet_067_st.IVI_NCAOnOffSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_SpeedlimitSet(&p_IVI_ACCSet_067_st.IVI_SpeedlimitSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_voicebroadcastSet(&p_IVI_ACCSet_067_st.IVI_voicebroadcastSet);
+    if(p_IVI_ACCSet_067_st.IVI_ICAOnOffSet != Com_SignalInitValue_IVI_ICAOnOffSet_0x067_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_ICAOnOffSet(&p_IVI_ACCSet_067_st.IVI_ICAOnOffSet);
+    }
+    if(p_IVI_ACCSet_067_st.IVI_lanechangestaly != Com_SignalInitValue_IVI_lanechangestaly_0x067_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_lanechangestaly(&p_IVI_ACCSet_067_st.IVI_lanechangestaly);
+    }
+    if(p_IVI_ACCSet_067_st.ivi_autolanechangeSet != Com_SignalInitValue_ivi_autolanechangeSet_0x067_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_ivi_autolanechangeSet(&p_IVI_ACCSet_067_st.ivi_autolanechangeSet);
+    }
+    if(p_IVI_ACCSet_067_st.ivi_RampfollowcarSet != Com_SignalInitValue_ivi_RampfollowcarSet_0x067_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_ivi_RampfollowcarSet(&p_IVI_ACCSet_067_st.ivi_RampfollowcarSet);
+    }
+    if(p_IVI_ACCSet_067_st.IVI_NCAOnOffSet != Com_SignalInitValue_IVI_NCAOnOffSet_0x067_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_NCAOnOffSet(&p_IVI_ACCSet_067_st.IVI_NCAOnOffSet);
+    }
+    if(p_IVI_ACCSet_067_st.IVI_SpeedlimitSet != Com_SignalInitValue_IVI_SpeedlimitSet_0x067_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_SpeedlimitSet(&p_IVI_ACCSet_067_st.IVI_SpeedlimitSet);
+    }
+    if(p_IVI_ACCSet_067_st.IVI_voicebroadcastSet != Com_SignalInitValue_IVI_voicebroadcastSet_0x067_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_voicebroadcastSet(&p_IVI_ACCSet_067_st.IVI_voicebroadcastSet);
+    }
     u16IVI_ParkPosn1_ID = (((uint16_t)p_IVI_ACCSet_067_st.IVI_ParkPosn1_ID_H) << 8) + 
                                 ((uint16_t)p_IVI_ACCSet_067_st.IVI_ParkPosn1_ID_L);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_ParkPosn1_ID(&u16IVI_ParkPosn1_ID);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_SpeedProportionSet(&p_IVI_ACCSet_067_st.IVI_SpeedProportionSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_SpeedValueSet(&p_IVI_ACCSet_067_st.IVI_SpeedValueSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_LanechangStyleSet(&p_IVI_ACCSet_067_st.IVI_LanechangStyleSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_TargetSpeedOffsetSet(&p_IVI_ACCSet_067_st.IVI_TargetSpeedOffsetSet);
+    if(p_IVI_ACCSet_067_st.IVI_SpeedProportionSet != Com_SignalInitValue_IVI_SpeedProportionSet_0x067_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_SpeedProportionSet(&p_IVI_ACCSet_067_st.IVI_SpeedProportionSet);
+    }
+    if(p_IVI_ACCSet_067_st.IVI_SpeedValueSet != Com_SignalInitValue_IVI_SpeedValueSet_0x067_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_SpeedValueSet(&p_IVI_ACCSet_067_st.IVI_SpeedValueSet);
+    }
+    if(p_IVI_ACCSet_067_st.IVI_LanechangStyleSet != Com_SignalInitValue_IVI_LanechangStyleSet_0x067_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_LanechangStyleSet(&p_IVI_ACCSet_067_st.IVI_LanechangStyleSet);
+    }
+    if(p_IVI_ACCSet_067_st.IVI_TargetSpeedOffsetSet != Com_SignalInitValue_IVI_TargetSpeedOffsetSet_0x067_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_TargetSpeedOffsetSet(&p_IVI_ACCSet_067_st.IVI_TargetSpeedOffsetSet);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_TargetSpeedOffsetValueSet(&p_IVI_ACCSet_067_st.IVI_TargetSpeedOffsetValueSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_NCAFuncSet(&p_IVI_ACCSet_067_st.IVI_NCAFuncSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_ICAFuncSet(&p_IVI_ACCSet_067_st.IVI_ICAFuncSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_ALCFuncSet(&p_IVI_ACCSet_067_st.IVI_ALCFuncSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_LaneChangeConfirmSet(&p_IVI_ACCSet_067_st.IVI_LaneChangeConfirmSet);
+    if(p_IVI_ACCSet_067_st.IVI_NCAFuncSet != Com_SignalInitValue_IVI_NCAFuncSet_0x067_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_NCAFuncSet(&p_IVI_ACCSet_067_st.IVI_NCAFuncSet);
+    }
+    if(p_IVI_ACCSet_067_st.IVI_ICAFuncSet != Com_SignalInitValue_IVI_ICAFuncSet_0x067_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_ICAFuncSet(&p_IVI_ACCSet_067_st.IVI_ICAFuncSet);
+    }
+    if(p_IVI_ACCSet_067_st.IVI_ALCFuncSet != Com_SignalInitValue_IVI_ALCFuncSet_0x067_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_ALCFuncSet(&p_IVI_ACCSet_067_st.IVI_ALCFuncSet);
+    }
+    if(p_IVI_ACCSet_067_st.IVI_LaneChangeConfirmSet != Com_SignalInitValue_IVI_LaneChangeConfirmSet_0x067_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_067_ComIn_VeCAN_IVI_LaneChangeConfirmSet(&p_IVI_ACCSet_067_st.IVI_LaneChangeConfirmSet);
+    }
 
     if (bResult != RTE_SIG_OK) {
         SystemApiLogPrintf(LOG_ERROR_OUTPUT,"setSignal_IVI_ACCSet_067 error bResult:0x%x\r\n", bResult);
@@ -965,22 +1312,49 @@ void setSignal_IVI_ACCSet_069(uint8_t *sigbuff, uint8_t len)
     }
     memcpy(((uint8_t*)&p_IVI_ACCSet_069_st) + 4, sigbuff, len);
 
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_SLAFuncSet(&p_IVI_ACCSet_069_st.IVI_SLAFuncSet);
+    if(p_IVI_ACCSet_069_st.IVI_SLAFuncSet != Com_SignalInitValue_IVI_SLAFuncSet_0x069_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_SLAFuncSet(&p_IVI_ACCSet_069_st.IVI_SLAFuncSet);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_SlaOffsetAdjusttSet(&p_IVI_ACCSet_069_st.IVI_SlaOffsetAdjusttSet);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_SlaValueAdjustSet(&p_IVI_ACCSet_069_st.IVI_SlaValueAdjustSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_TrafficLightRemFuncSet(&p_IVI_ACCSet_069_st.IVI_TrafficLightRemFuncSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_LaneAssistTypeSet(&p_IVI_ACCSet_069_st.IVI_LaneAssistTypeSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_LasWarnModeSet(&p_IVI_ACCSet_069_st.IVI_LasWarnModeSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_ELKFuncSet(&p_IVI_ACCSet_069_st.IVI_ELKFuncSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_FcwFuncSet(&p_IVI_ACCSet_069_st.IVI_FcwFuncSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_AEBFuncSet(&p_IVI_ACCSet_069_st.IVI_AEBFuncSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_LaebFuncSet(&p_IVI_ACCSet_069_st.IVI_LaebFuncSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_RCWFuncSet(&p_IVI_ACCSet_069_st.IVI_RCWFuncSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_BsdLcaFuncSet(&p_IVI_ACCSet_069_st.IVI_BsdLcaFuncSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_DowFuncSet(&p_IVI_ACCSet_069_st.IVI_DowFuncSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_StartRemFuncSet(&p_IVI_ACCSet_069_st.IVI_StartRemFuncSet);
+    if(p_IVI_ACCSet_069_st.IVI_TrafficLightRemFuncSet != Com_SignalInitValue_IVI_TrafficLightRemFuncSet_0x069_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_TrafficLightRemFuncSet(&p_IVI_ACCSet_069_st.IVI_TrafficLightRemFuncSet);
+    }
+    if(p_IVI_ACCSet_069_st.IVI_LaneAssistTypeSet != Com_SignalInitValue_IVI_LaneAssistTypeSet_0x069_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_LaneAssistTypeSet(&p_IVI_ACCSet_069_st.IVI_LaneAssistTypeSet);
+    }
+    if(p_IVI_ACCSet_069_st.IVI_LasWarnModeSet != Com_SignalInitValue_IVI_LasWarnModeSet_0x069_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_LasWarnModeSet(&p_IVI_ACCSet_069_st.IVI_LasWarnModeSet);
+    }
+    if(p_IVI_ACCSet_069_st.IVI_ELKFuncSet != Com_SignalInitValue_IVI_ELKFuncSet_0x069_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_ELKFuncSet(&p_IVI_ACCSet_069_st.IVI_ELKFuncSet);
+    }
+    if(p_IVI_ACCSet_069_st.IVI_FcwFuncSet != Com_SignalInitValue_IVI_FcwFuncSet_0x069_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_FcwFuncSet(&p_IVI_ACCSet_069_st.IVI_FcwFuncSet);
+    }
+    if(p_IVI_ACCSet_069_st.IVI_AEBFuncSet != Com_SignalInitValue_IVI_AEBFuncSet_0x069_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_AEBFuncSet(&p_IVI_ACCSet_069_st.IVI_AEBFuncSet);
+    }
+    if(p_IVI_ACCSet_069_st.IVI_LaebFuncSet != Com_SignalInitValue_IVI_LaebFuncSet_0x069_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_LaebFuncSet(&p_IVI_ACCSet_069_st.IVI_LaebFuncSet);
+    }
+    if(p_IVI_ACCSet_069_st.IVI_RCWFuncSet != Com_SignalInitValue_IVI_RCWFuncSet_0x069_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_RCWFuncSet(&p_IVI_ACCSet_069_st.IVI_RCWFuncSet);
+    }
+    if(p_IVI_ACCSet_069_st.IVI_BsdLcaFuncSet != Com_SignalInitValue_IVI_BsdLcaFuncSet_0x069_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_BsdLcaFuncSet(&p_IVI_ACCSet_069_st.IVI_BsdLcaFuncSet);
+    }
+    if(p_IVI_ACCSet_069_st.IVI_DowFuncSet != Com_SignalInitValue_IVI_DowFuncSet_0x069_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_DowFuncSet(&p_IVI_ACCSet_069_st.IVI_DowFuncSet);
+    }
+    if(p_IVI_ACCSet_069_st.IVI_StartRemFuncSet != Com_SignalInitValue_IVI_StartRemFuncSet_0x069_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_StartRemFuncSet(&p_IVI_ACCSet_069_st.IVI_StartRemFuncSet);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_AdsVoiceBroadcastTypeSet(&p_IVI_ACCSet_069_st.IVI_AdsVoiceBroadcastTypeSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_HmaFuncSet(&p_IVI_ACCSet_069_st.IVI_HmaFuncSet);
+    if(p_IVI_ACCSet_069_st.IVI_HmaFuncSet != Com_SignalInitValue_IVI_HmaFuncSet_0x069_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_HmaFuncSet(&p_IVI_ACCSet_069_st.IVI_HmaFuncSet);
+    }
+    bResult |= Rte_Write_rpSR_CANMSG_IVI_ACCSet_069_ComIn_VeCAN_IVI_SLAWarnModeSet(&p_IVI_ACCSet_069_st.IVI_SLAWarnModeSet);
 
     if (bResult != RTE_SIG_OK) {
         SystemApiLogPrintf(LOG_ERROR_OUTPUT,"setSignal_IVI_ACCSet_069 error bResult:0x%x\r\n", bResult);
@@ -999,14 +1373,26 @@ void setSignal_IVI_AVMSet_068(uint8_t *sigbuff, uint8_t len)
 
     u16IVI_AVMRotationAngle_X = (((uint16_t)p_IVI_AVMSet_068_st.IVI_AVMRotationAngle_X_H) << 8) + 
                                 ((uint16_t)p_IVI_AVMSet_068_st.IVI_AVMRotationAngle_X_L);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_AVMSet_068_ComIn_VeCAN_IVI_AVMRotationAngle_X(&u16IVI_AVMRotationAngle_X);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_AVMSet_068_ComIn_VeCAN_IVI_AVMRotationAngle_Y(&p_IVI_AVMSet_068_st.IVI_AVMRotationAngle_Y);
+    if(p_IVI_AVMSet_068_st.IVI_AVMRotationAngle_X != Com_SignalInitValue_IVI_AVMRotationAngle_X_0x068_INFO_Message){
+       bResult |= Rte_Write_rpSR_CANMSG_IVI_AVMSet_068_ComIn_VeCAN_IVI_AVMRotationAngle_X(&u16IVI_AVMRotationAngle_X);
+    }
+    if(p_IVI_AVMSet_068_st.IVI_AVMRotationAngle_Y != Com_SignalInitValue_IVI_AVMRotationAngle_Y_0x068_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_AVMSet_068_ComIn_VeCAN_IVI_AVMRotationAngle_Y(&p_IVI_AVMSet_068_st.IVI_AVMRotationAngle_Y);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IVI_AVMSet_068_ComIn_VeCAN_IVI_APACustomizeSlot(&p_IVI_AVMSet_068_st.IVI_APACustomizeSlot);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_AVMSet_068_ComIn_VeCAN_IVI_RpaApaSwitch(&p_IVI_AVMSet_068_st.IVI_RpaApaSwitch);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_AVMSet_068_ComIn_VeCAN_IVI_APAFuncReq(&p_IVI_AVMSet_068_st.IVI_APAFuncReq);
+    if(p_IVI_AVMSet_068_st.IVI_RpaApaSwitch != Com_SignalInitValue_IVI_RpaApaSwitch_0x068_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_AVMSet_068_ComIn_VeCAN_IVI_RpaApaSwitch(&p_IVI_AVMSet_068_st.IVI_RpaApaSwitch);
+    }
+    if(p_IVI_AVMSet_068_st.IVI_APAFuncReq != Com_SignalInitValue_IVI_APAFuncReq_0x068_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_AVMSet_068_ComIn_VeCAN_IVI_APAFuncReq(&p_IVI_AVMSet_068_st.IVI_APAFuncReq);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IVI_AVMSet_068_ComIn_VeCAN_IVI_ParkDirSel(&p_IVI_AVMSet_068_st.IVI_ParkDirSel);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_AVMSet_068_ComIn_VeCAN_IVI_AVMViewSelect(&p_IVI_AVMSet_068_st.IVI_AVMViewSelect);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_AVMSet_068_ComIn_VeCAN_IVI_ParkSpcGrdLockCfim(&p_IVI_AVMSet_068_st.IVI_ParkSpcGrdLockCfim);
+    if(p_IVI_AVMSet_068_st.IVI_AVMViewSelect != Com_SignalInitValue_IVI_AVMViewSelect_0x068_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_AVMSet_068_ComIn_VeCAN_IVI_AVMViewSelect(&p_IVI_AVMSet_068_st.IVI_AVMViewSelect);
+    }
+    if(p_IVI_AVMSet_068_st.IVI_ParkSpcGrdLockCfim != Com_SignalInitValue_IVI_ParkSpcGrdLockCfim_0x068_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_AVMSet_068_ComIn_VeCAN_IVI_ParkSpcGrdLockCfim(&p_IVI_AVMSet_068_st.IVI_ParkSpcGrdLockCfim);
+    }
 
     if (bResult != RTE_SIG_OK) {
         SystemApiLogPrintf(LOG_ERROR_OUTPUT,"setSignal_IVI_AVMSet_068 error bResult:0x%x\r\n", bResult);
@@ -1130,10 +1516,18 @@ void setSignal_IVI_dsmmSet2(uint8_t *sigbuff, uint8_t len)
     }
     memcpy(((uint8_t*)&p_IVI_dsmmSet2_st) + 4, sigbuff, len);
 
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet2_ComIn_VeCAN_IVI_PassSeatRouteSet(&p_IVI_dsmmSet2_st.IVI_PassSeatRouteSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet2_ComIn_VeCAN_IVI_PassSeatbackrestSet(&p_IVI_dsmmSet2_st.IVI_PassSeatbackrestSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet2_ComIn_VeCAN_IVI_PassSeatCushionSet(&p_IVI_dsmmSet2_st.IVI_PassSeatCushionSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet2_ComIn_VeCAN_IVI_PassSeatCushionAngleSet(&p_IVI_dsmmSet2_st.IVI_PassSeatCushionAngleSet);
+    if(p_IVI_dsmmSet2_st.IVI_PassSeatRouteSet != Com_SignalInitValue_IVI_PassSeatRouteSet_0x093_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet2_ComIn_VeCAN_IVI_PassSeatRouteSet(&p_IVI_dsmmSet2_st.IVI_PassSeatRouteSet);
+    }
+    if(p_IVI_dsmmSet2_st.IVI_PassSeatbackrestSet != Com_SignalInitValue_IVI_PassSeatbackrestSet_0x093_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet2_ComIn_VeCAN_IVI_PassSeatbackrestSet(&p_IVI_dsmmSet2_st.IVI_PassSeatbackrestSet);
+    }
+    if(p_IVI_dsmmSet2_st.IVI_PassSeatCushionSet != Com_SignalInitValue_IVI_PassSeatCushionSet_0x093_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet2_ComIn_VeCAN_IVI_PassSeatCushionSet(&p_IVI_dsmmSet2_st.IVI_PassSeatCushionSet);
+    }
+    if(p_IVI_dsmmSet2_st.IVI_PassSeatCushionAngleSet != Com_SignalInitValue_IVI_PassSeatCushionAngleSet_0x093_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet2_ComIn_VeCAN_IVI_PassSeatCushionAngleSet(&p_IVI_dsmmSet2_st.IVI_PassSeatCushionAngleSet);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IVI_dsmmSet2_ComIn_VeCAN_IVI_PSMChargeCtrl(&p_IVI_dsmmSet2_st.IVI_PSMChargeCtrl);
 
     if (bResult != RTE_SIG_OK) {
@@ -1150,8 +1544,12 @@ void setSignal_IVI_infoSet(uint8_t *sigbuff, uint8_t len)
     }
     memcpy(((uint8_t*)&p_IVI_infoSet_st) + 4, sigbuff, len);
 
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_ivi_darkIllumiLevelSetReserved(&p_IVI_infoSet_st.ivi_darkIllumiLevelSetReserved);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_ivi_TripSwitchReserved(&p_IVI_infoSet_st.ivi_TripSwitchReserved);
+    if(p_IVI_infoSet_st.ivi_darkIllumiLevelSetReserved != Com_SignalInitValue_ivi_darkIllumiLevelSetReserved_0x0C5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_ivi_darkIllumiLevelSetReserved(&p_IVI_infoSet_st.ivi_darkIllumiLevelSetReserved);
+    }
+    if(p_IVI_infoSet_st.ivi_TripSwitchReserved != Com_SignalInitValue_ivi_TripSwitchReserved_0x0C5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_ivi_TripSwitchReserved(&p_IVI_infoSet_st.ivi_TripSwitchReserved);
+    }
     if(p_IVI_infoSet_st.IVI_RearseatbeltVoiceWarningSet != Com_SignalInitValue_IVI_RearseatbeltVoiceWarningSet_0x0C5_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_IVI_RearseatbeltVoiceWarningSet(&p_IVI_infoSet_st.IVI_RearseatbeltVoiceWarningSet);
     }
@@ -1160,27 +1558,45 @@ void setSignal_IVI_infoSet(uint8_t *sigbuff, uint8_t len)
     }
     bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_IVI_PEBSVoiceWarningSet(&p_IVI_infoSet_st.IVI_PEBSVoiceWarningSet);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_ivi_NaviSwitchReserved(&p_IVI_infoSet_st.ivi_NaviSwitchReserved);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_ivi_themeSetReserved(&p_IVI_infoSet_st.ivi_themeSetReserved);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_ivi_wcmLeftOnOffSet(&p_IVI_infoSet_st.ivi_wcmLeftOnOffSet);
+    if(p_IVI_infoSet_st.ivi_themeSetReserved != Com_SignalInitValue_ivi_themeSetReserved_0x0C5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_ivi_themeSetReserved(&p_IVI_infoSet_st.ivi_themeSetReserved);
+    }
+    if(p_IVI_infoSet_st.ivi_wcmOnOffSet != Com_SignalInitValue_ivi_wcmOnOffSet_0x0C5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_ivi_wcmOnOffSet(&p_IVI_infoSet_st.ivi_wcmOnOffSet);
+    }
     if(p_IVI_infoSet_st.ivi_pdcOnOffSet != Com_SignalInitValue_ivi_pdcOnOffSet_0x0C5_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_ivi_pdcOnOffSet(&p_IVI_infoSet_st.ivi_pdcOnOffSet);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_ivi_ICthemegangedSetReserved(&p_IVI_infoSet_st.ivi_ICthemegangedSetReserved);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_IVI_FactoryResetCommand(&p_IVI_infoSet_st.IVI_FactoryResetCommand);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_ivi_ICIllumiLevelSet(&p_IVI_infoSet_st.ivi_ICIllumiLevelSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_IVI_laeb_SW(&p_IVI_infoSet_st.IVI_laeb_SW);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_ivi_vspOnOffSet(&p_IVI_infoSet_st.ivi_vspOnOffSet);
+    if(p_IVI_infoSet_st.ivi_ICthemegangedSetReserved != Com_SignalInitValue_ivi_ICthemegangedSetReserved_0x0C5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_ivi_ICthemegangedSetReserved(&p_IVI_infoSet_st.ivi_ICthemegangedSetReserved);
+    }
+    if(p_IVI_infoSet_st.IVI_FactoryResetCommand != Com_SignalInitValue_IVI_FactoryResetCommand_0x0C5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_IVI_FactoryResetCommand(&p_IVI_infoSet_st.IVI_FactoryResetCommand);
+    }
+    if(p_IVI_infoSet_st.ivi_ICIllumiLevelSet != Com_SignalInitValue_ivi_ICIllumiLevelSet_0x0C5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_ivi_ICIllumiLevelSet(&p_IVI_infoSet_st.ivi_ICIllumiLevelSet);
+    }
+    if(p_IVI_infoSet_st.IVI_laeb_SW != Com_SignalInitValue_IVI_laeb_SW_0x0C5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_IVI_laeb_SW(&p_IVI_infoSet_st.IVI_laeb_SW);
+    }
+    if(p_IVI_infoSet_st.ivi_vspOnOffSet != Com_SignalInitValue_ivi_vspOnOffSet_0x0C5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_ivi_vspOnOffSet(&p_IVI_infoSet_st.ivi_vspOnOffSet);
+    }
     if(p_IVI_infoSet_st.ivi_vsp_SoundConfigure != Com_SignalInitValue_ivi_vsp_SoundConfigure_0x0C5_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_ivi_vsp_SoundConfigure(&p_IVI_infoSet_st.ivi_vsp_SoundConfigure);
     }
     if(p_IVI_infoSet_st.IVI_unlocksoundSet != Com_SignalInitValue_IVI_unlocksoundSet_0x0C5_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_IVI_unlocksoundSet(&p_IVI_infoSet_st.IVI_unlocksoundSet);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_IVI_locksoundSet(&p_IVI_infoSet_st.IVI_locksoundSet);
+    if(p_IVI_infoSet_st.IVI_locksoundSet != Com_SignalInitValue_IVI_locksoundSet_0x0C5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_IVI_locksoundSet(&p_IVI_infoSet_st.IVI_locksoundSet);
+    }
     if(p_IVI_infoSet_st.IVI_ISAOnOffSet != Com_SignalInitValue_IVI_ISAOnOffSet_0x0C5_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_IVI_ISAOnOffSet(&p_IVI_infoSet_st.IVI_ISAOnOffSet);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_ivi_IllumiLevelSetReserved(&p_IVI_infoSet_st.ivi_IllumiLevelSetReserved);
+    if(p_IVI_infoSet_st.ivi_IllumiLevelSetReserved != Com_SignalInitValue_ivi_IllumiLevelSetReserved_0x0C5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet_ComIn_VeCAN_ivi_IllumiLevelSetReserved(&p_IVI_infoSet_st.ivi_IllumiLevelSetReserved);
+    }
 
     if (bResult != RTE_SIG_OK) {
         SystemApiLogPrintf(LOG_ERROR_OUTPUT,"setSignal_IVI_infoSet error bResult:0x%x\r\n", bResult);
@@ -1197,11 +1613,21 @@ void setSignal_IVI_infoSet2(uint8_t *sigbuff, uint8_t len)
     memcpy(((uint8_t*)&p_IVI_infoSet2_st) + 4, sigbuff, len);
 
     bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet2_ComIn_VeCAN_IVI_VehIntMntnMile(&p_IVI_infoSet2_st.IVI_VehIntMntnMile);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet2_ComIn_VeCAN_IVI_VehMntnMileClea(&p_IVI_infoSet2_st.IVI_VehMntnMileClea);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet2_ComIn_VeCAN_IVI_OilMntnMileClea(&p_IVI_infoSet2_st.IVI_OilMntnMileClea);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet2_ComIn_VeCAN_IVI_OilFilMntnMileClea(&p_IVI_infoSet2_st.IVI_OilFilMntnMileClea);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet2_ComIn_VeCAN_IVI_AirFilMntnMileClea(&p_IVI_infoSet2_st.IVI_AirFilMntnMileClea);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet2_ComIn_VeCAN_IVI_VehMntnTimeClea(&p_IVI_infoSet2_st.IVI_VehMntnTimeClea);
+    if(p_IVI_infoSet2_st.IVI_VehMntnMileClea != Com_SignalInitValue_IVI_VehMntnMileClea_0x0C6_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet2_ComIn_VeCAN_IVI_VehMntnMileClea(&p_IVI_infoSet2_st.IVI_VehMntnMileClea);
+    }
+    if(p_IVI_infoSet2_st.IVI_OilMntnMileClea != Com_SignalInitValue_IVI_OilMntnMileClea_0x0C6_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet2_ComIn_VeCAN_IVI_OilMntnMileClea(&p_IVI_infoSet2_st.IVI_OilMntnMileClea);
+    }
+    if(p_IVI_infoSet2_st.IVI_OilFilMntnMileClea != Com_SignalInitValue_IVI_OilFilMntnMileClea_0x0C6_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet2_ComIn_VeCAN_IVI_OilFilMntnMileClea(&p_IVI_infoSet2_st.IVI_OilFilMntnMileClea);
+    }
+    if(p_IVI_infoSet2_st.IVI_AirFilMntnMileClea != Com_SignalInitValue_IVI_AirFilMntnMileClea_0x0C6_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet2_ComIn_VeCAN_IVI_AirFilMntnMileClea(&p_IVI_infoSet2_st.IVI_AirFilMntnMileClea);
+    }
+    if(p_IVI_infoSet2_st.IVI_VehMntnTimeClea != Com_SignalInitValue_IVI_VehMntnTimeClea_0x0C6_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_infoSet2_ComIn_VeCAN_IVI_VehMntnTimeClea(&p_IVI_infoSet2_st.IVI_VehMntnTimeClea);
+    }
 
     if (bResult != RTE_SIG_OK) {
         SystemApiLogPrintf(LOG_ERROR_OUTPUT,"setSignal_IVI_infoSet2 error bResult:0x%x\r\n", bResult);
@@ -1226,10 +1652,16 @@ void setSignal_IVI_AVMSet_3D2(uint8_t *sigbuff, uint8_t len)
                                 ((uint16_t)p_IVI_AVMSet_3D2_st.ivi_AVMYCoordinate_L);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_AVMSet_3D2_ComIn_VeCAN_ivi_AVMYCoordinate(&u16ivi_AVMYCoordinate);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_AVMSet_3D2_ComIn_VeCAN_ivi_AVMCoTouchMotion(&p_IVI_AVMSet_3D2_st.ivi_AVMCoTouchMotion);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_AVMSet_3D2_ComIn_VeCAN_ivi_IVIthemeSet1(&p_IVI_AVMSet_3D2_st.ivi_IVIthemeSet1);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_AVMSet_3D2_ComIn_VeCAN_IVI_TakeINVideoPosReq(&p_IVI_AVMSet_3D2_st.IVI_TakeINVideoPosReq);
+    if(p_IVI_AVMSet_3D2_st.ivi_IVIthemeSet1 != Com_SignalInitValue_ivi_IVIthemeSet1_0x3D2_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_AVMSet_3D2_ComIn_VeCAN_ivi_IVIthemeSet1(&p_IVI_AVMSet_3D2_st.ivi_IVIthemeSet1);
+    }
+    if(p_IVI_AVMSet_3D2_st.IVI_TakeINVideoPosReq != Com_SignalInitValue_IVI_TakeINVideoPosReq_0x3D2_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_AVMSet_3D2_ComIn_VeCAN_IVI_TakeINVideoPosReq(&p_IVI_AVMSet_3D2_st.IVI_TakeINVideoPosReq);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IVI_AVMSet_3D2_ComIn_VeCAN_IVI_TakePhotoFaultReason(&p_IVI_AVMSet_3D2_st.IVI_TakePhotoFaultReason);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_AVMSet_3D2_ComIn_VeCAN_IVI_AlarmListrequest(&p_IVI_AVMSet_3D2_st.IVI_AlarmListrequest);
+    if(p_IVI_AVMSet_3D2_st.IVI_AlarmListrequest != Com_SignalInitValue_IVI_AlarmListrequest_0x3D2_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_AVMSet_3D2_ComIn_VeCAN_IVI_AlarmListrequest(&p_IVI_AVMSet_3D2_st.IVI_AlarmListrequest);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IVI_AVMSet_3D2_ComIn_VeCAN_IVI_driveModeSts(&p_IVI_AVMSet_3D2_st.IVI_driveModeSts);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_AVMSet_3D2_ComIn_VeCAN_IVI_PetFaultReason(&p_IVI_AVMSet_3D2_st.IVI_PetFaultReason);
 
@@ -1253,11 +1685,15 @@ void setSignal_IVI_scuSet(uint8_t *sigbuff, uint8_t len)
     if(p_IVI_scuSet_st.ivi_drSeatHeatLevelSet != Com_SignalInitValue_ivi_drSeatHeatLevelSet_0x0F5_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_scuSet_ComIn_VeCAN_ivi_drSeatHeatLevelSet(&p_IVI_scuSet_st.ivi_drSeatHeatLevelSet);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_scuSet_ComIn_VeCAN_ivi_drSeatVentLevelSet(&p_IVI_scuSet_st.ivi_drSeatVentLevelSet);
+    if(p_IVI_scuSet_st.ivi_drSeatVentLevelSet != Com_SignalInitValue_ivi_drSeatVentLevelSet_0x0F5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_scuSet_ComIn_VeCAN_ivi_drSeatVentLevelSet(&p_IVI_scuSet_st.ivi_drSeatVentLevelSet);
+    }
     if(p_IVI_scuSet_st.ivi_passSeatHeatLevelSet != Com_SignalInitValue_ivi_passSeatHeatLevelSet_0x0F5_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_scuSet_ComIn_VeCAN_ivi_passSeatHeatLevelSet(&p_IVI_scuSet_st.ivi_passSeatHeatLevelSet);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_scuSet_ComIn_VeCAN_ivi_passSeatVentLevelSet(&p_IVI_scuSet_st.ivi_passSeatVentLevelSet);
+    if(p_IVI_scuSet_st.ivi_passSeatVentLevelSet != Com_SignalInitValue_ivi_passSeatVentLevelSet_0x0F5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_scuSet_ComIn_VeCAN_ivi_passSeatVentLevelSet(&p_IVI_scuSet_st.ivi_passSeatVentLevelSet);
+    }
     if(p_IVI_scuSet_st.ivi_drSeatMassLevelSet != Com_SignalInitValue_ivi_drSeatMassLevelSet_0x0F5_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_scuSet_ComIn_VeCAN_ivi_drSeatMassLevelSet(&p_IVI_scuSet_st.ivi_drSeatMassLevelSet);
     }
@@ -1267,16 +1703,24 @@ void setSignal_IVI_scuSet(uint8_t *sigbuff, uint8_t len)
     if(p_IVI_scuSet_st.ivi_MirrorAutoFoldUnfoldSet != Com_SignalInitValue_ivi_MirrorAutoFoldUnfoldSet_0x0F5_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_scuSet_ComIn_VeCAN_ivi_MirrorAutoFoldUnfoldSet(&p_IVI_scuSet_st.ivi_MirrorAutoFoldUnfoldSet);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_scuSet_ComIn_VeCAN_IVI_RLSeatHeatLevelSet(&p_IVI_scuSet_st.IVI_RLSeatHeatLevelSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_scuSet_ComIn_VeCAN_ivi_dsmSetMemoryReqReserved(&p_IVI_scuSet_st.ivi_dsmSetMemoryReqReserved);
+    if(p_IVI_scuSet_st.IVI_RLSeatHeatLevelSet != Com_SignalInitValue_IVI_RLSeatHeatLevelSet_0x0F5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_scuSet_ComIn_VeCAN_IVI_RLSeatHeatLevelSet(&p_IVI_scuSet_st.IVI_RLSeatHeatLevelSet);
+    }
+    if(p_IVI_scuSet_st.ivi_dsmSetMemoryReqReserved != Com_SignalInitValue_ivi_dsmSetMemoryReqReserved_0x0F5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_scuSet_ComIn_VeCAN_ivi_dsmSetMemoryReqReserved(&p_IVI_scuSet_st.ivi_dsmSetMemoryReqReserved);
+    }
     if(p_IVI_scuSet_st.ivi_DrMassgIntenSet != Com_SignalInitValue_ivi_DrMassgIntenSet_0x0F5_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_scuSet_ComIn_VeCAN_ivi_DrMassgIntenSet(&p_IVI_scuSet_st.ivi_DrMassgIntenSet);
     }
     if(p_IVI_scuSet_st.ivi_PsgMassgIntenSet != Com_SignalInitValue_ivi_PsgMassgIntenSet_0x0F5_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_scuSet_ComIn_VeCAN_ivi_PsgMassgIntenSet(&p_IVI_scuSet_st.ivi_PsgMassgIntenSet);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_scuSet_ComIn_VeCAN_IVI_DSMMemoryReq(&p_IVI_scuSet_st.IVI_DSMMemoryReq);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_scuSet_ComIn_VeCAN_IVI_RRSeatHeatLevelSet(&p_IVI_scuSet_st.IVI_RRSeatHeatLevelSet);
+    if(p_IVI_scuSet_st.IVI_DSMMemoryReq != Com_SignalInitValue_IVI_DSMMemoryReq_0x0F5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_scuSet_ComIn_VeCAN_IVI_DSMMemoryReq(&p_IVI_scuSet_st.IVI_DSMMemoryReq);
+    }
+    if(p_IVI_scuSet_st.IVI_RRSeatHeatLevelSet != Com_SignalInitValue_IVI_RRSeatHeatLevelSet_0x0F5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_scuSet_ComIn_VeCAN_IVI_RRSeatHeatLevelSet(&p_IVI_scuSet_st.IVI_RRSeatHeatLevelSet);
+    }
 
     if (bResult != RTE_SIG_OK) {
         SystemApiLogPrintf(LOG_ERROR_OUTPUT,"setSignal_IVI_scuSet error bResult:0x%x\r\n", bResult);
@@ -1609,7 +2053,9 @@ void setSignal_IVI_NaviChrgSt_33E(uint8_t *sigbuff, uint8_t len)
                                 ((uint16_t)p_IVI_NaviChrgSt_33E_st.IVI_NextChrgStationPileMinU_L);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_NaviChrgSt_33E_ComIn_VeCAN_IVI_NextChrgStationPileMinU(&u16IVI_NextChrgStationPileMinU);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_NaviChrgSt_33E_ComIn_VeCAN_IVI_OutChrgStationOpenHour(&p_IVI_NaviChrgSt_33E_st.IVI_OutChrgStationOpenHour);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_NaviChrgSt_33E_ComIn_VeCAN_IVI_NavigChrgPostReq(&p_IVI_NaviChrgSt_33E_st.IVI_NavigChrgPostReq);
+    if(p_IVI_NaviChrgSt_33E_st.IVI_NavigChrgPostReq != Com_SignalInitValue_IVI_NavigChrgPostReq_0x33E_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_NaviChrgSt_33E_ComIn_VeCAN_IVI_NavigChrgPostReq(&p_IVI_NaviChrgSt_33E_st.IVI_NavigChrgPostReq);
+    }
 
     if (bResult != RTE_SIG_OK) {
         SystemApiLogPrintf(LOG_ERROR_OUTPUT,"setSignal_IVI_NaviChrgSt_33E error bResult:0x%x\r\n", bResult);
@@ -1630,8 +2076,12 @@ void setSignal_IC_engineOFF(uint8_t *sigbuff, uint8_t len)
                                 ((uint16_t)p_IC_engineOFF_st.ic_engOffTime_L);
     bResult |= Rte_Write_rpSR_CANMSG_IC_engineOFF_ComIn_VeCAN_ic_engOffTime(&u16ic_engOffTime);
     bResult |= Rte_Write_rpSR_CANMSG_IC_engineOFF_ComIn_VeCAN_ic_engOffTimeValid(&p_IC_engineOFF_st.ic_engOffTimeValid);
-    bResult |= Rte_Write_rpSR_CANMSG_IC_engineOFF_ComIn_VeCAN_IC_songFaultNum(&p_IC_engineOFF_st.IC_songFaultNum);
-    bResult |= Rte_Write_rpSR_CANMSG_IC_engineOFF_ComIn_VeCAN_IC_songWarningSts(&p_IC_engineOFF_st.IC_songWarningSts);
+    if(p_IC_engineOFF_st.IC_songFaultNum != Com_SignalInitValue_IC_songFaultNum_0x052_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IC_engineOFF_ComIn_VeCAN_IC_songFaultNum(&p_IC_engineOFF_st.IC_songFaultNum);
+    }
+    if(p_IC_engineOFF_st.IC_songWarningSts != Com_SignalInitValue_IC_songWarningSts_0x052_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IC_engineOFF_ComIn_VeCAN_IC_songWarningSts(&p_IC_engineOFF_st.IC_songWarningSts);
+    }
 
     if (bResult != RTE_SIG_OK) {
         SystemApiLogPrintf(LOG_ERROR_OUTPUT,"setSignal_IC_engineOFF error bResult:0x%x\r\n", bResult);
@@ -1753,19 +2203,33 @@ void setSignal_IC_Warning(uint8_t *sigbuff, uint8_t len)
     }
     memcpy(((uint8_t*)&p_IC_Warning_st) + 4, sigbuff, len);
 
-    bResult |= Rte_Write_rpSR_CANMSG_IC_Warning_ComIn_VeCAN_IC_AlarmListflag(&p_IC_Warning_st.IC_AlarmListflag);
+    if(p_IC_Warning_st.IC_AlarmListflag != Com_SignalInitValue_IC_AlarmListflag_0x571_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IC_Warning_ComIn_VeCAN_IC_AlarmListflag(&p_IC_Warning_st.IC_AlarmListflag);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IC_Warning_ComIn_VeCAN_IC_FaultNum(&p_IC_Warning_st.IC_FaultNum);
-    bResult |= Rte_Write_rpSR_CANMSG_IC_Warning_ComIn_VeCAN_IC_WarningStatus(&p_IC_Warning_st.IC_WarningStatus);
+    if(p_IC_Warning_st.IC_WarningStatus != Com_SignalInitValue_IC_WarningStatus_0x571_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IC_Warning_ComIn_VeCAN_IC_WarningStatus(&p_IC_Warning_st.IC_WarningStatus);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IC_Warning_ComIn_VeCAN_IC_FaultNum2(&p_IC_Warning_st.IC_FaultNum2);
-    bResult |= Rte_Write_rpSR_CANMSG_IC_Warning_ComIn_VeCAN_IC_WarningStatus2(&p_IC_Warning_st.IC_WarningStatus2);
+    if(p_IC_Warning_st.IC_WarningStatus2 != Com_SignalInitValue_IC_WarningStatus2_0x571_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IC_Warning_ComIn_VeCAN_IC_WarningStatus2(&p_IC_Warning_st.IC_WarningStatus2);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IC_Warning_ComIn_VeCAN_IC_FaultNum3(&p_IC_Warning_st.IC_FaultNum3);
-    bResult |= Rte_Write_rpSR_CANMSG_IC_Warning_ComIn_VeCAN_IC_WarningStatus3(&p_IC_Warning_st.IC_WarningStatus3);
+    if(p_IC_Warning_st.IC_WarningStatus3 != Com_SignalInitValue_IC_WarningStatus3_0x571_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IC_Warning_ComIn_VeCAN_IC_WarningStatus3(&p_IC_Warning_st.IC_WarningStatus3);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IC_Warning_ComIn_VeCAN_IC_FaultNum4(&p_IC_Warning_st.IC_FaultNum4);
-    bResult |= Rte_Write_rpSR_CANMSG_IC_Warning_ComIn_VeCAN_IC_WarningStatus4(&p_IC_Warning_st.IC_WarningStatus4);
+    if(p_IC_Warning_st.IC_WarningStatus4 != Com_SignalInitValue_IC_WarningStatus4_0x571_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IC_Warning_ComIn_VeCAN_IC_WarningStatus4(&p_IC_Warning_st.IC_WarningStatus4);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IC_Warning_ComIn_VeCAN_IC_FaultNum5(&p_IC_Warning_st.IC_FaultNum5);
-    bResult |= Rte_Write_rpSR_CANMSG_IC_Warning_ComIn_VeCAN_IC_WarningStatus5(&p_IC_Warning_st.IC_WarningStatus5);
+    if(p_IC_Warning_st.IC_WarningStatus5 != Com_SignalInitValue_IC_WarningStatus5_0x571_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IC_Warning_ComIn_VeCAN_IC_WarningStatus5(&p_IC_Warning_st.IC_WarningStatus5);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IC_Warning_ComIn_VeCAN_IC_FaultNum6(&p_IC_Warning_st.IC_FaultNum6);
-    bResult |= Rte_Write_rpSR_CANMSG_IC_Warning_ComIn_VeCAN_IC_WarningStatus6(&p_IC_Warning_st.IC_WarningStatus6);
+    if(p_IC_Warning_st.IC_WarningStatus6 != Com_SignalInitValue_IC_WarningStatus6_0x571_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IC_Warning_ComIn_VeCAN_IC_WarningStatus6(&p_IC_Warning_st.IC_WarningStatus6);
+    }
 
     if (bResult != RTE_SIG_OK) {
         SystemApiLogPrintf(LOG_ERROR_OUTPUT,"setSignal_IC_Warning error bResult:0x%x\r\n", bResult);
@@ -1781,8 +2245,12 @@ void setSignal_IC_Warningfb(uint8_t *sigbuff, uint8_t len)
     }
     memcpy(((uint8_t*)&p_IC_Warningfb_st) + 4, sigbuff, len);
 
-    bResult |= Rte_Write_rpSR_CANMSG_IC_Warningfb_ComIn_VeCAN_IC_DMS_DistractionIconFB(&p_IC_Warningfb_st.IC_DMS_DistractionIconFB);
-    bResult |= Rte_Write_rpSR_CANMSG_IC_Warningfb_ComIn_VeCAN_IC_DMS_FatigueIconFB(&p_IC_Warningfb_st.IC_DMS_FatigueIconFB);
+    if(p_IC_Warningfb_st.IC_DMS_DistractionIconFB != Com_SignalInitValue_IC_DMS_DistractionIconFB_0x570_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IC_Warningfb_ComIn_VeCAN_IC_DMS_DistractionIconFB(&p_IC_Warningfb_st.IC_DMS_DistractionIconFB);
+    }
+    if(p_IC_Warningfb_st.IC_DMS_FatigueIconFB != Com_SignalInitValue_IC_DMS_FatigueIconFB_0x570_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IC_Warningfb_ComIn_VeCAN_IC_DMS_FatigueIconFB(&p_IC_Warningfb_st.IC_DMS_FatigueIconFB);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IC_Warningfb_ComIn_VeCAN_IC_DMS_Res1(&p_IC_Warningfb_st.IC_DMS_Res1);
     bResult |= Rte_Write_rpSR_CANMSG_IC_Warningfb_ComIn_VeCAN_IC_DMS_Res2(&p_IC_Warningfb_st.IC_DMS_Res2);
     bResult |= Rte_Write_rpSR_CANMSG_IC_Warningfb_ComIn_VeCAN_IC_DMS_Res3(&p_IC_Warningfb_st.IC_DMS_Res3);
@@ -1962,10 +2430,18 @@ void setSignal_IC_state2(uint8_t *sigbuff, uint8_t len)
                                 (((uint32_t)p_IC_state2_st.IC_VehRemMntnMile_ML) << 8) + 
                                 ((uint32_t)p_IC_state2_st.IC_VehRemMntnMile_L);
     bResult |= Rte_Write_rpSR_CANMSG_IC_state2_ComIn_VeCAN_IC_VehRemMntnMile(&u32IC_VehRemMntnMile);
-    bResult |= Rte_Write_rpSR_CANMSG_IC_state2_ComIn_VeCAN_IC_VehMntnMileRmnReq(&p_IC_state2_st.IC_VehMntnMileRmnReq);
-    bResult |= Rte_Write_rpSR_CANMSG_IC_state2_ComIn_VeCAN_IC_VehMntnTimeRmnReq(&p_IC_state2_st.IC_VehMntnTimeRmnReq);
-    bResult |= Rte_Write_rpSR_CANMSG_IC_state2_ComIn_VeCAN_IC_REMntnRmnReq(&p_IC_state2_st.IC_REMntnRmnReq);
-    bResult |= Rte_Write_rpSR_CANMSG_IC_state2_ComIn_VeCAN_ic_PowerReset(&p_IC_state2_st.ic_PowerReset);
+    if(p_IC_state2_st.IC_VehMntnMileRmnReq != Com_SignalInitValue_IC_VehMntnMileRmnReq_0x492_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IC_state2_ComIn_VeCAN_IC_VehMntnMileRmnReq(&p_IC_state2_st.IC_VehMntnMileRmnReq);
+    }
+    if(p_IC_state2_st.IC_VehMntnTimeRmnReq != Com_SignalInitValue_IC_VehMntnTimeRmnReq_0x492_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IC_state2_ComIn_VeCAN_IC_VehMntnTimeRmnReq(&p_IC_state2_st.IC_VehMntnTimeRmnReq);
+    }
+    if(p_IC_state2_st.IC_REMntnRmnReq != Com_SignalInitValue_IC_REMntnRmnReq_0x492_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IC_state2_ComIn_VeCAN_IC_REMntnRmnReq(&p_IC_state2_st.IC_REMntnRmnReq);
+    }
+    if(p_IC_state2_st.ic_PowerReset != Com_SignalInitValue_ic_PowerReset_0x492_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IC_state2_ComIn_VeCAN_ic_PowerReset(&p_IC_state2_st.ic_PowerReset);
+    }
     u16ic_avgSpdTripA = (((uint16_t)p_IC_state2_st.ic_avgSpdTripA_H) << 8) + 
                                 ((uint16_t)p_IC_state2_st.ic_avgSpdTripA_L);
     bResult |= Rte_Write_rpSR_CANMSG_IC_state2_ComIn_VeCAN_ic_avgSpdTripA(&u16ic_avgSpdTripA);
@@ -2061,21 +2537,32 @@ void setSignal_IVI_StatusAndNotify(uint8_t *sigbuff, uint8_t len)
     bResult |= Rte_Write_rpSR_CANMSG_IVI_StatusAndNotify_ComIn_VeCAN_IVI_WorkStatus(&p_IVI_StatusAndNotify_st.IVI_WorkStatus);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_StatusAndNotify_ComIn_VeCAN_IVI_CurrentVideo(&p_IVI_StatusAndNotify_st.IVI_CurrentVideo);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_StatusAndNotify_ComIn_VeCAN_IVI_EventNotify(&p_IVI_StatusAndNotify_st.IVI_EventNotify);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_StatusAndNotify_ComIn_VeCAN_IVI_IC_Sync(&p_IVI_StatusAndNotify_st.IVI_IC_Sync);
+    if(p_IVI_StatusAndNotify_st.IVI_IC_Sync != Com_SignalInitValue_IVI_IC_Sync_0x495_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_StatusAndNotify_ComIn_VeCAN_IVI_IC_Sync(&p_IVI_StatusAndNotify_st.IVI_IC_Sync);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IVI_StatusAndNotify_ComIn_VeCAN_IVI_Respitemodests(&p_IVI_StatusAndNotify_st.IVI_Respitemodests);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_StatusAndNotify_ComIn_VeCAN_IVI_ModeSts(&p_IVI_StatusAndNotify_st.IVI_ModeSts);
     u16IVI_averagePowerConsumThisTrip = (((uint16_t)p_IVI_StatusAndNotify_st.IVI_averagePowerConsumThisTrip_H) << 8) + 
                                 ((uint16_t)p_IVI_StatusAndNotify_st.IVI_averagePowerConsumThisTrip_L);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_StatusAndNotify_ComIn_VeCAN_IVI_averagePowerConsumThisTrip(&u16IVI_averagePowerConsumThisTrip);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_StatusAndNotify_ComIn_VeCAN_IVI_SentryReq(&p_IVI_StatusAndNotify_st.IVI_SentryReq);
+    if(p_IVI_StatusAndNotify_st.IVI_SentryReq != Com_SignalInitValue_IVI_SentryReq_0x495_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_StatusAndNotify_ComIn_VeCAN_IVI_SentryReq(&p_IVI_StatusAndNotify_st.IVI_SentryReq);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IVI_StatusAndNotify_ComIn_VeCAN_IVI_SentryAlarmSts(&p_IVI_StatusAndNotify_st.IVI_SentryAlarmSts);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_StatusAndNotify_ComIn_VeCAN_IVI_ModeReq(&p_IVI_StatusAndNotify_st.IVI_ModeReq);
+    if(p_IVI_StatusAndNotify_st.IVI_ModeReq != Com_SignalInitValue_IVI_ModeReq_0x495_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_StatusAndNotify_ComIn_VeCAN_IVI_ModeReq(&p_IVI_StatusAndNotify_st.IVI_ModeReq);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IVI_StatusAndNotify_ComIn_VeCAN_IVI_SentryTimeFd(&p_IVI_StatusAndNotify_st.IVI_SentryTimeFd);
+    if(p_IVI_StatusAndNotify_st.IVI_RangeExtenderdisenable != Com_SignalInitValue_IVI_RangeExtenderdisenable_0x495_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_StatusAndNotify_ComIn_VeCAN_IVI_RangeExtenderdisenable(&p_IVI_StatusAndNotify_st.IVI_RangeExtenderdisenable);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IVI_StatusAndNotify_ComIn_VeCAN_IVI_ChildrenLeftremindSts(&p_IVI_StatusAndNotify_st.IVI_ChildrenLeftremindSts);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_StatusAndNotify_ComIn_VeCAN_IVI_PetModeSts(&p_IVI_StatusAndNotify_st.IVI_PetModeSts);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_StatusAndNotify_ComIn_VeCAN_IVI_SentryFaultReason(&p_IVI_StatusAndNotify_st.IVI_SentryFaultReason);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_StatusAndNotify_ComIn_VeCAN_IVI_WashModeSts(&p_IVI_StatusAndNotify_st.IVI_WashModeSts);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_StatusAndNotify_ComIn_VeCAN_IVI_HCUcontrol(&p_IVI_StatusAndNotify_st.IVI_HCUcontrol);
+    if(p_IVI_StatusAndNotify_st.IVI_HCUcontrol != Com_SignalInitValue_IVI_HCUcontrol_0x495_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_StatusAndNotify_ComIn_VeCAN_IVI_HCUcontrol(&p_IVI_StatusAndNotify_st.IVI_HCUcontrol);
+    }
 
     if (bResult != RTE_SIG_OK) {
         SystemApiLogPrintf(LOG_ERROR_OUTPUT,"setSignal_IVI_StatusAndNotify error bResult:0x%x\r\n", bResult);
@@ -2091,14 +2578,20 @@ void setSignal_IVI_hmi(uint8_t *sigbuff, uint8_t len)
     }
     memcpy(((uint8_t*)&p_IVI_hmi_st) + 4, sigbuff, len);
 
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_hmi_ComIn_VeCAN_IVI_DMS_DistractionIcon(&p_IVI_hmi_st.IVI_DMS_DistractionIcon);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_hmi_ComIn_VeCAN_IVI_DMS_FatigueIcon(&p_IVI_hmi_st.IVI_DMS_FatigueIcon);
+    if(p_IVI_hmi_st.IVI_DMS_DistractionIcon != Com_SignalInitValue_IVI_DMS_DistractionIcon_0x496_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_hmi_ComIn_VeCAN_IVI_DMS_DistractionIcon(&p_IVI_hmi_st.IVI_DMS_DistractionIcon);
+    }
+    if(p_IVI_hmi_st.IVI_DMS_FatigueIcon != Com_SignalInitValue_IVI_DMS_FatigueIcon_0x496_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_hmi_ComIn_VeCAN_IVI_DMS_FatigueIcon(&p_IVI_hmi_st.IVI_DMS_FatigueIcon);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IVI_hmi_ComIn_VeCAN_IVI_DMS_Res1(&p_IVI_hmi_st.IVI_DMS_Res1);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_hmi_ComIn_VeCAN_IVI_DMS_Res2(&p_IVI_hmi_st.IVI_DMS_Res2);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_hmi_ComIn_VeCAN_IVI_DMS_Res3(&p_IVI_hmi_st.IVI_DMS_Res3);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_hmi_ComIn_VeCAN_IVI_AdsWarnLvl(&p_IVI_hmi_st.IVI_AdsWarnLvl);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_hmi_ComIn_VeCAN_IVI_UserID(&p_IVI_hmi_st.IVI_UserID);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_hmi_ComIn_VeCAN_ivi_CampModeReq(&p_IVI_hmi_st.ivi_CampModeReq);
+    if(p_IVI_hmi_st.ivi_CampModeReq != Com_SignalInitValue_ivi_CampModeReq_0x496_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_hmi_ComIn_VeCAN_ivi_CampModeReq(&p_IVI_hmi_st.ivi_CampModeReq);
+    }
 
     if (bResult != RTE_SIG_OK) {
         SystemApiLogPrintf(LOG_ERROR_OUTPUT,"setSignal_IVI_hmi error bResult:0x%x\r\n", bResult);
@@ -2196,19 +2689,33 @@ void setSignal_IVI_set(uint8_t *sigbuff, uint8_t len)
     if(p_IVI_set_st.ivi_acReq != Com_SignalInitValue_ivi_acReq_0x3B5_INFO_Message){
         bResult |= Rte_Write_rpSR_CANMSG_IVI_set_ComIn_VeCAN_ivi_acReq(&p_IVI_set_st.ivi_acReq);
     }
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_set_ComIn_VeCAN_IVI_NavigatioRecircReq(&p_IVI_set_st.IVI_NavigatioRecircReq);
+    if(p_IVI_set_st.IVI_NavigatioRecircReq != Com_SignalInitValue_IVI_NavigatioRecircReq_0x3B5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_set_ComIn_VeCAN_IVI_NavigatioRecircReq(&p_IVI_set_st.IVI_NavigatioRecircReq);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IVI_set_ComIn_VeCAN_IVI_NaviTunnelstatus(&p_IVI_set_st.IVI_NaviTunnelstatus);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_set_ComIn_VeCAN_IVI_ScreenOutReq(&p_IVI_set_st.IVI_ScreenOutReq);
+    if(p_IVI_set_st.IVI_ScreenOutReq != Com_SignalInitValue_IVI_ScreenOutReq_0x3B5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_set_ComIn_VeCAN_IVI_ScreenOutReq(&p_IVI_set_st.IVI_ScreenOutReq);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IVI_set_ComIn_VeCAN_IVI_TimeFormatset(&p_IVI_set_st.IVI_TimeFormatset);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_set_ComIn_VeCAN_USB_Sts(&p_IVI_set_st.USB_Sts);
     bResult |= Rte_Write_rpSR_CANMSG_IVI_set_ComIn_VeCAN_ivi_svcSteerInteractionSetReserved(&p_IVI_set_st.ivi_svcSteerInteractionSetReserved);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_set_ComIn_VeCAN_ivi_InterfaceSwitchReq(&p_IVI_set_st.ivi_InterfaceSwitchReq);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_set_ComIn_VeCAN_ivi_languageSet(&p_IVI_set_st.ivi_languageSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_set_ComIn_VeCAN_IVI_IntPuficationSw(&p_IVI_set_st.IVI_IntPuficationSw);
+    if(p_IVI_set_st.ivi_InterfaceSwitchReq != Com_SignalInitValue_ivi_InterfaceSwitchReq_0x3B5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_set_ComIn_VeCAN_ivi_InterfaceSwitchReq(&p_IVI_set_st.ivi_InterfaceSwitchReq);
+    }
+    if(p_IVI_set_st.ivi_languageSet != Com_SignalInitValue_ivi_languageSet_0x3B5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_set_ComIn_VeCAN_ivi_languageSet(&p_IVI_set_st.ivi_languageSet);
+    }
+    if(p_IVI_set_st.IVI_IntPuficationSw != Com_SignalInitValue_IVI_IntPuficationSw_0x3B5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_set_ComIn_VeCAN_IVI_IntPuficationSw(&p_IVI_set_st.IVI_IntPuficationSw);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IVI_set_ComIn_VeCAN_ivi_unitSet(&p_IVI_set_st.ivi_unitSet);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_set_ComIn_VeCAN_IVI_NaturalwindSw(&p_IVI_set_st.IVI_NaturalwindSw);
+    if(p_IVI_set_st.IVI_NaturalwindSw != Com_SignalInitValue_IVI_NaturalwindSw_0x3B5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_set_ComIn_VeCAN_IVI_NaturalwindSw(&p_IVI_set_st.IVI_NaturalwindSw);
+    }
     bResult |= Rte_Write_rpSR_CANMSG_IVI_set_ComIn_VeCAN_IVI_VideoResult(&p_IVI_set_st.IVI_VideoResult);
-    bResult |= Rte_Write_rpSR_CANMSG_IVI_set_ComIn_VeCAN_IVI_TakePhotoReq(&p_IVI_set_st.IVI_TakePhotoReq);
+    if(p_IVI_set_st.IVI_TakePhotoReq != Com_SignalInitValue_IVI_TakePhotoReq_0x3B5_INFO_Message){
+        bResult |= Rte_Write_rpSR_CANMSG_IVI_set_ComIn_VeCAN_IVI_TakePhotoReq(&p_IVI_set_st.IVI_TakePhotoReq);
+    }
 
     if (bResult != RTE_SIG_OK) {
         SystemApiLogPrintf(LOG_ERROR_OUTPUT,"setSignal_IVI_set error bResult:0x%x\r\n", bResult);

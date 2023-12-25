@@ -48,6 +48,7 @@ BOOL getSignal_GSM_state(void);
 BOOL getSignal_GTW_mcur0_mcuf0_info(void);
 BOOL getSignal_BMS_temperature(void);
 BOOL getSignal_VCU_Info(void);
+BOOL getSignal_GCU_state(void);
 BOOL getSignal_Diag_FuncReq(void);
 BOOL getSignal_VCU_pwr(void);
 BOOL getSignal_VCU_RevV2V(void);
@@ -92,6 +93,7 @@ BOOL getSignal_ADS_FunctionSt_2B5(void);
 BOOL getSignal_ADS_FunctionSt_2B6(void);
 BOOL getSignal_ADS_FunctionSt_2B7(void);
 BOOL getSignal_ADS_HMI_2C6(void);
+BOOL getSignal_ADS_DisState_30A(void);
 BOOL getSignal_ADS_APAState_30D(void);
 BOOL getSignal_ADS_ACCState_30E(void);
 BOOL getSignal_ADS_FunctionSt_308(void);
@@ -150,6 +152,7 @@ BOOL getSignal_HUD_state(void);
 BOOL getSignal_MFW_Ctrl(void);
 BOOL getSignal_MFW_KeySt(void);
 BOOL getSignal_HOD_21C(void);
+BOOL getSignal_IC_info_181(void);
 BOOL getSignal_TBOX_timeAndGPS(void);
 BOOL getSignal_GTW_BMS_Rev(void);
 BOOL getSignal_Diag_PhyReq_IVI(void);
@@ -165,7 +168,7 @@ BOOL getSignal_SWHC_400(void);
         pGetSigFunc         pSigFunc;
     } STC_SIGNAL_INFO;
     
-#define SIG_PUB_MAX_SIZE 121
+#define SIG_PUB_MAX_SIZE 124
 STC_SIGNAL_INFO gPubSigInfo[SIG_PUB_MAX_SIZE] =
     {
     {&p_TBOX_chargeSet_st, getSignal_TBOX_chargeSet},
@@ -182,6 +185,7 @@ STC_SIGNAL_INFO gPubSigInfo[SIG_PUB_MAX_SIZE] =
     {&p_GTW_mcur0_mcuf0_info_st, getSignal_GTW_mcur0_mcuf0_info},
     {&p_BMS_temperature_st, getSignal_BMS_temperature},
     {&p_VCU_Info_st, getSignal_VCU_Info},
+    {&p_GCU_state_st, getSignal_GCU_state},
     {&p_Diag_FuncReq_st, getSignal_Diag_FuncReq},
     {&p_VCU_pwr_st, getSignal_VCU_pwr},
     {&p_VCU_RevV2V_st, getSignal_VCU_RevV2V},
@@ -226,6 +230,7 @@ STC_SIGNAL_INFO gPubSigInfo[SIG_PUB_MAX_SIZE] =
     {&p_ADS_FunctionSt_2B6_st, getSignal_ADS_FunctionSt_2B6},
     {&p_ADS_FunctionSt_2B7_st, getSignal_ADS_FunctionSt_2B7},
     {&p_ADS_HMI_2C6_st, getSignal_ADS_HMI_2C6},
+    {&p_ADS_DisState_30A_st, getSignal_ADS_DisState_30A},
     {&p_ADS_APAState_30D_st, getSignal_ADS_APAState_30D},
     {&p_ADS_ACCState_30E_st, getSignal_ADS_ACCState_30E},
     {&p_ADS_FunctionSt_308_st, getSignal_ADS_FunctionSt_308},
@@ -284,6 +289,7 @@ STC_SIGNAL_INFO gPubSigInfo[SIG_PUB_MAX_SIZE] =
     {&p_MFW_Ctrl_st, getSignal_MFW_Ctrl},
     {&p_MFW_KeySt_st, getSignal_MFW_KeySt},
     {&p_HOD_21C_st, getSignal_HOD_21C},
+    {&p_IC_info_181_st, getSignal_IC_info_181},
     {&p_TBOX_timeAndGPS_st, getSignal_TBOX_timeAndGPS},
     {&p_GTW_BMS_Rev_st, getSignal_GTW_BMS_Rev},
     {&p_Diag_PhyReq_IVI_st, getSignal_Diag_PhyReq_IVI},
@@ -610,6 +616,14 @@ BOOL getSignal_VCU_range(void)
         p_VCU_range_st.VCU_chargeFaultReason = (uint8_t)(Read_Signal);
     } else {
         p_VCU_range_st.VCU_chargeFaultReason = 0;
+    }
+
+    Read_Signal = 0;
+    bResult = Rte_Read_rpSR_CANMSG_VCU_range_ComIn_VeCAN_VCU_RegenWeakRemind(&Read_Signal);
+    if (bResult == RTE_SIG_OK) {
+        p_VCU_range_st.VCU_RegenWeakRemind = (uint8_t)(Read_Signal);
+    } else {
+        p_VCU_range_st.VCU_RegenWeakRemind = 0;
     }
 
     if (memcmp(&signal_bk, &p_VCU_range_st, sizeof(p_VCU_range_st)) == 0) {
@@ -1045,6 +1059,14 @@ BOOL getSignal_VCU_Info(void)
     }
 
     Read_Signal = 0;
+    bResult = Rte_Read_rpSR_CANMSG_VCU_Info_ComIn_VeCAN_VCU_LowFuel(&Read_Signal);
+    if (bResult == RTE_SIG_OK) {
+        p_VCU_Info_st.VCU_LowFuel = (uint8_t)(Read_Signal);
+    } else {
+        p_VCU_Info_st.VCU_LowFuel = 0;
+    }
+
+    Read_Signal = 0;
     bResult = Rte_Read_rpSR_CANMSG_VCU_Info_ComIn_VeCAN_VCU_LowSOC(&Read_Signal);
     if (bResult == RTE_SIG_OK) {
         p_VCU_Info_st.VCU_LowSOC = (uint8_t)(Read_Signal);
@@ -1061,6 +1083,14 @@ BOOL getSignal_VCU_Info(void)
     }
 
     Read_Signal = 0;
+    bResult = Rte_Read_rpSR_CANMSG_VCU_Info_ComIn_VeCAN_vcu_v2vChrgFdbk(&Read_Signal);
+    if (bResult == RTE_SIG_OK) {
+        p_VCU_Info_st.vcu_v2vChrgFdbk = (uint8_t)(Read_Signal);
+    } else {
+        p_VCU_Info_st.vcu_v2vChrgFdbk = 0;
+    }
+
+    Read_Signal = 0;
     bResult = Rte_Read_rpSR_CANMSG_VCU_Info_ComIn_VeCAN_vcu_obcDschrgFdbk(&Read_Signal);
     if (bResult == RTE_SIG_OK) {
         p_VCU_Info_st.vcu_obcDschrgFdbk = (uint8_t)(Read_Signal);
@@ -1068,7 +1098,61 @@ BOOL getSignal_VCU_Info(void)
         p_VCU_Info_st.vcu_obcDschrgFdbk = 0;
     }
 
+    Read_Signal = 0;
+    bResult = Rte_Read_rpSR_CANMSG_VCU_Info_ComIn_VeCAN_vcu_v2vChrgOutCurntFdbk(&Read_Signal);
+    if (bResult == RTE_SIG_OK) {
+        p_VCU_Info_st.vcu_v2vChrgOutCurntFdbk = (uint8_t)(Read_Signal);
+    } else {
+        p_VCU_Info_st.vcu_v2vChrgOutCurntFdbk = 0;
+    }
+
+    Read_Signal = 0;
+    bResult = Rte_Read_rpSR_CANMSG_VCU_Info_ComIn_VeCAN_VCU_MaxFuelConsumptionSt(&Read_Signal);
+    if (bResult == RTE_SIG_OK) {
+        p_VCU_Info_st.VCU_MaxFuelConsumptionSt = (uint8_t)(Read_Signal);
+    } else {
+        p_VCU_Info_st.VCU_MaxFuelConsumptionSt = 0;
+    }
+
+    Read_Signal = 0;
+    bResult = Rte_Read_rpSR_CANMSG_VCU_Info_ComIn_VeCAN_VCU_MaxFuelConsumptionModeSt(&Read_Signal);
+    if (bResult == RTE_SIG_OK) {
+        p_VCU_Info_st.VCU_MaxFuelConsumptionModeSt = (uint8_t)(Read_Signal);
+    } else {
+        p_VCU_Info_st.VCU_MaxFuelConsumptionModeSt = 0;
+    }
+
+    Read_Signal = 0;
+    bResult = Rte_Read_rpSR_CANMSG_VCU_Info_ComIn_VeCAN_vcu_RangeExtenderNoSt(&Read_Signal);
+    if (bResult == RTE_SIG_OK) {
+        p_VCU_Info_st.vcu_RangeExtenderNoSt = (uint8_t)(Read_Signal);
+    } else {
+        p_VCU_Info_st.vcu_RangeExtenderNoSt = 0;
+    }
+
     if (memcmp(&signal_bk, &p_VCU_Info_st, sizeof(p_VCU_Info_st)) == 0) {
+        return FALSE;
+    } else {
+        return TRUE;
+    }
+}
+
+BOOL getSignal_GCU_state(void)
+{
+    uint8_t bResult = FALSE;
+    uint8_t Read_Signal = 0;
+    struct package_0x10C_st_GCU_state signal_bk;
+    memcpy(&signal_bk, &p_GCU_state_st, sizeof(p_GCU_state_st));
+
+    bResult = Rte_Read_rpSR_CANMSG_GCU_state_ComIn_VeCAN_gcu_MotorControlMode(&Read_Signal);
+    if (bResult == RTE_SIG_OK) {
+        p_GCU_state_st.gcu_MotorControlMode = Read_Signal;
+    } else {
+        p_GCU_state_st.gcu_MotorControlMode = 0;
+    }
+    p_GCU_state_st.data_status = bResult;
+
+    if (memcmp(&signal_bk, &p_GCU_state_st, sizeof(p_GCU_state_st)) == 0) {
         return FALSE;
     } else {
         return TRUE;
@@ -1198,6 +1282,35 @@ BOOL getSignal_VCU_RevV2V(void)
     struct package_0x330_st_VCU_RevV2V signal_bk;
     memcpy(&signal_bk, &p_VCU_RevV2V_st, sizeof(p_VCU_RevV2V_st));
 
+    bResult = Rte_Read_rpSR_CANMSG_VCU_RevV2V_ComIn_VeCAN_vcu_v2vChrgAllow(&Read_Signal);
+    if (bResult == RTE_SIG_OK) {
+        p_VCU_RevV2V_st.vcu_v2vChrgAllow = (uint8_t)(Read_Signal);
+    } else {
+        p_VCU_RevV2V_st.vcu_v2vChrgAllow = 0;
+    }
+    p_VCU_RevV2V_st.data_status = bResult;
+
+    Read_Signal = 0;
+    bResult = Rte_Read_rpSR_CANMSG_VCU_RevV2V_ComIn_VeCAN_vcu_v2vChrgOptVoltg(&Read_Signal);
+    if (bResult == RTE_SIG_OK) {
+        p_VCU_RevV2V_st.vcu_v2vChrgOptVoltg_H = (uint8_t)(Read_Signal >> 8);
+        p_VCU_RevV2V_st.vcu_v2vChrgOptVoltg_L = (uint8_t)(Read_Signal);
+    } else {
+        p_VCU_RevV2V_st.vcu_v2vChrgOptVoltg_H = 0;
+        p_VCU_RevV2V_st.vcu_v2vChrgOptVoltg_L = 0;
+    }
+
+    Read_Signal = 0;
+    bResult = Rte_Read_rpSR_CANMSG_VCU_RevV2V_ComIn_VeCAN_vcu_v2vChrgOptCurnt(&Read_Signal);
+    if (bResult == RTE_SIG_OK) {
+        p_VCU_RevV2V_st.vcu_v2vChrgOptCurnt_H = (uint8_t)(Read_Signal >> 8);
+        p_VCU_RevV2V_st.vcu_v2vChrgOptCurnt_L = (uint8_t)(Read_Signal);
+    } else {
+        p_VCU_RevV2V_st.vcu_v2vChrgOptCurnt_H = 0;
+        p_VCU_RevV2V_st.vcu_v2vChrgOptCurnt_L = 0;
+    }
+
+    Read_Signal = 0;
     bResult = Rte_Read_rpSR_CANMSG_VCU_RevV2V_ComIn_VeCAN_VCU_InstantaneousPower(&Read_Signal);
     if (bResult == RTE_SIG_OK) {
         p_VCU_RevV2V_st.VCU_InstantaneousPower_H = (uint8_t)(Read_Signal >> 8);
@@ -1206,7 +1319,14 @@ BOOL getSignal_VCU_RevV2V(void)
         p_VCU_RevV2V_st.VCU_InstantaneousPower_H = 0;
         p_VCU_RevV2V_st.VCU_InstantaneousPower_L = 0;
     }
-    p_VCU_RevV2V_st.data_status = bResult;
+
+    Read_Signal = 0;
+    bResult = Rte_Read_rpSR_CANMSG_VCU_RevV2V_ComIn_VeCAN_VCU_ConveyerBeltMode(&Read_Signal);
+    if (bResult == RTE_SIG_OK) {
+        p_VCU_RevV2V_st.VCU_ConveyerBeltMode = (uint8_t)(Read_Signal);
+    } else {
+        p_VCU_RevV2V_st.VCU_ConveyerBeltMode = 0;
+    }
 
     if (memcmp(&signal_bk, &p_VCU_RevV2V_st, sizeof(p_VCU_RevV2V_st)) == 0) {
         return FALSE;
@@ -1317,6 +1437,22 @@ BOOL getSignal_VCU_stateCha1(void)
     }
 
     Read_Signal = 0;
+    bResult = Rte_Read_rpSR_CANMSG_VCU_stateCha1_ComIn_VeCAN_Vcu_ParkingChargeFB(&Read_Signal);
+    if (bResult == RTE_SIG_OK) {
+        p_VCU_stateCha1_st.Vcu_ParkingChargeFB = Read_Signal;
+    } else {
+        p_VCU_stateCha1_st.Vcu_ParkingChargeFB = 0;
+    }
+
+    Read_Signal = 0;
+    bResult = Rte_Read_rpSR_CANMSG_VCU_stateCha1_ComIn_VeCAN_Vcu_ParkingChargeModFB(&Read_Signal);
+    if (bResult == RTE_SIG_OK) {
+        p_VCU_stateCha1_st.Vcu_ParkingChargeModFB = Read_Signal;
+    } else {
+        p_VCU_stateCha1_st.Vcu_ParkingChargeModFB = 0;
+    }
+
+    Read_Signal = 0;
     bResult = Rte_Read_rpSR_CANMSG_VCU_stateCha1_ComIn_VeCAN_vcu_towMode(&Read_Signal);
     if (bResult == RTE_SIG_OK) {
         p_VCU_stateCha1_st.vcu_towMode = Read_Signal;
@@ -1373,6 +1509,14 @@ BOOL getSignal_VCU_stateCha1(void)
     }
 
     Read_Signal = 0;
+    bResult = Rte_Read_rpSR_CANMSG_VCU_stateCha1_ComIn_VeCAN_VCU_RangeExtenderSt(&Read_Signal);
+    if (bResult == RTE_SIG_OK) {
+        p_VCU_stateCha1_st.VCU_RangeExtenderSt = Read_Signal;
+    } else {
+        p_VCU_stateCha1_st.VCU_RangeExtenderSt = 0;
+    }
+
+    Read_Signal = 0;
     bResult = Rte_Read_rpSR_CANMSG_VCU_stateCha1_ComIn_VeCAN_vcu_highVoltageSuccess(&Read_Signal);
     if (bResult == RTE_SIG_OK) {
         p_VCU_stateCha1_st.vcu_highVoltageSuccess = Read_Signal;
@@ -1402,6 +1546,14 @@ BOOL getSignal_VCU_stateCha1(void)
         p_VCU_stateCha1_st.vcu_memoryStatus = Read_Signal;
     } else {
         p_VCU_stateCha1_st.vcu_memoryStatus = 0;
+    }
+
+    Read_Signal = 0;
+    bResult = Rte_Read_rpSR_CANMSG_VCU_stateCha1_ComIn_VeCAN_VCU_Eng_SelfShieldStart(&Read_Signal);
+    if (bResult == RTE_SIG_OK) {
+        p_VCU_stateCha1_st.VCU_Eng_SelfShieldStart = Read_Signal;
+    } else {
+        p_VCU_stateCha1_st.VCU_Eng_SelfShieldStart = 0;
     }
 
     Read_Signal = 0;
@@ -3497,19 +3649,19 @@ BOOL getSignal_ABM_state(void)
     }
 
     Read_Signal = 0;
-    bResult = Rte_Read_rpSR_CANMSG_ABM_state_ComIn_VeCAN_acu_rollingCounter(&Read_Signal);
+    bResult = Rte_Read_rpSR_CANMSG_ABM_state_ComIn_VeCAN_acu_rollingCounter_(&Read_Signal);
     if (bResult == RTE_SIG_OK) {
-        p_ABM_state_st.acu_rollingCounter = Read_Signal;
+        p_ABM_state_st.acu_rollingCounter_ = Read_Signal;
     } else {
-        p_ABM_state_st.acu_rollingCounter = 0;
+        p_ABM_state_st.acu_rollingCounter_ = 0;
     }
 
     Read_Signal = 0;
-    bResult = Rte_Read_rpSR_CANMSG_ABM_state_ComIn_VeCAN_acu_checksum(&Read_Signal);
+    bResult = Rte_Read_rpSR_CANMSG_ABM_state_ComIn_VeCAN_acu_checksum_(&Read_Signal);
     if (bResult == RTE_SIG_OK) {
-        p_ABM_state_st.acu_checksum = Read_Signal;
+        p_ABM_state_st.acu_checksum_ = Read_Signal;
     } else {
-        p_ABM_state_st.acu_checksum = 0;
+        p_ABM_state_st.acu_checksum_ = 0;
     }
 
     if (memcmp(&signal_bk, &p_ABM_state_st, sizeof(p_ABM_state_st)) == 0) {
@@ -4121,6 +4273,14 @@ BOOL getSignal_ADS_FunctionSt_2B3(void)
     }
 
     Read_Signal = 0;
+    bResult = Rte_Read_rpSR_CANMSG_ADS_FunctionSt_2B3_ComIn_VeCAN_ADS_HMAFunctionStatus(&Read_Signal);
+    if (bResult == RTE_SIG_OK) {
+        p_ADS_FunctionSt_2B3_st.ADS_HMAFunctionStatus = (uint8_t)(Read_Signal);
+    } else {
+        p_ADS_FunctionSt_2B3_st.ADS_HMAFunctionStatus = 0;
+    }
+
+    Read_Signal = 0;
     bResult = Rte_Read_rpSR_CANMSG_ADS_FunctionSt_2B3_ComIn_VeCAN_ADS_DriverSetSpeedDisplay(&Read_Signal);
     if (bResult == RTE_SIG_OK) {
         p_ADS_FunctionSt_2B3_st.ADS_DriverSetSpeedDisplay = (uint8_t)(Read_Signal);
@@ -4657,6 +4817,36 @@ BOOL getSignal_ADS_HMI_2C6(void)
     }
 }
 
+BOOL getSignal_ADS_DisState_30A(void)
+{
+    uint8_t bResult = FALSE;
+    uint8_t Read_Signal = 0;
+    struct package_0x30A_st_ADS_DisState_30A signal_bk;
+    memcpy(&signal_bk, &p_ADS_DisState_30A_st, sizeof(p_ADS_DisState_30A_st));
+
+    bResult = Rte_Read_rpSR_CANMSG_ADS_DisState_30A_ComIn_VeCAN_ADS_RAEBSts(&Read_Signal);
+    if (bResult == RTE_SIG_OK) {
+        p_ADS_DisState_30A_st.ADS_RAEBSts = Read_Signal;
+    } else {
+        p_ADS_DisState_30A_st.ADS_RAEBSts = 0;
+    }
+    p_ADS_DisState_30A_st.data_status = bResult;
+
+    Read_Signal = 0;
+    bResult = Rte_Read_rpSR_CANMSG_ADS_DisState_30A_ComIn_VeCAN_ADS_SLAWarnMode(&Read_Signal);
+    if (bResult == RTE_SIG_OK) {
+        p_ADS_DisState_30A_st.ADS_SLAWarnMode = Read_Signal;
+    } else {
+        p_ADS_DisState_30A_st.ADS_SLAWarnMode = 0;
+    }
+
+    if (memcmp(&signal_bk, &p_ADS_DisState_30A_st, sizeof(p_ADS_DisState_30A_st)) == 0) {
+        return FALSE;
+    } else {
+        return TRUE;
+    }
+}
+
 BOOL getSignal_ADS_APAState_30D(void)
 {
     uint8_t bResult = FALSE;
@@ -5087,14 +5277,6 @@ BOOL getSignal_ADS_FunctionSt_307(void)
     }
 
     Read_Signal = 0;
-    bResult = Rte_Read_rpSR_CANMSG_ADS_FunctionSt_307_ComIn_VeCAN_ADS_VehParkModeAvil(&Read_Signal);
-    if (bResult == RTE_SIG_OK) {
-        p_ADS_FunctionSt_307_st.ADS_VehParkModeAvil = (uint8_t)(Read_Signal);
-    } else {
-        p_ADS_FunctionSt_307_st.ADS_VehParkModeAvil = 0;
-    }
-
-    Read_Signal = 0;
     bResult = Rte_Read_rpSR_CANMSG_ADS_FunctionSt_307_ComIn_VeCAN_ADS_APAParkInTypeSel(&Read_Signal);
     if (bResult == RTE_SIG_OK) {
         p_ADS_FunctionSt_307_st.ADS_APAParkInTypeSel = (uint8_t)(Read_Signal);
@@ -5143,14 +5325,6 @@ BOOL getSignal_ADS_FunctionSt_307(void)
     }
 
     Read_Signal = 0;
-    bResult = Rte_Read_rpSR_CANMSG_ADS_FunctionSt_307_ComIn_VeCAN_ADS_APACustomizedSlotSt(&Read_Signal);
-    if (bResult == RTE_SIG_OK) {
-        p_ADS_FunctionSt_307_st.ADS_APACustomizedSlotSt = (uint8_t)(Read_Signal);
-    } else {
-        p_ADS_FunctionSt_307_st.ADS_APACustomizedSlotSt = 0;
-    }
-
-    Read_Signal = 0;
     bResult = Rte_Read_rpSR_CANMSG_ADS_FunctionSt_307_ComIn_VeCAN_ADS_ParkFRmngDst(&Read_Signal);
     if (bResult == RTE_SIG_OK) {
         p_ADS_FunctionSt_307_st.ADS_ParkFRmngDst_H = (uint8_t)(Read_Signal >> 8);
@@ -5184,6 +5358,22 @@ BOOL getSignal_ADS_FunctionSt_307(void)
         p_ADS_FunctionSt_307_st.ADS_PDCMuteSts = (uint8_t)(Read_Signal);
     } else {
         p_ADS_FunctionSt_307_st.ADS_PDCMuteSts = 0;
+    }
+
+    Read_Signal = 0;
+    bResult = Rte_Read_rpSR_CANMSG_ADS_FunctionSt_307_ComIn_VeCAN_ADS_APACustomizedSlotSt(&Read_Signal);
+    if (bResult == RTE_SIG_OK) {
+        p_ADS_FunctionSt_307_st.ADS_APACustomizedSlotSt = (uint8_t)(Read_Signal);
+    } else {
+        p_ADS_FunctionSt_307_st.ADS_APACustomizedSlotSt = 0;
+    }
+
+    Read_Signal = 0;
+    bResult = Rte_Read_rpSR_CANMSG_ADS_FunctionSt_307_ComIn_VeCAN_ADS_VehParkModeAvil(&Read_Signal);
+    if (bResult == RTE_SIG_OK) {
+        p_ADS_FunctionSt_307_st.ADS_VehParkModeAvil = (uint8_t)(Read_Signal);
+    } else {
+        p_ADS_FunctionSt_307_st.ADS_VehParkModeAvil = 0;
     }
 
     if (memcmp(&signal_bk, &p_ADS_FunctionSt_307_st, sizeof(p_ADS_FunctionSt_307_st)) == 0) {
@@ -6271,6 +6461,14 @@ BOOL getSignal_BCM_state4(void)
         p_BCM_state4_st.bcm_footLightSwitchSts = 0;
     }
     p_BCM_state4_st.data_status = bResult;
+
+    Read_Signal = 0;
+    bResult = Rte_Read_rpSR_CANMSG_BCM_state4_ComIn_VeCAN_BCM_HighBeamModel(&Read_Signal);
+    if (bResult == RTE_SIG_OK) {
+        p_BCM_state4_st.BCM_HighBeamModel = Read_Signal;
+    } else {
+        p_BCM_state4_st.BCM_HighBeamModel = 0;
+    }
 
     if (memcmp(&signal_bk, &p_BCM_state4_st, sizeof(p_BCM_state4_st)) == 0) {
         return FALSE;
@@ -10385,6 +10583,36 @@ BOOL getSignal_HOD_21C(void)
     }
 
     if (memcmp(&signal_bk, &p_HOD_21C_st, sizeof(p_HOD_21C_st)) == 0) {
+        return FALSE;
+    } else {
+        return TRUE;
+    }
+}
+
+BOOL getSignal_IC_info_181(void)
+{
+    uint8_t bResult = FALSE;
+    uint8_t Read_Signal = 0;
+    struct package_0x181_st_IC_info_181 signal_bk;
+    memcpy(&signal_bk, &p_IC_info_181_st, sizeof(p_IC_info_181_st));
+
+    bResult = Rte_Read_rpSR_CANMSG_IC_info_181_ComIn_VeCAN_ic_displayFail(&Read_Signal);
+    if (bResult == RTE_SIG_OK) {
+        p_IC_info_181_st.ic_displayFail = Read_Signal;
+    } else {
+        p_IC_info_181_st.ic_displayFail = 0;
+    }
+    p_IC_info_181_st.data_status = bResult;
+
+    Read_Signal = 0;
+    bResult = Rte_Read_rpSR_CANMSG_IC_info_181_ComIn_VeCAN_ic_IllumiLevelSts(&Read_Signal);
+    if (bResult == RTE_SIG_OK) {
+        p_IC_info_181_st.ic_IllumiLevelSts = Read_Signal;
+    } else {
+        p_IC_info_181_st.ic_IllumiLevelSts = 0;
+    }
+
+    if (memcmp(&signal_bk, &p_IC_info_181_st, sizeof(p_IC_info_181_st)) == 0) {
         return FALSE;
     } else {
         return TRUE;

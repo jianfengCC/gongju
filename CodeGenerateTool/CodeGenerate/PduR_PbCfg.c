@@ -203,6 +203,14 @@ const PduRDestPdu_type PduRDestination_VCU_Info_INFO_Rx_PduRDestPdu = {
     .DataProvision  = PDUR_NO_PROVISION,
     .TxBufferId     =  PDUR_NO_BUFFER
 };
+const PduRDestPdu_type PduRDestination_GCU_state_INFO_Rx_PduRDestPdu = {
+    .DestModule     = AS_PDUR_COM,
+    .DestPduId      = ComConf_ComIPdu_0x10C_INFO,
+    .NofGroupRefs = 0,
+    .RoutingPathGroupRefs = NULL,
+    .DataProvision  = PDUR_NO_PROVISION,
+    .TxBufferId     =  PDUR_NO_BUFFER
+};
 const PduRDestPdu_type PduRDestination_Diag_FuncReq_INFO_Rx_PduRDestPdu = {
     .DestModule     = AS_PDUR_DCM,
     .DestPduId      = DCM_PDU_ID_DIAGFUNCTIONALRX,
@@ -558,6 +566,14 @@ const PduRDestPdu_type PduRDestination_ADS_FunctionSt_2B7_INFO_Rx_PduRDestPdu = 
 const PduRDestPdu_type PduRDestination_ADS_HMI_2C6_INFO_Rx_PduRDestPdu = {
     .DestModule     = AS_PDUR_COM,
     .DestPduId      = ComConf_ComIPdu_0x2C6_INFO,
+    .NofGroupRefs = 0,
+    .RoutingPathGroupRefs = NULL,
+    .DataProvision  = PDUR_NO_PROVISION,
+    .TxBufferId     =  PDUR_NO_BUFFER
+};
+const PduRDestPdu_type PduRDestination_ADS_DisState_30A_INFO_Rx_PduRDestPdu = {
+    .DestModule     = AS_PDUR_COM,
+    .DestPduId      = ComConf_ComIPdu_0x30A_INFO,
     .NofGroupRefs = 0,
     .RoutingPathGroupRefs = NULL,
     .DataProvision  = PDUR_NO_PROVISION,
@@ -1331,6 +1347,14 @@ const PduRDestPdu_type PduRDestination_HOD_21C_INFO_Rx_PduRDestPdu = {
     .DataProvision  = PDUR_NO_PROVISION,
     .TxBufferId     =  PDUR_NO_BUFFER
 };
+const PduRDestPdu_type PduRDestination_IC_info_181_INFO_Rx_PduRDestPdu = {
+    .DestModule     = AS_PDUR_COM,
+    .DestPduId      = ComConf_ComIPdu_0x181_INFO,
+    .NofGroupRefs = 0,
+    .RoutingPathGroupRefs = NULL,
+    .DataProvision  = PDUR_NO_PROVISION,
+    .TxBufferId     =  PDUR_NO_BUFFER
+};
 const PduRDestPdu_type PduRDestination_IC_state_INFO_Tx_PduRDestPdu = {
     .DestModule     = AS_PDUR_CANIF,
     .DestPduId      = CANIF_PDU_ID_0x2F2_INFO,
@@ -1589,6 +1613,10 @@ const PduRDestPdu_type * const PduRDestinations_VCU_Info_INFO_Rx[] = {
     &PduRDestination_VCU_Info_INFO_Rx_PduRDestPdu,
     NULL
 };
+const PduRDestPdu_type * const PduRDestinations_GCU_state_INFO_Rx[] = {
+    &PduRDestination_GCU_state_INFO_Rx_PduRDestPdu,
+    NULL
+};
 const PduRDestPdu_type * const PduRDestinations_Diag_FuncReq_INFO_Rx[] = {
     &PduRDestination_Diag_FuncReq_INFO_Rx_PduRDestPdu,
     NULL
@@ -1767,6 +1795,10 @@ const PduRDestPdu_type * const PduRDestinations_ADS_FunctionSt_2B7_INFO_Rx[] = {
 };
 const PduRDestPdu_type * const PduRDestinations_ADS_HMI_2C6_INFO_Rx[] = {
     &PduRDestination_ADS_HMI_2C6_INFO_Rx_PduRDestPdu,
+    NULL
+};
+const PduRDestPdu_type * const PduRDestinations_ADS_DisState_30A_INFO_Rx[] = {
+    &PduRDestination_ADS_DisState_30A_INFO_Rx_PduRDestPdu,
     NULL
 };
 const PduRDestPdu_type * const PduRDestinations_ADS_APAState_30D_INFO_Rx[] = {
@@ -2153,6 +2185,10 @@ const PduRDestPdu_type * const PduRDestinations_HOD_21C_INFO_Rx[] = {
     &PduRDestination_HOD_21C_INFO_Rx_PduRDestPdu,
     NULL
 };
+const PduRDestPdu_type * const PduRDestinations_IC_info_181_INFO_Rx[] = {
+    &PduRDestination_IC_info_181_INFO_Rx_PduRDestPdu,
+    NULL
+};
 const PduRDestPdu_type * const PduRDestinations_IC_state_INFO_Tx[] = {
     &PduRDestination_IC_state_INFO_Tx_PduRDestPdu,
     NULL
@@ -2350,6 +2386,13 @@ const PduRRoutingPath_type PduRRoutingPath_VCU_Info_INFO_Rx = {
     .SrcModule     = AS_PDUR_CANIF,
     .SrcPduId = CANIF_PDU_ID_0x331_INFO,
     .PduRDestPdus = PduRDestinations_VCU_Info_INFO_Rx,
+    .PduRDirectGateway = TRUE,
+    .PduRTpThreshld = 0,
+};
+const PduRRoutingPath_type PduRRoutingPath_GCU_state_INFO_Rx = {
+    .SrcModule     = AS_PDUR_CANIF,
+    .SrcPduId = CANIF_PDU_ID_0x10C_INFO,
+    .PduRDestPdus = PduRDestinations_GCU_state_INFO_Rx,
     .PduRDirectGateway = TRUE,
     .PduRTpThreshld = 0,
 };
@@ -2665,6 +2708,13 @@ const PduRRoutingPath_type PduRRoutingPath_ADS_HMI_2C6_INFO_Rx = {
     .SrcModule     = AS_PDUR_CANIF,
     .SrcPduId = CANIF_PDU_ID_0x2C6_INFO,
     .PduRDestPdus = PduRDestinations_ADS_HMI_2C6_INFO_Rx,
+    .PduRDirectGateway = TRUE,
+    .PduRTpThreshld = 0,
+};
+const PduRRoutingPath_type PduRRoutingPath_ADS_DisState_30A_INFO_Rx = {
+    .SrcModule     = AS_PDUR_CANIF,
+    .SrcPduId = CANIF_PDU_ID_0x30A_INFO,
+    .PduRDestPdus = PduRDestinations_ADS_DisState_30A_INFO_Rx,
     .PduRDirectGateway = TRUE,
     .PduRTpThreshld = 0,
 };
@@ -3340,6 +3390,13 @@ const PduRRoutingPath_type PduRRoutingPath_HOD_21C_INFO_Rx = {
     .PduRDirectGateway = TRUE,
     .PduRTpThreshld = 0,
 };
+const PduRRoutingPath_type PduRRoutingPath_IC_info_181_INFO_Rx = {
+    .SrcModule     = AS_PDUR_CANIF,
+    .SrcPduId = CANIF_PDU_ID_0x181_INFO,
+    .PduRDestPdus = PduRDestinations_IC_info_181_INFO_Rx,
+    .PduRDirectGateway = TRUE,
+    .PduRTpThreshld = 0,
+};
 const PduRRoutingPath_type PduRRoutingPath_IC_state_INFO_Tx = {
     .SrcModule     = AS_PDUR_COM,
     .SrcPduId = ComConf_ComIPdu_0x2F2_INFO,
@@ -3534,6 +3591,7 @@ const PduRRoutingPath_type * const PduRRoutingPaths[] = {
     &PduRRoutingPath_GTW_mcur0_mcuf0_info_INFO_Rx,
     &PduRRoutingPath_BMS_temperature_INFO_Rx,
     &PduRRoutingPath_VCU_Info_INFO_Rx,
+    &PduRRoutingPath_GCU_state_INFO_Rx,
     &PduRRoutingPath_VCU_pwr_INFO_Rx,
     &PduRRoutingPath_VCU_RevV2V_INFO_Rx,
     &PduRRoutingPath_BMS_ASSt_INFO_Rx,
@@ -3577,6 +3635,7 @@ const PduRRoutingPath_type * const PduRRoutingPaths[] = {
     &PduRRoutingPath_ADS_FunctionSt_2B6_INFO_Rx,
     &PduRRoutingPath_ADS_FunctionSt_2B7_INFO_Rx,
     &PduRRoutingPath_ADS_HMI_2C6_INFO_Rx,
+    &PduRRoutingPath_ADS_DisState_30A_INFO_Rx,
     &PduRRoutingPath_ADS_APAState_30D_INFO_Rx,
     &PduRRoutingPath_ADS_ACCState_30E_INFO_Rx,
     &PduRRoutingPath_ADS_FunctionSt_308_INFO_Rx,
@@ -3635,6 +3694,7 @@ const PduRRoutingPath_type * const PduRRoutingPaths[] = {
     &PduRRoutingPath_MFW_Ctrl_INFO_Rx,
     &PduRRoutingPath_MFW_KeySt_INFO_Rx,
     &PduRRoutingPath_HOD_21C_INFO_Rx,
+    &PduRRoutingPath_IC_info_181_INFO_Rx,
     &PduRRoutingPath_TBOX_timeAndGPS_INFO_Rx,
     &PduRRoutingPath_GTW_BMS_Rev_INFO_Rx,
     &PduRRoutingPath_GW_IF_OBD_state_INFO_Rx,

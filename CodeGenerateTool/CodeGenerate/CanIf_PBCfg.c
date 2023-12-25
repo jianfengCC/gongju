@@ -349,6 +349,24 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
   },
   /* 16 */
    {
+       .CanIfCanRxPduId            = PDUR_PDU_ID_GCU_state_INFO_CANIF,
+       .CanIfCanRxPduLowerCanId    = 0x10C,
+       .CanIfCanRxPduUpperCanId    = 0x10C,
+       .CanIfCanRxPduDlc           = 8,
+#if ( CANIF_PUBLIC_READRXPDU_DATA_API == STD_ON )
+       .CanIfReadRxPduData         = FALSE,
+#endif
+#if ( CANIF_PUBLIC_READRXPDU_NOTIFY_STATUS_API == STD_ON )
+       .CanIfReadRxPduNotifyStatus = FALSE,
+#endif
+      .CanIdIsExtended            = FALSE,
+      .CanIfUserRxIndication      = PDUR_CALLOUT,
+#if ( CANIF_OSEKNM_SUPPORT == STD_ON )
+      .OsekNmRxIndicationSupport  = STD_OFF,
+#endif
+  },
+  /* 17 */
+   {
        .CanIfCanRxPduId            = PDUR_PDU_ID_VCU_pwr_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x301,
        .CanIfCanRxPduUpperCanId    = 0x301,
@@ -365,7 +383,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 17 */
+  /* 18 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_VCU_RevV2V_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x330,
@@ -383,7 +401,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 18 */
+  /* 19 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_BMS_ASSt_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3A4,
@@ -401,7 +419,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 19 */
+  /* 20 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_VCU_stateCha1_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3A1,
@@ -419,7 +437,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 20 */
+  /* 21 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_EPS_state_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x124,
@@ -437,7 +455,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 21 */
+  /* 22 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_EPS_sas_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x144,
@@ -455,7 +473,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 22 */
+  /* 23 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ESC_wheelSpd_Front_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x142,
@@ -473,7 +491,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 23 */
+  /* 24 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ESC_wheelSpd_Rear_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x122,
@@ -491,7 +509,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 24 */
+  /* 25 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ESC_state1_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x212,
@@ -509,7 +527,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 25 */
+  /* 26 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ESC_state2_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x2A2,
@@ -527,7 +545,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 26 */
+  /* 27 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ESC_yawState_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x252,
@@ -545,7 +563,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 27 */
+  /* 28 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_GW_ESC_yawState_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3FB,
@@ -563,7 +581,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 28 */
+  /* 29 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ESC_wssFront_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x272,
@@ -581,7 +599,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 29 */
+  /* 30 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ESC_wssRear_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x282,
@@ -599,7 +617,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 30 */
+  /* 31 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ESC_epb_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x2C2,
@@ -617,7 +635,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 31 */
+  /* 32 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_MRR_acc_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x219,
@@ -635,7 +653,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 32 */
+  /* 33 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_MRR_pss_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x239,
@@ -653,7 +671,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 33 */
+  /* 34 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_MRR_hmi1_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x349,
@@ -671,7 +689,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 34 */
+  /* 35 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_MRR_hmi2_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x369,
@@ -689,7 +707,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 35 */
+  /* 36 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_MRR_hmi3_34E_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x34E,
@@ -707,7 +725,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 36 */
+  /* 37 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_MRR_hmi4_34F_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x34F,
@@ -725,7 +743,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 37 */
+  /* 38 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_MRR_hmi5_355_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x355,
@@ -743,7 +761,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 38 */
+  /* 39 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_MRR_hmi6_356_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x356,
@@ -761,7 +779,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 39 */
+  /* 40 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_MPC_state_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x21A,
@@ -779,7 +797,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 40 */
+  /* 41 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_MPC_hmi_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x35A,
@@ -797,7 +815,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 41 */
+  /* 42 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_MPC_RoadState_359_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x359,
@@ -815,7 +833,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 42 */
+  /* 43 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_MPC_hmi_35D_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x35D,
@@ -833,7 +851,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 43 */
+  /* 44 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_SRR_R_state_22B_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x22B,
@@ -851,7 +869,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 44 */
+  /* 45 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ADS_RPA_3AC_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3AC,
@@ -869,7 +887,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 45 */
+  /* 46 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ADS_RPA_3A8_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3A8,
@@ -887,7 +905,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 46 */
+  /* 47 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ABM_state_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x380,
@@ -905,7 +923,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 47 */
+  /* 48 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_APA_35B_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x35B,
@@ -923,7 +941,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 48 */
+  /* 49 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ADS_TDU_STATE_345_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x345,
@@ -941,7 +959,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 49 */
+  /* 50 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ADS_WarningSt_2AA_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x2AA,
@@ -959,7 +977,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 50 */
+  /* 51 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ADS_WarningSt_2AB_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x2AB,
@@ -977,7 +995,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 51 */
+  /* 52 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ADS_RadarWarningSt_2AD_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x2AD,
@@ -995,7 +1013,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 52 */
+  /* 53 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ADS_RadarWarningSt_2AF_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x2AF,
@@ -1013,7 +1031,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 53 */
+  /* 54 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ADS_RadarWarningSt_2B2_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x2B2,
@@ -1031,7 +1049,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 54 */
+  /* 55 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ADS_FunctionSt_2B3_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x2B3,
@@ -1049,7 +1067,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 55 */
+  /* 56 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ADS_FunctionSt_2B5_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x2B5,
@@ -1067,7 +1085,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 56 */
+  /* 57 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ADS_FunctionSt_2B6_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x2B6,
@@ -1085,7 +1103,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 57 */
+  /* 58 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ADS_FunctionSt_2B7_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x2B7,
@@ -1103,7 +1121,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 58 */
+  /* 59 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ADS_HMI_2C6_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x2C6,
@@ -1121,7 +1139,25 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 59 */
+  /* 60 */
+   {
+       .CanIfCanRxPduId            = PDUR_PDU_ID_ADS_DisState_30A_INFO_CANIF,
+       .CanIfCanRxPduLowerCanId    = 0x30A,
+       .CanIfCanRxPduUpperCanId    = 0x30A,
+       .CanIfCanRxPduDlc           = 8,
+#if ( CANIF_PUBLIC_READRXPDU_DATA_API == STD_ON )
+       .CanIfReadRxPduData         = FALSE,
+#endif
+#if ( CANIF_PUBLIC_READRXPDU_NOTIFY_STATUS_API == STD_ON )
+       .CanIfReadRxPduNotifyStatus = FALSE,
+#endif
+      .CanIdIsExtended            = FALSE,
+      .CanIfUserRxIndication      = PDUR_CALLOUT,
+#if ( CANIF_OSEKNM_SUPPORT == STD_ON )
+      .OsekNmRxIndicationSupport  = STD_OFF,
+#endif
+  },
+  /* 61 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ADS_APAState_30D_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x30D,
@@ -1139,7 +1175,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 60 */
+  /* 62 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ADS_ACCState_30E_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x30E,
@@ -1157,7 +1193,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 61 */
+  /* 63 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ADS_FunctionSt_308_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x308,
@@ -1175,7 +1211,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 62 */
+  /* 64 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ADS_FunctionSt_307_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x307,
@@ -1193,7 +1229,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 63 */
+  /* 65 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ADS_FunctionSt_31B_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x31B,
@@ -1211,7 +1247,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 64 */
+  /* 66 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_ADS_FunctionSt_321_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x321,
@@ -1229,7 +1265,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 65 */
+  /* 67 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_VCU_state2_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3B1,
@@ -1247,7 +1283,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 66 */
+  /* 68 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_TBOX_413_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x413,
@@ -1265,7 +1301,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 67 */
+  /* 69 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_BLE_FB_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x347,
@@ -1283,7 +1319,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 68 */
+  /* 70 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_BLE_User_ID_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x375,
@@ -1301,7 +1337,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 69 */
+  /* 71 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_TBOX_Factory_360_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x360,
@@ -1319,7 +1355,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 70 */
+  /* 72 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_AC_ctrlFeedback_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3B6,
@@ -1337,7 +1373,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 71 */
+  /* 73 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_AC_state2_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x386,
@@ -1355,7 +1391,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 72 */
+  /* 74 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_BCM_state_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x2A1,
@@ -1373,7 +1409,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 73 */
+  /* 75 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_BCM_state2_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3C1,
@@ -1391,7 +1427,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 74 */
+  /* 76 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_BCM_state3_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3C2,
@@ -1409,7 +1445,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 75 */
+  /* 77 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_BCM_state4_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x305,
@@ -1427,7 +1463,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 76 */
+  /* 78 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_BCM_tpms_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x411,
@@ -1445,7 +1481,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 77 */
+  /* 79 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_BCM_tpms1_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x421,
@@ -1463,7 +1499,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 78 */
+  /* 80 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_BCM_peps_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x2C1,
@@ -1481,7 +1517,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 79 */
+  /* 81 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_BCM_rsm_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3D1,
@@ -1499,7 +1535,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 80 */
+  /* 82 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_BCM_RemotFB_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x5C3,
@@ -1517,7 +1553,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 81 */
+  /* 83 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_LCU_32A_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x32A,
@@ -1535,7 +1571,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 82 */
+  /* 84 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_PLG_state_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x394,
@@ -1553,7 +1589,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 83 */
+  /* 85 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_GW_Handle_state_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x335,
@@ -1571,7 +1607,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 84 */
+  /* 86 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_DSM_state_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3D5,
@@ -1589,7 +1625,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 85 */
+  /* 87 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_PSM_memory_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3D6,
@@ -1607,7 +1643,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 86 */
+  /* 88 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_DSM_memory_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3D4,
@@ -1625,7 +1661,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 87 */
+  /* 89 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_PSM_state_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x318,
@@ -1643,7 +1679,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 88 */
+  /* 90 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_LRSM_state_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x31A,
@@ -1661,7 +1697,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 89 */
+  /* 91 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_TBOX_infoCtrl_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x0A8,
@@ -1679,7 +1715,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 90 */
+  /* 92 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_VSP_state_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3A0,
@@ -1697,7 +1733,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 91 */
+  /* 93 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_GW_vent1Sts_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3C6,
@@ -1715,7 +1751,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 92 */
+  /* 94 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_GW_vent2Sts_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3C7,
@@ -1733,7 +1769,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 93 */
+  /* 95 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_GW_vent3Sts_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3C8,
@@ -1751,7 +1787,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 94 */
+  /* 96 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_GW_vent4Sts_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3C9,
@@ -1769,7 +1805,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 95 */
+  /* 97 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_GW_vent5Sts_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3CA,
@@ -1787,7 +1823,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 96 */
+  /* 98 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_GW_vent6Sts_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3CB,
@@ -1805,7 +1841,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 97 */
+  /* 99 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_GW_vent7Sts_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3CC,
@@ -1823,7 +1859,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 98 */
+  /* 100 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_GW_vent8Sts_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3CD,
@@ -1841,7 +1877,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 99 */
+  /* 101 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_GW_BMS_meas_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3DE,
@@ -1859,7 +1895,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 100 */
+  /* 102 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_BMS_state_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x31E,
@@ -1877,7 +1913,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 101 */
+  /* 103 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_GTW_mcur0_info_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3AE,
@@ -1895,7 +1931,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 102 */
+  /* 104 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_GTW_mcuf0_info_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3BE,
@@ -1913,7 +1949,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 103 */
+  /* 105 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_GTW_ecu_gcu_vcu_info_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x37E,
@@ -1931,7 +1967,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 104 */
+  /* 106 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_GTW_esc_eps_iB_info_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x223,
@@ -1949,7 +1985,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 105 */
+  /* 107 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_GW_EPS_state_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x353,
@@ -1967,7 +2003,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 106 */
+  /* 108 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_VCU_stateCha2_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x24E,
@@ -1985,7 +2021,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 107 */
+  /* 109 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_AC_temp_pressure_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3CE,
@@ -2003,7 +2039,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 108 */
+  /* 110 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_PDC_state_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3B7,
@@ -2021,7 +2057,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 109 */
+  /* 111 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_PDC_state1_3B8_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3B8,
@@ -2039,7 +2075,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 110 */
+  /* 112 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_PDC_state1_3B9_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3B9,
@@ -2057,7 +2093,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 111 */
+  /* 113 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_WCM_state_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3AD,
@@ -2075,7 +2111,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 112 */
+  /* 114 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_AVM_state_484_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x484,
@@ -2093,7 +2129,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 113 */
+  /* 115 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_HUD_state_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x3FA,
@@ -2111,7 +2147,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 114 */
+  /* 116 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_MFW_Ctrl_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x0A9,
@@ -2129,7 +2165,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 115 */
+  /* 117 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_MFW_KeySt_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x498,
@@ -2147,7 +2183,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 116 */
+  /* 118 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_HOD_21C_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x21C,
@@ -2165,7 +2201,25 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 117 */
+  /* 119 */
+   {
+       .CanIfCanRxPduId            = PDUR_PDU_ID_IC_info_181_INFO_CANIF,
+       .CanIfCanRxPduLowerCanId    = 0x181,
+       .CanIfCanRxPduUpperCanId    = 0x181,
+       .CanIfCanRxPduDlc           = 8,
+#if ( CANIF_PUBLIC_READRXPDU_DATA_API == STD_ON )
+       .CanIfReadRxPduData         = FALSE,
+#endif
+#if ( CANIF_PUBLIC_READRXPDU_NOTIFY_STATUS_API == STD_ON )
+       .CanIfReadRxPduNotifyStatus = FALSE,
+#endif
+      .CanIdIsExtended            = FALSE,
+      .CanIfUserRxIndication      = PDUR_CALLOUT,
+#if ( CANIF_OSEKNM_SUPPORT == STD_ON )
+      .OsekNmRxIndicationSupport  = STD_OFF,
+#endif
+  },
+  /* 120 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_TBOX_timeAndGPS_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x4F5,
@@ -2183,7 +2237,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 118 */
+  /* 121 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_GTW_BMS_Rev_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x35E,
@@ -2201,7 +2255,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 119 */
+  /* 122 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_GW_IF_OBD_state_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x515,
@@ -2219,7 +2273,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 120 */
+  /* 123 */
    {
        .CanIfCanRxPduId            = PDUR_PDU_ID_SWHC_400_INFO_CANIF,
        .CanIfCanRxPduLowerCanId    = 0x400,
@@ -2237,7 +2291,7 @@ const CanIf_RxPduConfigType HrhRxPdu_CanIfHrhCfg[] = {
       .OsekNmRxIndicationSupport  = STD_OFF,
 #endif
   },
-  /* 121 */
+  /* 124 */
    {
        .CanIfCanRxPduId            = CANIF_PDU_ID_CANNMRX,
        .CanIfCanRxPduLowerCanId    = 0x600,

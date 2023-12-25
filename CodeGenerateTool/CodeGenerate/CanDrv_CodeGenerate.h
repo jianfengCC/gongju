@@ -30,7 +30,7 @@ typedef struct {
     volatile uint32_t e_dw_P1;
 } stCanDrv_RxRuleSfr;
 /* RCFDCnCFDGAFLCFG0 and RCFDCnCFDGAFLCFG1 Set channel < 128 */
-#define     CANDRV_RNC0                   ( 122U )
+#define     CANDRV_RNC0                   ( 125U )
 #define     CANDRV_RNC1                   ( 0U )
 #define     CANDRV_RNC2                   ( 0U )
 #define     CANDRV_RNC3                   ( 0U )

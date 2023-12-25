@@ -92,7 +92,8 @@ struct package_0x561_st_VCU_range
     uint8_t vcu_avgPwr_L;
     uint8_t vcu_alertLevel;
     uint8_t VCU_chargeFaultReason;
-}p_VCU_range_st = {0x05, 0x61, 5};
+    uint8_t VCU_RegenWeakRemind;
+}p_VCU_range_st = {0x05, 0x61, 6};
 
 struct package_0x351_st_VCU_range1
 {
@@ -219,10 +220,25 @@ struct package_0x331_st_VCU_Info
     uint8_t VCU_stEgyFlowMcuf0AndBatt;
     uint8_t VCU_stEgyFlowMcur0AndBatt;
     uint8_t VCU_IVI_HVDownRepairMode;
+    uint8_t VCU_LowFuel;
     uint8_t VCU_LowSOC;
     uint8_t vcu_obcDschrgAllow;
+    uint8_t vcu_v2vChrgFdbk;
     uint8_t vcu_obcDschrgFdbk;
-}p_VCU_Info_st = {0x03, 0x31, 11};
+    uint8_t vcu_v2vChrgOutCurntFdbk;
+    uint8_t VCU_MaxFuelConsumptionSt;
+    uint8_t VCU_MaxFuelConsumptionModeSt;
+    uint8_t vcu_RangeExtenderNoSt;
+}p_VCU_Info_st = {0x03, 0x31, 17};
+
+struct package_0x10C_st_GCU_state
+{
+    uint8_t canid_high;
+    uint8_t canid_low;
+    uint8_t data_len;
+    uint8_t data_status;
+    uint8_t gcu_MotorControlMode;
+}p_GCU_state_st = {0x01, 0x0C, 2};
 
 struct package_0x7DF_st_Diag_FuncReq
 {
@@ -266,9 +282,15 @@ struct package_0x330_st_VCU_RevV2V
     uint8_t canid_low;
     uint8_t data_len;
     uint8_t data_status;
+    uint8_t vcu_v2vChrgAllow;
+    uint8_t vcu_v2vChrgOptVoltg_H;
+    uint8_t vcu_v2vChrgOptVoltg_L;
+    uint8_t vcu_v2vChrgOptCurnt_H;
+    uint8_t vcu_v2vChrgOptCurnt_L;
     uint8_t VCU_InstantaneousPower_H;
     uint8_t VCU_InstantaneousPower_L;
-}p_VCU_RevV2V_st = {0x03, 0x30, 3};
+    uint8_t VCU_ConveyerBeltMode;
+}p_VCU_RevV2V_st = {0x03, 0x30, 9};
 
 struct package_0x3A4_st_BMS_ASSt
 {
@@ -294,6 +316,8 @@ struct package_0x3A1_st_VCU_stateCha1
     uint8_t VCU_SuperPowerSavingModeReq;
     uint8_t VCU_PercentInstantaneousPower;
     uint8_t VCU_SuperPowerSavingModeFaultReason;
+    uint8_t Vcu_ParkingChargeFB;
+    uint8_t Vcu_ParkingChargeModFB;
     uint8_t vcu_towMode;
     uint8_t vcu_ready;
     uint8_t vcu_traveModeSts;
@@ -301,14 +325,16 @@ struct package_0x3A1_st_VCU_stateCha1
     uint8_t VCU_VehicleRepairModeFB;
     uint8_t VCU_CampModeSts;
     uint8_t vcu_RegenModeStatus;
+    uint8_t VCU_RangeExtenderSt;
     uint8_t vcu_highVoltageSuccess;
     uint8_t vcu_hvOnMode;
     uint8_t vcu_VehicleMode;
     uint8_t vcu_memoryStatus;
+    uint8_t VCU_Eng_SelfShieldStart;
     uint8_t VCU_ExhibitionRequest;
     uint8_t VCU_TrailerModeSts;
     uint8_t vcu_ExhibitionMode;
-}p_VCU_stateCha1_st = {0x03, 0xA1, 20};
+}p_VCU_stateCha1_st = {0x03, 0xA1, 24};
 
 struct package_0x124_st_EPS_state
 {
@@ -760,8 +786,8 @@ struct package_0x380_st_ABM_state
     uint8_t acu_driverSeatBeltStatusValid;
     uint8_t acu_passengerSeatBeltStatus;
     uint8_t acu_passengerSeatBeltStatusValid;
-    uint8_t acu_rollingCounter;
-    uint8_t acu_checksum;
+    uint8_t acu_rollingCounter_;
+    uint8_t acu_checksum_;
 }p_ABM_state_st = {0x03, 0x80, 11};
 
 struct package_0x35B_st_APA_35B
@@ -891,8 +917,9 @@ struct package_0x2B3_st_ADS_FunctionSt_2B3
     uint8_t ADS_SpeedAutoFollow;
     uint8_t ADS_OneTouchSpeedAdjustment;
     uint8_t ADS_TimeGapAdjustment;
+    uint8_t ADS_HMAFunctionStatus;
     uint8_t ADS_DriverSetSpeedDisplay;
-}p_ADS_FunctionSt_2B3_st = {0x02, 0xB3, 17};
+}p_ADS_FunctionSt_2B3_st = {0x02, 0xB3, 18};
 
 struct package_0x2B5_st_ADS_FunctionSt_2B5
 {
@@ -985,6 +1012,16 @@ struct package_0x2C6_st_ADS_HMI_2C6
     uint8_t ADS_EthPdcSignalState;
 }p_ADS_HMI_2C6_st = {0x02, 0xC6, 7};
 
+struct package_0x30A_st_ADS_DisState_30A
+{
+    uint8_t canid_high;
+    uint8_t canid_low;
+    uint8_t data_len;
+    uint8_t data_status;
+    uint8_t ADS_RAEBSts;
+    uint8_t ADS_SLAWarnMode;
+}p_ADS_DisState_30A_st = {0x03, 0x0A, 3};
+
 struct package_0x30D_st_ADS_APAState_30D
 {
     uint8_t canid_high;
@@ -1064,20 +1101,20 @@ struct package_0x307_st_ADS_FunctionSt_307
     uint8_t ADS_APAViewSts;
     uint8_t ADS_AVMViewSts;
     uint8_t ADS_APAFuncType;
-    uint8_t ADS_VehParkModeAvil;
     uint8_t ADS_APAParkInTypeSel;
     uint8_t ADS_APACustomizeSlotFB;
     uint8_t ADS_RpaApaSwitchFB;
     uint8_t ADS_APAUIFuncSts;
     uint8_t ADS_ParkSpcGrdLockSts;
     uint8_t ADS_AVMSideViewSts;
-    uint8_t ADS_APACustomizedSlotSt;
     uint8_t ADS_ParkFRmngDst_H;
     uint8_t ADS_ParkFRmngDst_L;
     uint8_t ADS_ParkRRmngDst_H;
     uint8_t ADS_ParkRRmngDst_L;
     uint8_t ADS_FrontPDCAlarmSts;
     uint8_t ADS_PDCMuteSts;
+    uint8_t ADS_APACustomizedSlotSt;
+    uint8_t ADS_VehParkModeAvil;
 }p_ADS_FunctionSt_307_st = {0x03, 0x07, 18};
 
 struct package_0x31B_st_ADS_FunctionSt_31B
@@ -1304,7 +1341,8 @@ struct package_0x305_st_BCM_state4
     uint8_t data_len;
     uint8_t data_status;
     uint8_t bcm_footLightSwitchSts;
-}p_BCM_state4_st = {0x03, 0x05, 2};
+    uint8_t BCM_HighBeamModel;
+}p_BCM_state4_st = {0x03, 0x05, 3};
 
 struct package_0x411_st_BCM_tpms
 {
@@ -2106,6 +2144,16 @@ struct package_0x21C_st_HOD_21C
     uint8_t HOD_Handoffmonitor;
     uint8_t HOD_HandoffmonitorValid;
 }p_HOD_21C_st = {0x02, 0x1C, 3};
+
+struct package_0x181_st_IC_info_181
+{
+    uint8_t canid_high;
+    uint8_t canid_low;
+    uint8_t data_len;
+    uint8_t data_status;
+    uint8_t ic_displayFail;
+    uint8_t ic_IllumiLevelSts;
+}p_IC_info_181_st = {0x01, 0x81, 3};
 
 struct package_0x4F5_st_TBOX_timeAndGPS
 {

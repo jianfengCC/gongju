@@ -21,7 +21,7 @@
 #ifndef DBC_CFG_H
 #define DBC_CFG_H
 #define CAN_AS_LOG_UNIT_CNT            2U
-#define PDUR_MAX_ROUTE_COUNT       181
+#define PDUR_MAX_ROUTE_COUNT       184
 #define CANIF_AS_MAX_NUM_LPDU_TX_BUF   60u
 #define CANIF_AS_MAX_NOF_TX_BUFFERS   60u
 #define CANIF_PDU_ID_CANNMTX        59

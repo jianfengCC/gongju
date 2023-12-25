@@ -195,6 +195,7 @@ struct package_0x1D5_st_IVI_chassisSet1
     uint8_t canid_low;
     uint8_t data_len;
     uint8_t data_status;
+    uint8_t ivi_PreRefuelCtrl;
     uint8_t ivi_EmergencyHvOffRequestReserved;
     uint8_t ivi_ExhibitionModeCtrl;
     uint8_t ivi_DCDCAutoChargeSet;
@@ -203,7 +204,7 @@ struct package_0x1D5_st_IVI_chassisSet1
     uint8_t IVI_FactoryRestHold;
     uint8_t ivi_chassisSet1_rollingCounter;
     uint8_t ivi_chassisSet1_CheckSum;
-}p_IVI_chassisSet1_st = {0x01, 0xD5, 9};
+}p_IVI_chassisSet1_st = {0x01, 0xD5, 10};
 
 struct package_0x065_st_IVI_chassisSet_065
 {
@@ -308,7 +309,8 @@ struct package_0x069_st_IVI_ACCSet_069
     uint8_t IVI_StartRemFuncSet;
     uint8_t IVI_AdsVoiceBroadcastTypeSet;
     uint8_t IVI_HmaFuncSet;
-}p_IVI_ACCSet_069_st = {0x00, 0x69, 17};
+    uint8_t IVI_SLAWarnModeSet;
+}p_IVI_ACCSet_069_st = {0x00, 0x69, 18};
 
 struct package_0x068_st_IVI_AVMSet_068
 {
@@ -405,7 +407,7 @@ struct package_0x0C5_st_IVI_infoSet
     uint8_t IVI_PEBSVoiceWarningSet;
     uint8_t ivi_NaviSwitchReserved;
     uint8_t ivi_themeSetReserved;
-    uint8_t ivi_wcmLeftOnOffSet;
+    uint8_t ivi_wcmOnOffSet;
     uint8_t ivi_pdcOnOffSet;
     uint8_t ivi_ICthemegangedSetReserved;
     uint8_t IVI_FactoryResetCommand;
@@ -975,12 +977,13 @@ struct package_0x495_st_IVI_StatusAndNotify
     uint8_t IVI_SentryAlarmSts;
     uint8_t IVI_ModeReq;
     uint8_t IVI_SentryTimeFd;
+    uint8_t IVI_RangeExtenderdisenable;
     uint8_t IVI_ChildrenLeftremindSts;
     uint8_t IVI_PetModeSts;
     uint8_t IVI_SentryFaultReason;
     uint8_t IVI_WashModeSts;
     uint8_t IVI_HCUcontrol;
-}p_IVI_StatusAndNotify_st = {0x04, 0x95, 19};
+}p_IVI_StatusAndNotify_st = {0x04, 0x95, 20};
 
 struct package_0x496_st_IVI_hmi
 {
